@@ -10,12 +10,11 @@
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */; };
-		E1D853112C880F7E00DE6CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E1D853102C880F7E00DE6CC6 /* Base */; };
 		E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D853122C880F8000DE6CC6 /* Assets.xcassets */; };
-		E1D853162C880F8000DE6CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E1D853152C880F8000DE6CC6 /* Base */; };
 		E1D853212C880F8000DE6CC6 /* NBC_WealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853202C880F8000DE6CC6 /* NBC_WealthTests.swift */; };
 		E1D8532B2C880F8000DE6CC6 /* NBC_WealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */; };
 		E1D8532D2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */; };
+		E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */ = {isa = PBXBuildFile; fileRef = E1D8533D2C880FFB00DE6CC6 /* wealth.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +39,14 @@
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1D853102C880F7E00DE6CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1D853122C880F8000DE6CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1D853152C880F8000DE6CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D853172C880F8000DE6CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D8531C2C880F8000DE6CC6 /* NBC-WealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NBC-WealthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853202C880F8000DE6CC6 /* NBC_WealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthTests.swift; sourceTree = "<group>"; };
 		E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NBC-WealthUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITests.swift; sourceTree = "<group>"; };
 		E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1D8533D2C880FFB00DE6CC6 /* wealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wealth.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +100,8 @@
 				E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */,
 				E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */,
 				E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */,
-				E1D8530F2C880F7E00DE6CC6 /* Main.storyboard */,
+				E1D8533D2C880FFB00DE6CC6 /* wealth.json */,
 				E1D853122C880F8000DE6CC6 /* Assets.xcassets */,
-				E1D853142C880F8000DE6CC6 /* LaunchScreen.storyboard */,
 				E1D853172C880F8000DE6CC6 /* Info.plist */,
 			);
 			path = "NBC-Wealth";
@@ -232,8 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */,
-				E1D853162C880F8000DE6CC6 /* Base in Resources */,
-				E1D853112C880F7E00DE6CC6 /* Base in Resources */,
+				E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +291,6 @@
 			targetProxy = E1D853272C880F8000DE6CC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E1D8530F2C880F7E00DE6CC6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1D853102C880F7E00DE6CC6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E1D853142C880F8000DE6CC6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1D853152C880F8000DE6CC6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E1D8532E2C880F8000DE6CC6 /* Debug */ = {
@@ -443,13 +420,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NBC-Wealth/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,13 +449,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NBC-Wealth/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
