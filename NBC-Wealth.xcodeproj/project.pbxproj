@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
+		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
+		E1D8530E2C880F7E00DE6CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */; };
+		E1D853112C880F7E00DE6CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E1D853102C880F7E00DE6CC6 /* Base */; };
+		E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D853122C880F8000DE6CC6 /* Assets.xcassets */; };
+		E1D853162C880F8000DE6CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E1D853152C880F8000DE6CC6 /* Base */; };
+		E1D853212C880F8000DE6CC6 /* NBC_WealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853202C880F8000DE6CC6 /* NBC_WealthTests.swift */; };
+		E1D8532B2C880F8000DE6CC6 /* NBC_WealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */; };
+		E1D8532D2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1D8531D2C880F8000DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853052C880F7E00DE6CC6;
+			remoteInfo = "NBC-Wealth";
+		};
+		E1D853272C880F8000DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853052C880F7E00DE6CC6;
+			remoteInfo = "NBC-Wealth";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1D853102C880F7E00DE6CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1D853122C880F8000DE6CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1D853152C880F8000DE6CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1D853172C880F8000DE6CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D8531C2C880F8000DE6CC6 /* NBC-WealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NBC-WealthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D853202C880F8000DE6CC6 /* NBC_WealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthTests.swift; sourceTree = "<group>"; };
+		E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NBC-WealthUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITests.swift; sourceTree = "<group>"; };
+		E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1D853032C880F7E00DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853192C880F8000DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853232C880F8000DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1D852FD2C880F7E00DE6CC6 = {
+			isa = PBXGroup;
+			children = (
+				E1D853082C880F7E00DE6CC6 /* NBC-Wealth */,
+				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
+				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
+				E1D853072C880F7E00DE6CC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1D853072C880F7E00DE6CC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */,
+				E1D8531C2C880F8000DE6CC6 /* NBC-WealthTests.xctest */,
+				E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D853082C880F7E00DE6CC6 /* NBC-Wealth */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */,
+				E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */,
+				E1D8530D2C880F7E00DE6CC6 /* ViewController.swift */,
+				E1D8530F2C880F7E00DE6CC6 /* Main.storyboard */,
+				E1D853122C880F8000DE6CC6 /* Assets.xcassets */,
+				E1D853142C880F8000DE6CC6 /* LaunchScreen.storyboard */,
+				E1D853172C880F8000DE6CC6 /* Info.plist */,
+			);
+			path = "NBC-Wealth";
+			sourceTree = "<group>";
+		};
+		E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853202C880F8000DE6CC6 /* NBC_WealthTests.swift */,
+			);
+			path = "NBC-WealthTests";
+			sourceTree = "<group>";
+		};
+		E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */,
+				E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */,
+			);
+			path = "NBC-WealthUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1D853052C880F7E00DE6CC6 /* NBC-Wealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853302C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-Wealth" */;
+			buildPhases = (
+				E1D853022C880F7E00DE6CC6 /* Sources */,
+				E1D853032C880F7E00DE6CC6 /* Frameworks */,
+				E1D853042C880F7E00DE6CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NBC-Wealth";
+			productName = "NBC-Wealth";
+			productReference = E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1D8531B2C880F8000DE6CC6 /* NBC-WealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853332C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-WealthTests" */;
+			buildPhases = (
+				E1D853182C880F8000DE6CC6 /* Sources */,
+				E1D853192C880F8000DE6CC6 /* Frameworks */,
+				E1D8531A2C880F8000DE6CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1D8531E2C880F8000DE6CC6 /* PBXTargetDependency */,
+			);
+			name = "NBC-WealthTests";
+			productName = "NBC-WealthTests";
+			productReference = E1D8531C2C880F8000DE6CC6 /* NBC-WealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853362C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-WealthUITests" */;
+			buildPhases = (
+				E1D853222C880F8000DE6CC6 /* Sources */,
+				E1D853232C880F8000DE6CC6 /* Frameworks */,
+				E1D853242C880F8000DE6CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1D853282C880F8000DE6CC6 /* PBXTargetDependency */,
+			);
+			name = "NBC-WealthUITests";
+			productName = "NBC-WealthUITests";
+			productReference = E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1D852FE2C880F7E00DE6CC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E1D853052C880F7E00DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E1D8531B2C880F8000DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E1D853052C880F7E00DE6CC6;
+					};
+					E1D853252C880F8000DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E1D853052C880F7E00DE6CC6;
+					};
+				};
+			};
+			buildConfigurationList = E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1D852FD2C880F7E00DE6CC6;
+			productRefGroup = E1D853072C880F7E00DE6CC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1D853052C880F7E00DE6CC6 /* NBC-Wealth */,
+				E1D8531B2C880F8000DE6CC6 /* NBC-WealthTests */,
+				E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1D853042C880F7E00DE6CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */,
+				E1D853162C880F8000DE6CC6 /* Base in Resources */,
+				E1D853112C880F7E00DE6CC6 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D8531A2C880F8000DE6CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853242C880F8000DE6CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1D853022C880F7E00DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D8530E2C880F7E00DE6CC6 /* ViewController.swift in Sources */,
+				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
+				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853182C880F8000DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853212C880F8000DE6CC6 /* NBC_WealthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853222C880F8000DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D8532B2C880F8000DE6CC6 /* NBC_WealthUITests.swift in Sources */,
+				E1D8532D2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1D8531E2C880F8000DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853052C880F7E00DE6CC6 /* NBC-Wealth */;
+			targetProxy = E1D8531D2C880F8000DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D853282C880F8000DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853052C880F7E00DE6CC6 /* NBC-Wealth */;
+			targetProxy = E1D853272C880F8000DE6CC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1D8530F2C880F7E00DE6CC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1D853102C880F7E00DE6CC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E1D853142C880F8000DE6CC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1D853152C880F8000DE6CC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1D8532E2C880F8000DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1D8532F2C880F8000DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1D853312C880F8000DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NBC-Wealth/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-Wealth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1D853322C880F8000DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NBC-Wealth/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-Wealth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1D853342C880F8000DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC-Wealth.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NBC-Wealth";
+			};
+			name = Debug;
+		};
+		E1D853352C880F8000DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC-Wealth.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NBC-Wealth";
+			};
+			name = Release;
+		};
+		E1D853372C880F8000DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NBC-Wealth";
+			};
+			name = Debug;
+		};
+		E1D853382C880F8000DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NBC-Wealth";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D8532E2C880F8000DE6CC6 /* Debug */,
+				E1D8532F2C880F8000DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853302C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-Wealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853312C880F8000DE6CC6 /* Debug */,
+				E1D853322C880F8000DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853332C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-WealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853342C880F8000DE6CC6 /* Debug */,
+				E1D853352C880F8000DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853362C880F8000DE6CC6 /* Build configuration list for PBXNativeTarget "NBC-WealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853372C880F8000DE6CC6 /* Debug */,
+				E1D853382C880F8000DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+}
