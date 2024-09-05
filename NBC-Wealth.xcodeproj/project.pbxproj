@@ -25,6 +25,10 @@
 		E1D8537D2C89630200DE6CC6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853782C89630200DE6CC6 /* Product.swift */; };
 		E1D8537E2C89630200DE6CC6 /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853792C89630200DE6CC6 /* ProductGroup.swift */; };
 		E1D8537F2C89630200DE6CC6 /* Wealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8537B2C89630200DE6CC6 /* Wealth.swift */; };
+		E1D8538B2C89637A00DE6CC6 /* libData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853842C89637300DE6CC6 /* libData.a */; };
+		E1D853922C89639400DE6CC6 /* WealthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */; };
+		E1D853932C89639400DE6CC6 /* WealthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */; };
+		E1D853942C89639400DE6CC6 /* WealthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853902C89639400DE6CC6 /* WealthRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,13 @@
 			remoteGlobalIDString = E1D8536D2C89626500DE6CC6;
 			remoteInfo = Domain;
 		};
+		E1D8538C2C89638200DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853832C89637300DE6CC6;
+			remoteInfo = Data;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +80,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E1D8536C2C89626500DE6CC6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853822C89637300DE6CC6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -102,6 +122,10 @@
 		E1D853782C89630200DE6CC6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E1D853792C89630200DE6CC6 /* ProductGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGroup.swift; sourceTree = "<group>"; };
 		E1D8537B2C89630200DE6CC6 /* Wealth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wealth.swift; sourceTree = "<group>"; };
+		E1D853842C89637300DE6CC6 /* libData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libData.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthEndpoint.swift; sourceTree = "<group>"; };
+		E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRemoteDataSource.swift; sourceTree = "<group>"; };
+		E1D853902C89639400DE6CC6 /* WealthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D8538B2C89637A00DE6CC6 /* libData.a in Frameworks */,
 				E1D853772C8962F400DE6CC6 /* libDomain.a in Frameworks */,
 				E1D853512C88B01E00DE6CC6 /* libNetworking.a in Frameworks */,
 			);
@@ -142,6 +167,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D853812C89637300DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -151,8 +183,9 @@
 				E1D853082C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
-				E1D853442C8827B500DE6CC6 /* Networking */,
 				E1D8536F2C89626500DE6CC6 /* Domain */,
+				E1D853442C8827B500DE6CC6 /* Networking */,
+				E1D853852C89637300DE6CC6 /* Data */,
 				E1D853072C880F7E00DE6CC6 /* Products */,
 				E1D853502C88B01E00DE6CC6 /* Frameworks */,
 			);
@@ -166,6 +199,7 @@
 				E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */,
 				E1D853432C8827B500DE6CC6 /* libNetworking.a */,
 				E1D8536E2C89626500DE6CC6 /* libDomain.a */,
+				E1D853842C89637300DE6CC6 /* libData.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +287,24 @@
 			path = Wealth;
 			sourceTree = "<group>";
 		};
+		E1D853852C89637300DE6CC6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853912C89639400DE6CC6 /* Wealth */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E1D853912C89639400DE6CC6 /* Wealth */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */,
+				E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */,
+				E1D853902C89639400DE6CC6 /* WealthRepository.swift */,
+			);
+			path = Wealth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,6 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E1D8538D2C89638200DE6CC6 /* PBXTargetDependency */,
 				E1D853762C89626D00DE6CC6 /* PBXTargetDependency */,
 				E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */,
 			);
@@ -345,6 +398,23 @@
 			productReference = E1D8536E2C89626500DE6CC6 /* libDomain.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		E1D853832C89637300DE6CC6 /* Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853882C89637300DE6CC6 /* Build configuration list for PBXNativeTarget "Data" */;
+			buildPhases = (
+				E1D853802C89637300DE6CC6 /* Sources */,
+				E1D853812C89637300DE6CC6 /* Frameworks */,
+				E1D853822C89637300DE6CC6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Data;
+			productName = Data;
+			productReference = E1D853842C89637300DE6CC6 /* libData.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -372,6 +442,9 @@
 					E1D8536D2C89626500DE6CC6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					E1D853832C89637300DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */;
@@ -392,6 +465,7 @@
 				E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */,
 				E1D853422C8827B500DE6CC6 /* Networking */,
 				E1D8536D2C89626500DE6CC6 /* Domain */,
+				E1D853832C89637300DE6CC6 /* Data */,
 			);
 		};
 /* End PBXProject section */
@@ -472,6 +546,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D853802C89637300DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853922C89639400DE6CC6 /* WealthEndpoint.swift in Sources */,
+				E1D853942C89639400DE6CC6 /* WealthRepository.swift in Sources */,
+				E1D853932C89639400DE6CC6 /* WealthRemoteDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -494,6 +578,11 @@
 			isa = PBXTargetDependency;
 			target = E1D8536D2C89626500DE6CC6 /* Domain */;
 			targetProxy = E1D853752C89626D00DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D8538D2C89638200DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853832C89637300DE6CC6 /* Data */;
+			targetProxy = E1D8538C2C89638200DE6CC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,6 +894,32 @@
 			};
 			name = Release;
 		};
+		E1D853892C89637300DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1D8538A2C89637300DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -858,6 +973,15 @@
 			buildConfigurations = (
 				E1D853732C89626500DE6CC6 /* Debug */,
 				E1D853742C89626500DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853882C89637300DE6CC6 /* Build configuration list for PBXNativeTarget "Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853892C89637300DE6CC6 /* Debug */,
+				E1D8538A2C89637300DE6CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
