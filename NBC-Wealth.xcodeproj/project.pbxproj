@@ -15,6 +15,12 @@
 		E1D8532B2C880F8000DE6CC6 /* NBC_WealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */; };
 		E1D8532D2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */; };
 		E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */ = {isa = PBXBuildFile; fileRef = E1D8533D2C880FFB00DE6CC6 /* wealth.json */; };
+		E1D853462C8827B500DE6CC6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853452C8827B500DE6CC6 /* APIService.swift */; };
+		E1D853512C88B01E00DE6CC6 /* libNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853432C8827B500DE6CC6 /* libNetworking.a */; };
+		E1D853532C88E30800DE6CC6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853522C88E30800DE6CC6 /* Response.swift */; };
+		E1D8535D2C894AF600DE6CC6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8535C2C894AF600DE6CC6 /* NetworkError.swift */; };
+		E1D853602C89501200DE6CC6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8535F2C89501200DE6CC6 /* HTTPMethod.swift */; };
+		E1D853622C89508000DE6CC6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853612C89508000DE6CC6 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +38,26 @@
 			remoteGlobalIDString = E1D853052C880F7E00DE6CC6;
 			remoteInfo = "NBC-Wealth";
 		};
+		E1D8534E2C88AF2E00DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853422C8827B500DE6CC6;
+			remoteInfo = Networking;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1D853412C8827B500DE6CC6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +72,12 @@
 		E1D8532A2C880F8000DE6CC6 /* NBC_WealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITests.swift; sourceTree = "<group>"; };
 		E1D8532C2C880F8000DE6CC6 /* NBC_WealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_WealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E1D8533D2C880FFB00DE6CC6 /* wealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wealth.json; sourceTree = "<group>"; };
+		E1D853432C8827B500DE6CC6 /* libNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D853452C8827B500DE6CC6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E1D853522C88E30800DE6CC6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		E1D8535C2C894AF600DE6CC6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E1D8535F2C89501200DE6CC6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E1D853612C89508000DE6CC6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D853512C88B01E00DE6CC6 /* libNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D853402C8827B500DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,7 +119,9 @@
 				E1D853082C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
+				E1D853442C8827B500DE6CC6 /* Networking */,
 				E1D853072C880F7E00DE6CC6 /* Products */,
+				E1D853502C88B01E00DE6CC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +131,7 @@
 				E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */,
 				E1D8531C2C880F8000DE6CC6 /* NBC-WealthTests.xctest */,
 				E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */,
+				E1D853432C8827B500DE6CC6 /* libNetworking.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +166,33 @@
 			path = "NBC-WealthUITests";
 			sourceTree = "<group>";
 		};
+		E1D853442C8827B500DE6CC6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8535E2C89500900DE6CC6 /* Endpoint */,
+				E1D853452C8827B500DE6CC6 /* APIService.swift */,
+				E1D853522C88E30800DE6CC6 /* Response.swift */,
+				E1D8535C2C894AF600DE6CC6 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E1D853502C88B01E00DE6CC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1D8535E2C89500900DE6CC6 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853612C89508000DE6CC6 /* Endpoint.swift */,
+				E1D8535F2C89501200DE6CC6 /* HTTPMethod.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +207,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */,
 			);
 			name = "NBC-Wealth";
 			productName = "NBC-Wealth";
@@ -180,6 +250,23 @@
 			productReference = E1D853262C880F8000DE6CC6 /* NBC-WealthUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E1D853422C8827B500DE6CC6 /* Networking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853492C8827B500DE6CC6 /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildPhases = (
+				E1D8533F2C8827B500DE6CC6 /* Sources */,
+				E1D853402C8827B500DE6CC6 /* Frameworks */,
+				E1D853412C8827B500DE6CC6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Networking;
+			productName = Networking;
+			productReference = E1D853432C8827B500DE6CC6 /* libNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +288,9 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = E1D853052C880F7E00DE6CC6;
 					};
+					E1D853422C8827B500DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */;
@@ -219,6 +309,7 @@
 				E1D853052C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531B2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */,
+				E1D853422C8827B500DE6CC6 /* Networking */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +368,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D8533F2C8827B500DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853532C88E30800DE6CC6 /* Response.swift in Sources */,
+				E1D8535D2C894AF600DE6CC6 /* NetworkError.swift in Sources */,
+				E1D853462C8827B500DE6CC6 /* APIService.swift in Sources */,
+				E1D853602C89501200DE6CC6 /* HTTPMethod.swift in Sources */,
+				E1D853622C89508000DE6CC6 /* Endpoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +392,11 @@
 			isa = PBXTargetDependency;
 			target = E1D853052C880F7E00DE6CC6 /* NBC-Wealth */;
 			targetProxy = E1D853272C880F8000DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853422C8827B500DE6CC6 /* Networking */;
+			targetProxy = E1D8534E2C88AF2E00DE6CC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,6 +654,34 @@
 			};
 			name = Release;
 		};
+		E1D853472C8827B500DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1D853482C8827B500DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +717,15 @@
 			buildConfigurations = (
 				E1D853372C880F8000DE6CC6 /* Debug */,
 				E1D853382C880F8000DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853492C8827B500DE6CC6 /* Build configuration list for PBXNativeTarget "Networking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853472C8827B500DE6CC6 /* Debug */,
+				E1D853482C8827B500DE6CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
