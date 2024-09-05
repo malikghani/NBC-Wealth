@@ -29,6 +29,20 @@
 		E1D853922C89639400DE6CC6 /* WealthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */; };
 		E1D853932C89639400DE6CC6 /* WealthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */; };
 		E1D853942C89639400DE6CC6 /* WealthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853902C89639400DE6CC6 /* WealthRepository.swift */; };
+		E1D853A72C8976A100DE6CC6 /* libBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853A02C89768C00DE6CC6 /* libBase.a */; };
+		E1D853AB2C8976AF00DE6CC6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */; };
+		E1D853AD2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */; };
+		E1D853AF2C89775200DE6CC6 /* ViewModelProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */; };
+		E1D853B12C898CC100DE6CC6 /* DelegateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */; };
+		E1D853B32C898EC000DE6CC6 /* DiffableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B22C898EC000DE6CC6 /* DiffableTableView.swift */; };
+		E1D853B52C898EE700DE6CC6 /* DiffableTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */; };
+		E1D853B72C898F2A00DE6CC6 /* HapticProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */; };
+		E1D853B92C89904D00DE6CC6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */; };
+		E1D853BB2C8990EB00DE6CC6 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */; };
+		E1D853BE2C89915800DE6CC6 /* DiffableViewScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */; };
+		E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */; };
+		E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */; };
+		E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +81,13 @@
 			remoteGlobalIDString = E1D853832C89637300DE6CC6;
 			remoteInfo = Data;
 		};
+		E1D853A82C8976A600DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D8539F2C89768C00DE6CC6;
+			remoteInfo = Base;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +110,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E1D853822C89637300DE6CC6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D8539E2C89768C00DE6CC6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -126,6 +156,20 @@
 		E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthEndpoint.swift; sourceTree = "<group>"; };
 		E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRemoteDataSource.swift; sourceTree = "<group>"; };
 		E1D853902C89639400DE6CC6 /* WealthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRepository.swift; sourceTree = "<group>"; };
+		E1D853A02C89768C00DE6CC6 /* libBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
+		E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProviding.swift; sourceTree = "<group>"; };
+		E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProviding.swift; sourceTree = "<group>"; };
+		E1D853B22C898EC000DE6CC6 /* DiffableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableView.swift; sourceTree = "<group>"; };
+		E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewProvider.swift; sourceTree = "<group>"; };
+		E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticProducer.swift; sourceTree = "<group>"; };
+		E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
+		E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewScrollPosition.swift; sourceTree = "<group>"; };
+		E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewScrollDelegate.swift; sourceTree = "<group>"; };
+		E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D853A72C8976A100DE6CC6 /* libBase.a in Frameworks */,
 				E1D8538B2C89637A00DE6CC6 /* libData.a in Frameworks */,
 				E1D853772C8962F400DE6CC6 /* libDomain.a in Frameworks */,
 				E1D853512C88B01E00DE6CC6 /* libNetworking.a in Frameworks */,
@@ -174,6 +219,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D8539D2C89768C00DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -186,6 +238,7 @@
 				E1D853082C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
+				E1D853A12C89768C00DE6CC6 /* Base */,
 				E1D853072C880F7E00DE6CC6 /* Products */,
 				E1D853502C88B01E00DE6CC6 /* Frameworks */,
 			);
@@ -200,6 +253,7 @@
 				E1D853432C8827B500DE6CC6 /* libNetworking.a */,
 				E1D8536E2C89626500DE6CC6 /* libDomain.a */,
 				E1D853842C89637300DE6CC6 /* libData.a */,
+				E1D853A02C89768C00DE6CC6 /* libBase.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -353,6 +407,50 @@
 			path = WealthDetail;
 			sourceTree = "<group>";
 		};
+		E1D853A12C89768C00DE6CC6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853C42C8A163600DE6CC6 /* Extensions */,
+				E1D853C32C8A162C00DE6CC6 /* Provider */,
+				E1D853BC2C89912E00DE6CC6 /* DiffableTableView */,
+				E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */,
+				E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */,
+				E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E1D853BC2C89912E00DE6CC6 /* DiffableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853B22C898EC000DE6CC6 /* DiffableTableView.swift */,
+				E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */,
+				E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */,
+				E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */,
+			);
+			path = DiffableTableView;
+			sourceTree = "<group>";
+		};
+		E1D853C32C8A162C00DE6CC6 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */,
+				E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		E1D853C42C8A163600DE6CC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */,
+				E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */,
+				E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */,
+				E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +465,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E1D853A92C8976A600DE6CC6 /* PBXTargetDependency */,
 				E1D8538D2C89638200DE6CC6 /* PBXTargetDependency */,
 				E1D853762C89626D00DE6CC6 /* PBXTargetDependency */,
 				E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */,
@@ -463,6 +562,23 @@
 			productReference = E1D853842C89637300DE6CC6 /* libData.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		E1D8539F2C89768C00DE6CC6 /* Base */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D853A62C89768C00DE6CC6 /* Build configuration list for PBXNativeTarget "Base" */;
+			buildPhases = (
+				E1D8539C2C89768C00DE6CC6 /* Sources */,
+				E1D8539D2C89768C00DE6CC6 /* Frameworks */,
+				E1D8539E2C89768C00DE6CC6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Base;
+			productName = Base;
+			productReference = E1D853A02C89768C00DE6CC6 /* libBase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -493,6 +609,9 @@
 					E1D853832C89637300DE6CC6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					E1D8539F2C89768C00DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */;
@@ -514,6 +633,7 @@
 				E1D853422C8827B500DE6CC6 /* Networking */,
 				E1D8536D2C89626500DE6CC6 /* Domain */,
 				E1D853832C89637300DE6CC6 /* Data */,
+				E1D8539F2C89768C00DE6CC6 /* Base */,
 			);
 		};
 /* End PBXProject section */
@@ -604,6 +724,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D8539C2C89768C00DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853AF2C89775200DE6CC6 /* ViewModelProviding.swift in Sources */,
+				E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */,
+				E1D853AD2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift in Sources */,
+				E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */,
+				E1D853B32C898EC000DE6CC6 /* DiffableTableView.swift in Sources */,
+				E1D853AB2C8976AF00DE6CC6 /* BaseViewController.swift in Sources */,
+				E1D853B72C898F2A00DE6CC6 /* HapticProducer.swift in Sources */,
+				E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */,
+				E1D853B12C898CC100DE6CC6 /* DelegateProviding.swift in Sources */,
+				E1D853B52C898EE700DE6CC6 /* DiffableTableViewProvider.swift in Sources */,
+				E1D853BB2C8990EB00DE6CC6 /* UIControl+Extension.swift in Sources */,
+				E1D853BE2C89915800DE6CC6 /* DiffableViewScrollPosition.swift in Sources */,
+				E1D853B92C89904D00DE6CC6 /* Array+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -631,6 +771,11 @@
 			isa = PBXTargetDependency;
 			target = E1D853832C89637300DE6CC6 /* Data */;
 			targetProxy = E1D8538C2C89638200DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D853A92C8976A600DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D8539F2C89768C00DE6CC6 /* Base */;
+			targetProxy = E1D853A82C8976A600DE6CC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -968,6 +1113,34 @@
 			};
 			name = Release;
 		};
+		E1D853A42C89768C00DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1D853A52C89768C00DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1030,6 +1203,15 @@
 			buildConfigurations = (
 				E1D853892C89637300DE6CC6 /* Debug */,
 				E1D8538A2C89637300DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D853A62C89768C00DE6CC6 /* Build configuration list for PBXNativeTarget "Base" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D853A42C89768C00DE6CC6 /* Debug */,
+				E1D853A52C89768C00DE6CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
