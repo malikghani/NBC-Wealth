@@ -1,0 +1,99 @@
+struct
+
+
+{
+    "data": [
+        {
+            "productList": [
+                {
+                    "rate": 8,
+                    "code": "3MF",
+                    "marketingPoints": [
+                        "High Interest",
+                        "Rollover Options"
+                    ],
+                    "productName": "Flexi 3 months",
+                    "startingAmount": 100000,
+                    "isPopular": true
+                },
+                {
+                    "rate": 5,
+                    "code": "1MF",
+                    "marketingPoints": [
+                        "Flexible Withdrawal"
+                    ],
+                    "productName": "Flexi 1 months",
+                    "startingAmount": 250000,
+                    "isPopular": false
+                },
+                {
+                    "rate": 5,
+                    "code": "6MF",
+                    "marketingPoints": [],
+                    "productName": "Flexi 6 months",
+                    "startingAmount": 150000,
+                    "isPopular": false
+                },
+                {
+                    "rate": 21,
+                    "code": "7DF",
+                    "marketingPoints": [],
+                    "productName": "Flexi 7 days",
+                    "startingAmount": 1000000,
+                    "isPopular": false
+                },
+                {
+                    "rate": 2,
+                    "code": "8DF",
+                    "marketingPoints": [],
+                    "productName": "Flexi 8 days",
+                    "startingAmount": 1000000,
+                    "isPopular": false
+                },
+                {
+                    "rate": 2,
+                    "code": "10DF",
+                    "marketingPoints": [],
+                    "productName": "Flexi 10 days",
+                    "startingAmount": 1000000,
+                    "isPopular": false
+                }
+            ],
+            "productGroupName": "Flexible"
+        },
+        {
+            "productList": [
+                {
+                    "rate": 8,
+                    "code": "3MW",
+                    "marketingPoints": [
+                        "0 Minimum ",
+                        "Rollover Options"
+                    ],
+                    "productName": "Wow 3 months",
+                    "startingAmount": 1000000,
+                    "isPopular": true
+                },
+                {
+                    "rate": 5,
+                    "code": "1MW",
+                    "marketingPoints": [
+                        "Flexible Withdrawal"
+                    ],
+                    "productName": "Wow 1 months",
+                    "startingAmount": 15000,
+                    "isPopular": false
+                },
+                {
+                    "rate": 5,
+                    "code": "6Mw",
+                    "marketingPoints": [],
+                    "productName": "Wow 6 months",
+                    "startingAmount": 2500000000,
+                    "isPopular": false
+                }
+            ],
+            "productGroupName": "Fixed Income"
+        }
+    ]
+}
