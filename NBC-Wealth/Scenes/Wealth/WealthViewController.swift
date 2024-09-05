@@ -6,7 +6,17 @@
 //
 
 import UIKit
+import Base
 
-final class WealthViewController: UIViewController {
+final class WealthViewModel {
+    init() {
+        
+    }
+}
 
+final class WealthViewController: BaseViewController<WealthViewModel> {
+
+    override func setupOnInit() {
+        surfaceColor = .quaternaryLabel
+    }
 }

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         window = UIWindow(windowScene: windowScene)
-        let viewController = WealthViewController()
+        let viewController = WealthViewController(viewModel: .init())
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
