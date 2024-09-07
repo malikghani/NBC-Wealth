@@ -80,8 +80,8 @@ public extension UIView {
     /// Fills the view's superview with the specified spacing.
     ///
     /// - Parameter spacing: The spacing to apply on all sides of the view relative to its superview. Defaults to `0`.
-    func fillToSuperview(spacing: CGFloat = 0) {
-        fillToSuperview(horizontalSpacing: spacing, verticalSpacing: spacing)
+    func fillSuperview(spacing: CGFloat = 0) {
+        fillSuperview(horizontalSpacing: spacing, verticalSpacing: spacing)
     }
 
     /// Fills the view's superview with specified horizontal and vertical spacing.
@@ -89,7 +89,7 @@ public extension UIView {
     /// - Parameters:
     ///   - horizontalSpacing: The spacing to apply to the leading and trailing edges of the view relative to its superview. Defaults to `0`.
     ///   - verticalSpacing: The spacing to apply to the top and bottom edges of the view relative to its superview. Defaults to `0`.
-    func fillToSuperview(
+    func fillSuperview(
         horizontalSpacing: CGFloat = 0,
         verticalSpacing: CGFloat = 0
     ) {

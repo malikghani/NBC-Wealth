@@ -16,4 +16,19 @@ public extension ColorNamespace {
     static var border: ColorNamespace<Border> {
         ColorNamespace<Border>()
     }
+    
+    /// NeoColor Button Namespace
+    static var button: ColorNamespace<Button> {
+        ColorNamespace<Button>()
+    }
+    
+    /// NeoColor Surface Namespace
+    static var surface: ColorNamespace<Surface> {
+        ColorNamespace<Surface>()
+    }
+    
+    /// NeoColor Text Namespace
+    static var text: ColorNamespace<Text> {
+        ColorNamespace<Text>()
+    }
 }

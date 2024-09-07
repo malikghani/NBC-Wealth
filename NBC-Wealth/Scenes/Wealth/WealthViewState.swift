@@ -22,7 +22,7 @@ enum WealthViewState {
     case error(message: String)
 }
 
-// MARK: - Public Functionality
+// MARK: - Internal Functionality
 extension WealthViewState {
     /// Determines whether the loading state view should be toggled based on the current state.
     var shouldShowLoadingIndicator: Bool {

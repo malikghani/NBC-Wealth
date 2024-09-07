@@ -11,9 +11,9 @@ public extension AttributedStringProducer {
     /// Represents key-value pairs for configuring attributes in an attributed string.
     enum AttributedKeyValue {
         // General
-        case backgroundColor(UIColor)
-        case foregroundColor(UIColor)
-        case font(UIFont)
+        case backgroundColor(NeoColor<Surface>)
+        case foregroundColor(NeoColor<Text>)
+        case font(NeoLabel.Scale)
         case paragraphStyle(NSMutableParagraphStyle)
         
         // Typesettings
@@ -24,19 +24,19 @@ public extension AttributedStringProducer {
         // Strikethrough
         /// Only pass the `patternStyle` parameter if needed to apply pattern to the strikethrough
         case strikethroughStyle(NSUnderlineStyle, patternStyle: NSUnderlineStyle? = nil)
-        case strikethroughColor(UIColor)
+        case strikethroughColor(NeoColor<Border>)
         
         // Underline
         // Only pass the `patternStyle` parameter if needed to apply pattern to the underline
         case underlineStyle(NSUnderlineStyle, patternStyle: NSUnderlineStyle? = nil)
-        case underlineColor(UIColor)
+        case underlineColor(NeoColor<Border>)
         
         // Stroke
-        case strokeColor(UIColor)
+        case strokeColor(NeoColor<Border>)
         case strokeWidth(CGFloat, fill: Bool = true)
         
         // Shadow
-        case shadow(offset: CGSize = .zero, radius: CGFloat = 1, color: UIColor)
+        case shadow(offset: CGSize = .zero, radius: CGFloat = 1, color: NeoColor<Surface>)
         
         /// The key associated with the attribute.
         var key: NSAttributedString.Key {
@@ -93,10 +93,12 @@ public extension AttributedStringProducer {
             switch self {
                 
             // General
-            case .backgroundColor(let color), .foregroundColor(let color):
-                return color
-            case .font(let font):
-                return font
+            case .backgroundColor(let color):
+                return color.value
+            case .foregroundColor(let color):
+                return color.value
+            case .font(let scale):
+                return scale.font
             case .paragraphStyle(let style):
                 return style
                 

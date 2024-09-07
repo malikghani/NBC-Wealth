@@ -6,365 +6,7 @@
 //
 
 import UIKit
-import Base
-
-/// A configuration struct for specifying settings related to dashed lines.
-public struct LineDashConfiguration {
-    /// The line cap style to be used for the dashed line.
-    public var lineCap: CAShapeLayerLineCap
-    
-    /// The dash pattern array specifying the lengths of dashes and gaps.
-    public var pattern: [NSNumber]
-    
-    /// The color of the line.
-    public var color: UIColor
-
-    /// The width or thickness of the line.
-    public var width: CGFloat
-
-    /// Initializes a `LineConfiguration` with optional parameters.
-    ///
-    /// - Parameters:
-    ///   - color: The color of the line or border.
-    ///   - width: The width or thickness of the line or border. Default is `1`.
-    ///   - lineCap: The line cap style to be used for the dashed line. Default is `.butt`.
-    ///   - pattern: The dash pattern array specifying the lengths of dashes and gaps. Default is `[5, 5]`.
-    public init(color: UIColor,
-                width: CGFloat = 1,
-                lineCap: CAShapeLayerLineCap = .butt,
-                pattern: [NSNumber] = [5, 5]) {
-        self.color = color
-        self.width = width
-        self.lineCap = lineCap
-        self.pattern = pattern
-    }
-}
-
-final class NeoLabel: BaseView {
-    private lazy var state = State()
-    
-    private lazy var label = UILabel().with(parent: self)
-    
-    enum Scale {
-        case title
-        case titleAlt
-        case subtitle
-        case ternary
-        
-        var font: UIFont {
-            switch self {
-            case .title:
-                .systemFont(ofSize: 16, weight: .semibold)
-            case .titleAlt:
-                .systemFont(ofSize: 14, weight: .semibold)
-            case .subtitle:
-                .systemFont(ofSize: 12, weight: .regular)
-            case .ternary:
-                .systemFont(ofSize: 12, weight: .semibold)
-            }
-        }
-    }
-
-    struct State {
-        var text: String?
-        var attributedText: NSAttributedString?
-        var scale: Scale = .title
-        var textAlignment: NSTextAlignment = .left
-        var textColor: UIColor = .Text.default
-    }
-    
-    override func setupOnMovedToSuperview() {
-        label.fillToSuperview()
-    }
-    
-    enum Action {
-        case bindInitialState((inout State) -> Void)
-        case setText(String?)
-        case setAttributedText(NSAttributedString?)
-        case setTextAligment(NSTextAlignment)
-        case setScale(Scale)
-        case setTextColor(UIColor)
-    }
-    
-    func dispatch(_ action: Action) {
-        switch action {
-        case .bindInitialState(let builder):
-            builder(&state)
-            bindInitialState()
-        case .setText(let text):
-            state.text = text
-            bindText()
-        case .setAttributedText(let attributedString):
-            state.attributedText = attributedString
-            bindText()
-        case .setTextAligment(let alignment):
-            state.textAlignment = alignment
-            bindTextAlignment()
-        case .setScale(let typeScale):
-            state.scale = typeScale
-            bindFont()
-        case .setTextColor(let color):
-            state.textColor = color
-            bindTextColor()
-        }
-    }
-    
-    func bindInitialState() {
-        bindText()
-        bindFont()
-        bindTextColor()
-        bindTextAlignment()
-        surfaceColor = .clear
-    }
-    
-    func bindText() {
-        if let attributedText = state.attributedText {
-            label.attributedText = attributedText
-            return
-        }
-        
-        label.text = state.text
-    }
-    
-    func bindAttributedText() {
-        label.attributedText = state.attributedText
-    }
-    
-    func bindTextAlignment() {
-        label.textAlignment = state.textAlignment
-    }
-    
-    func bindFont() {
-        label.font = state.scale.font
-    }
-    
-    func bindTextColor() {
-        label.textColor = state.textColor
-    }
-}
-
-final class NeoButton: BaseView {
-    private lazy var state = State()
-    private lazy var button = UIButton().with(parent: self)
-    
-    private lazy var label: NeoLabel = {
-        let label = NeoLabel().with(parent: button)
-        label.dispatch(.bindInitialState { state in
-            state.textAlignment = .center
-        })
-        
-        return label
-    }()
-    
-    enum Size {
-        case small
-        case medium
-        case large
-        
-        var font: NeoLabel.Scale {
-            switch self {
-            case .small:
-                .titleAlt
-            case .medium:
-                .titleAlt
-            case .large:
-                .title
-            }
-        }
-        
-        var spacing: CGFloat {
-            switch self {
-            case .small:
-                2
-            case .medium:
-                12
-            case .large:
-                16
-            }
-        }
-    }
-    
-    enum Configuration {
-        case primary
-        
-        var textColor: UIColor {
-            switch self {
-            case .primary:
-                .Text.default
-            }
-        }
-        
-        var backgroundColor: UIColor {
-            switch self {
-            case .primary:
-                .Button.primary
-            }
-        }
-    }
-
-    struct State {
-        var text: String?
-        var size: Size = .small
-        var configuration: Configuration = .primary
-        var tapHandler: (() -> Void)?
-    }
-    
-    override func setupOnMovedToSuperview() {
-        button.fillToSuperview()
-    }
-    
-    enum Action {
-        case bindInitialState((inout State) -> Void)
-        case setText(String)
-        case setSize(Size)
-        case setConfiguration(Configuration)
-        case setTapHandler((() -> Void)?)
-    }
-    
-    func dispatch(_ action: Action) {
-        switch action {
-        case .bindInitialState(let builder):
-            builder(&state)
-            bindInitialState()
-        case .setText(let text):
-            state.text = text
-            bindText()
-        case .setSize(let size):
-            state.size = size
-            bindSize()
-        case .setConfiguration(let configuration):
-            state.configuration = configuration
-            bindConfiguration()
-        case .setTapHandler(let tapHandler):
-            state.tapHandler = tapHandler
-        }
-    }
-    
-    func bindInitialState() {
-        bindText()
-        bindSize()
-        bindConfiguration()
-        
-        setTapGesture()
-        
-        surfaceColor = .clear
-    }
-    
-    func setTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapButton))
-        button.addGestureRecognizer(tapGesture)
-    }
-    
-    func setupView() {
-        button.fillToSuperview()
-        setSpacing()
-    }
-    
-    func setSpacing() {
-        label.removeFromSuperview()
-        button.addSubview(label)
-        
-        label.constraint(\.topAnchor, equalTo: button.topAnchor, constant: state.size.spacing)
-        label.constraint(\.bottomAnchor, equalTo: button.bottomAnchor, constant: -state.size.spacing)
-        label.constraint(\.leadingAnchor, equalTo: button.leadingAnchor, priority: .defaultHigh, constant: 16)
-        label.constraint(\.trailingAnchor, equalTo: button.trailingAnchor, priority: .defaultHigh, constant: -16)
-    }
-    
-    @objc private func didTapButton() {
-        state.tapHandler?()
-    }
-    
-    func bindText() {
-        label.dispatch(.setText(state.text ?? ""))
-    }
-    
-    func bindSize() {
-        label.dispatch(.setScale(state.size.font))
-        setSpacing()
-    }
-    
-    func bindConfiguration() {
-        button.backgroundColor = state.configuration.backgroundColor
-        label.dispatch(.setTextColor(state.configuration.textColor))
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        button.layer.cornerRadius = button.frame.height / 2
-    }
-}
-
-final class CapsuleView: BaseView {
-    var state = State()
-    
-    struct State {
-        var view: UIView?
-        var backgroundColor: UIColor = .Button.important
-        var horizontalSpacing: CGFloat = 8
-        var verticalSpacing: CGFloat = 2
-    }
-    
-    enum Action {
-        case bindInitialState((inout State) -> Void)
-        case setView(UIView)
-        case setBackgroundColor(UIColor)
-        case setHorizontalSpacing(CGFloat)
-        case setVerticalSpacing(CGFloat)
-    }
-    
-    
-    func dispatch(_ action: Action) {
-        switch action {
-        case .bindInitialState(let builder):
-            builder(&state)
-            bindInitialState()
-        case .setView(let view):
-            state.view = view
-        case .setBackgroundColor(let color):
-            state.backgroundColor = color
-        case .setHorizontalSpacing(let horizontalSpacing):
-            state.horizontalSpacing = horizontalSpacing
-        case .setVerticalSpacing(let verticalSpacing):
-            state.verticalSpacing = verticalSpacing
-        }
-    }
-    
-    func bindInitialState() {
-        bindView()
-        bindBackgroundColor()
-        bindSpacing()
-    }
-    
-    func bindView() {
-        guard let view = state.view else {
-            return
-        }
-        
-        subviews.forEach {
-            $0.removeFromSuperview()
-        }
-        
-        addSubview(view)
-    }
-    
-    func bindBackgroundColor() {
-        backgroundColor = state.backgroundColor
-    }
-    
-    func bindSpacing() {
-        bindView()
-        state.view?.fillToSuperview(
-            horizontalSpacing: state.horizontalSpacing,
-            verticalSpacing: state.verticalSpacing
-        )
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        clipsToBounds = true
-        layer.cornerRadius = frame.height / 2
-    }
-}
+import NeoBase
 
 final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegateProviding {
     var viewModel: WealthProductCellViewModel? {
@@ -389,7 +31,7 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
         label.dispatch(.bindInitialState { state in
             state.text = "Populer"
             state.scale = .ternary
-            state.textColor = .white
+            state.textColor = .neo(.text, color: .primary)
         })
         
         let capsuleView = CapsuleView()
@@ -406,7 +48,6 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
     private lazy var descriptionLabel: NeoLabel = {
         let label = NeoLabel()
         label.dispatch(.bindInitialState { state in
-            state.textColor = .Text.default
             state.scale = .subtitle
         })
         
@@ -436,7 +77,7 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
         label.dispatch(.bindInitialState { state in
             state.text = "Bunga"
             state.scale = .subtitle
-            state.textColor = .Text.subdued
+            state.textColor = .neo(.text, color: .subdued)
         })
         
         return label
@@ -461,7 +102,7 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
         let label = NeoLabel()
         label.dispatch(.bindInitialState { state in
             state.text = "Mulai dari"
-            state.textColor = .Text.subdued
+            state.textColor = .neo(.text, color: .subdued)
             state.scale = .subtitle
         })
         
@@ -548,9 +189,8 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
 // MARK: - Private Functionality
 private extension WealthProductCell {
     func setupViews() {
-        surfaceColor = .Surface.default
-        containerView.fillToSuperview(horizontalSpacing: 16)
-        contentStackView.fillToSuperview(horizontalSpacing: 16, verticalSpacing: 16)
+        containerView.fillSuperview(horizontalSpacing: 16)
+        contentStackView.fillSuperview(horizontalSpacing: 16, verticalSpacing: 16)
     }
     
     func setupProductView() {
@@ -584,17 +224,17 @@ private extension WealthProductCell {
     
     func setupRate(with value: String) {
         let producer = AttributedStringProducer(from: value)
-            .assign(.foregroundColor(.Text.highlight))
-            .assign(.font(NeoLabel.Scale.title.font))
-            .assign(.font(NeoLabel.Scale.ternary.font), for: "p.a.")
+            .assign(.foregroundColor(.neo(.text, color: .highlight)))
+            .assign(.font(.title))
+            .assign(.font(.ternary), for: "p.a.")
         
         rateLabel.dispatch(.setAttributedText(producer.get()))
     }
     
     func setupStartingAmount(with value: String) {
         let producer = AttributedStringProducer(from: value)
-            .assign(.foregroundColor(.Text.default))
-            .assign(.font(NeoLabel.Scale.titleAlt.font))
+            .assign(.foregroundColor(.neo(.text, color: .default)))
+            .assign(.font(.titleAlt))
         
         startAmountLabel.dispatch(.setAttributedText(producer.get()))
     }
@@ -670,9 +310,9 @@ private extension WealthProductCell {
          
         let borderLayer = CAShapeLayer()
         borderLayer.path = path.cgPath
-        borderLayer.strokeColor = UIColor.Border.default.cgColor
         borderLayer.lineWidth = borderWidth
-        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = .neo(.border, color: .default)
+        borderLayer.fillColor = .neo(.surface, color: .clear)
             
         containerView.layer.addSublayer(borderLayer)
         superview?.clipsToBounds = false

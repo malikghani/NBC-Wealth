@@ -8,27 +8,6 @@
 import Foundation
 
 /// A helper struct for creating and customizing attributed strings without typing the same code repeatedly.
-///
-/// Example usage:
-/// ```
-/// let stringProducer = AttributedStringProducer(from: "Klik bayar berarti kamu menyetujui Syarat & Ketentuan.")
-///                                              .assign(.foregroundColor(.Text_Subdued))
-///                                              .assign(.font(.HDS_Paragraph_XSmall()))
-///
-/// let tncText = "Syarat & Ketentuan."
-/// stringProducer
-///               // Assign the foregroundColor
-///               .assign(.foregroundColor(.Text_Highlight), for: tncText)
-///               // Assign the font
-///               .assign(.font(.HDS_Label_Small()), for: tncText)
-///
-/// let backgroundedText = "ra"
-/// stringProducer
-///              // Set the background color for all character matches with the backgroundedText
-///              .assign(.background(.Icon_Error), for: backgroundedText, recursive: true)
-///
-/// let attributedString = stringProducer.get()
-/// ```
 public struct AttributedStringProducer {
     /// The source text used to create the attributed string.
     ///

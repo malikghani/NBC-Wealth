@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NeoBase
 
 /// A default table view cell with common setup procedures.
 open class BaseTableViewCell: UITableViewCell {
@@ -14,15 +15,15 @@ open class BaseTableViewCell: UITableViewCell {
     /// This property is overridden to provide a default `.surfaceDefault` background color.
     ///
     /// - Note: Setting a new background color will update the appearance of the cell.
-    open var surfaceColor: UIColor = .white {
+    open var surfaceColor: NeoColor = .neo(.surface, color: .default) {
         didSet {
-            super.backgroundColor = surfaceColor
+            super.backgroundColor = surfaceColor.value
         }
     }
     
     /// Performs initial setup for the cell.
     open func setupOnInit() {
-        backgroundColor = surfaceColor
+        backgroundColor = surfaceColor.value
     }
     
     /// Performs setup when the cell is moved to a superview.

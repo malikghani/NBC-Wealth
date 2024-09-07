@@ -6,18 +6,15 @@
 //
 
 import UIKit
-import Base
 import Combine
 import Domain
+import NeoBase
 
 final class WealthViewController: BaseViewController<WealthViewModel> {
     private var cancellables = Set<AnyCancellable>()
     
     private lazy var tableView: DiffableTableView<WealthViewController, WealthViewController> = {
-        let tableView = DiffableTableView<WealthViewController, WealthViewController>(
-            backgroundColor: .Surface.default,
-            provider: self
-        )
+        let tableView = DiffableTableView<WealthViewController, WealthViewController>(provider: self)
         tableView.register(WealthProductCell.self)
         tableView.setRefreshControl { [weak self] in
             self?.viewModel.fetchProducts()
@@ -40,7 +37,6 @@ extension WealthViewController {
 private extension WealthViewController {
     func setupViews() {
         title = "Wealth"
-        surfaceColor = .Surface.default
         
         tableView.constraint(\.leadingAnchor, equalTo: view.leadingAnchor)
         tableView.constraint(\.topAnchor, equalTo: view.safeAreaLayoutGuide.topAnchor)
@@ -82,8 +78,6 @@ private extension WealthViewController {
 // MARK: - Navigation Functionality
 private extension WealthViewController {
     func pushProductDetail(with product: Wealth) {
-        print(#function)
-        
         tableView.scroll(to: .productList("Fixed Income"), scrollToTopIfMissing: true)
     }
 }
@@ -114,41 +108,5 @@ extension WealthViewController: DiffableViewScrollDelegate {
 extension WealthViewController: WealthProductCellDelegate {
     func didTapProductCallToAction(of product: Wealth) {
         pushProductDetail(with: product)
-    }
-}
-
-final class WealthProductHeaderView: BaseView {
-    private var section: WealthSection
-    
-    private lazy var titleLabel: NeoLabel = {
-        let label = NeoLabel().with(parent: self)
-        label.dispatch(.bindInitialState { state in
-            state.scale = .title
-        })
-        
-        return label
-    }()
-    
-    init?(section: WealthSection) {
-        guard section.title != nil else {
-            return nil
-        }
-        
-        self.section = section
-        super.init()
-        setupViews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-// MARK: - Private Functionality
-private extension WealthProductHeaderView {
-    func setupViews() {
-        surfaceColor = .Surface.default
-        titleLabel.dispatch(.setText(section.title ?? ""))
-        titleLabel.fillToSuperview(horizontalSpacing: 16, verticalSpacing: 12)
     }
 }

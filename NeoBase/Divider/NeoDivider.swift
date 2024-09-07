@@ -69,8 +69,7 @@ private extension NeoDivider {
         divider.removeFromSuperview()
         addSubview(divider)
         
-        surfaceColor = .white// .Surface.default
-        divider.fillToSuperview()
+        divider.fillSuperview()
         divider.constraint(\.heightAnchor, constant: 1)
     }
     
@@ -128,7 +127,7 @@ private extension NeoDivider {
         let shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = state.foregroundColor.value.cgColor
         shapeLayer.lineWidth = state.height
-        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.fillColor = .neo(.surface, color: .clear)
         shapeLayer.lineDashPattern = configuration.pattern
         shapeLayer.lineCap = configuration.lineCap
 

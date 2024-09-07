@@ -12,7 +12,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNavigationBar()
     
-    
         return true
     }
 }
@@ -21,12 +20,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
     func setupNavigationBar() {
         let appearance = UINavigationBarAppearance()
+        appearance.shadowColor = .neo(.surface, color: .default)
+        appearance.backgroundColor = .neo(.surface, color: .default)
         appearance.titlePositionAdjustment = UIOffset(
             horizontal: -.greatestFiniteMagnitude,
             vertical: 0
         )
-        appearance.backgroundColor = .Surface.default
-        appearance.shadowColor = .Surface.default
         
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

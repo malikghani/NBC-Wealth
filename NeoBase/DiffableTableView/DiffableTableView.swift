@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NeoBase
 
 /// A TableView class that implements `DiffableDatasource` to reduce complexity and code boilerplate for displaying data lists in the app.
 ///
@@ -138,7 +139,7 @@ public final class DiffableTableView<
     /// ```
     public init(
         style: UITableView.Style = .grouped,
-        backgroundColor: UIColor = .white,
+        backgroundColor: NeoColor<Surface> = .neo(.surface, color: .default),
         rowAnimation: RowAnimation = .fade,
         provider: Provider,
         scrollDelegate: ScrollDelegate? = nil
@@ -160,7 +161,7 @@ public final class DiffableTableView<
         delegate = self
         dataSource = source
         applyLongPressGesture()
-        self.backgroundColor = backgroundColor
+        self.backgroundColor = backgroundColor.value
         self.scrollDelegate = scrollDelegate
         
         if #available(iOS 15.0, *) {

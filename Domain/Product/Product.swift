@@ -8,7 +8,7 @@
 import Foundation
 
 /// A protocol that represents a basic product.
-public protocol Product: Decodable {
+public protocol Product: Decodable, Hashable {
     /// The name of the product.
     var name: String { get }
     

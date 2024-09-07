@@ -6,13 +6,15 @@
 //
 
 import Foundation
-import Base
+import NeoBase
 
+/// An enumeration representing different sections in a wealth-related view.
 enum WealthSection: Hashable {
-    case productList(String)
+    /// Represents a section displaying a list of products.
+    case productList(_ title: String)
 }
 
-// MARK: - Public Functionality
+// MARK: - SectionStickable Conformance
 extension WealthSection: SectionStickable {
     var title: String? {
         switch self {
