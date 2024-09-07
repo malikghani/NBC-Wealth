@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NeoBase
 
 /// A TableView class that implements `DiffableDatasource` to reduce complexity and code boilerplate for displaying data lists in the app.
 ///
@@ -24,7 +23,7 @@ public final class DiffableTableView<
     private weak var scrollDelegate: ScrollDelegate?
     
     /// The current section header that is sticky.
-    private var stickyHeaderView: UIView?
+    public private(set) var stickyHeaderView: UIView?
 
     /// Shorthand for the Data Source Snapshot
     public typealias Snapshot = NSDiffableDataSourceSnapshot<Provider.Section, Provider.Item>
@@ -260,11 +259,11 @@ public extension DiffableTableView {
     /// - Parameters:
     ///   - item: The item to scroll to.
     ///   - scrollToTopIfMissing: A boolean value indicating whether to scroll to the top of the table view if the item is not found. Defaults to `false`.
-    func scroll(to item: Provider.Item, scrollToTopIfMissing: Bool = false) {
+    func scroll(to item: Provider.Item, position: UITableView.ScrollPosition = .middle, scrollToTopIfMissing: Bool = false) {
         if let id = currentSnapshot.itemIdentifiers.first(where: { $0 == item }), let index = currentSnapshot.indexOfItem(id) {
-            scroll(to: .init(row: index, section: .zero))
+            scroll(to: .init(row: index, section: .zero), position: position)
         } else if scrollToTopIfMissing {
-            scroll(to: .init())
+            scroll(to: .init(), position: position)
         }
     }
 
@@ -273,21 +272,21 @@ public extension DiffableTableView {
     ///
     /// - Parameter section: The section to scroll to.
     ///   - scrollToTopIfMissing: A boolean value indicating whether to scroll to the top of the table view if the section is not found. Defaults to `false`.
-    func scroll(to section: Provider.Section, scrollToTopIfMissing: Bool = false) {
+    func scroll(to section: Provider.Section, position: UITableView.ScrollPosition = .middle, scrollToTopIfMissing: Bool = false) {
         if let id = currentSnapshot.sectionIdentifiers.first(where: { $0 == section }), let index = currentSnapshot.indexOfSection(id) {
-            scroll(to: .init(row: .zero, section: index))
+            scroll(to: .init(row: .zero, section: index), position: position)
         } else if scrollToTopIfMissing {
-            scroll(to: .init())
+            scroll(to: .init(), position: position)
         }
     }
 
     /// Scrolls to a specific index path in the table view with a spring animation.
     ///
     /// - Parameter indexPath: The index path to scroll to.
-    func scroll(to indexPath: IndexPath) {
+    func scroll(to indexPath: IndexPath, position: UITableView.ScrollPosition) {
         contentOffset.y += 1
         springAnimation(duration: 0.75, damping: 0.85, velocity: 0.8, animation: { [weak self] in
-            self?.scrollToRow(at: indexPath, at: .middle, animated: false)
+            self?.scrollToRow(at: indexPath, at: position, animated: false)
         })
     }
 }
@@ -305,8 +304,6 @@ public extension DiffableTableView {
     /// - Remove the sticky header view if it is no longer needed.
     func handleStickyHeaderView(at section: Provider.Section) {
         guard let sectionStickable = section as? (any SectionStickable), sectionStickable.shouldStick else {
-            stickyHeaderView?.removeFromSuperview()
-            stickyHeaderView = nil
             return
         }
 
@@ -323,11 +320,13 @@ public extension DiffableTableView {
             if stickyHeaderView == nil {
                 stickyHeaderView = provider?.setHeaderView(in: section)
                 stickyHeaderView?.frame = CGRect(x: 0, y: navigationBarHeight, width: bounds.width, height: headerHeight)
-                if let stickyHeaderView = stickyHeaderView {
+                if let stickyHeaderView {
                     superview?.addSubview(stickyHeaderView)
+                    contentInset = .init(top: headerHeight, left: 0, bottom: 0, right: 0)
                 }
             }
         } else {
+            contentInset = .zero
             stickyHeaderView?.removeFromSuperview()
             stickyHeaderView = nil
         }

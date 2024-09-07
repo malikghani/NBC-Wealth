@@ -43,6 +43,13 @@
 		E11BD4702C8C783000EC6777 /* NeoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD46F2C8C783000EC6777 /* NeoButton.swift */; };
 		E11BD4722C8C78A700EC6777 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4712C8C78A700EC6777 /* CapsuleView.swift */; };
 		E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */; };
+		E11BD47B2C8CC76500EC6777 /* WealthProductNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD47A2C8CC76500EC6777 /* WealthProductNavigationCell.swift */; };
+		E11BD47D2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD47C2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift */; };
+		E11BD47F2C8CC7EB00EC6777 /* WealthProductNavigationHeaderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD47E2C8CC7EB00EC6777 /* WealthProductNavigationHeaderViewDelegate.swift */; };
+		E11BD4862C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4852C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift */; };
+		E11BD4882C8CE7EB00EC6777 /* NeoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4762C8CBE7500EC6777 /* NeoTabView.swift */; };
+		E11BD4892C8CE7EB00EC6777 /* TabItemRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4802C8CCF0200EC6777 /* TabItemRepresentable.swift */; };
+		E11BD48A2C8CE7EB00EC6777 /* NeoTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4832C8CD0D800EC6777 /* NeoTabItemView.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -185,6 +192,13 @@
 		E11BD46F2C8C783000EC6777 /* NeoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoButton.swift; sourceTree = "<group>"; };
 		E11BD4712C8C78A700EC6777 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductHeaderView.swift; sourceTree = "<group>"; };
+		E11BD4762C8CBE7500EC6777 /* NeoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoTabView.swift; sourceTree = "<group>"; };
+		E11BD47A2C8CC76500EC6777 /* WealthProductNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductNavigationCell.swift; sourceTree = "<group>"; };
+		E11BD47C2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductNavigationHeaderViewModel.swift; sourceTree = "<group>"; };
+		E11BD47E2C8CC7EB00EC6777 /* WealthProductNavigationHeaderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductNavigationHeaderViewDelegate.swift; sourceTree = "<group>"; };
+		E11BD4802C8CCF0200EC6777 /* TabItemRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemRepresentable.swift; sourceTree = "<group>"; };
+		E11BD4832C8CD0D800EC6777 /* NeoTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoTabItemView.swift; sourceTree = "<group>"; };
+		E11BD4852C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductNavigationHeaderView.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -381,6 +395,44 @@
 				E11BD4712C8C78A700EC6777 /* CapsuleView.swift */,
 			);
 			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		E11BD4782C8CC74800EC6777 /* WealthProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */,
+				E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */,
+				E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */,
+			);
+			path = WealthProductCell;
+			sourceTree = "<group>";
+		};
+		E11BD4792C8CC75500EC6777 /* WealthProductNavigationCell */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD47A2C8CC76500EC6777 /* WealthProductNavigationCell.swift */,
+			);
+			path = WealthProductNavigationCell;
+			sourceTree = "<group>";
+		};
+		E11BD4822C8CD07300EC6777 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD4762C8CBE7500EC6777 /* NeoTabView.swift */,
+				E11BD4832C8CD0D800EC6777 /* NeoTabItemView.swift */,
+				E11BD4802C8CCF0200EC6777 /* TabItemRepresentable.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		E11BD4872C8CE57500EC6777 /* WealthProductHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD4852C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift */,
+				E11BD47E2C8CC7EB00EC6777 /* WealthProductNavigationHeaderViewDelegate.swift */,
+				E11BD47C2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift */,
+			);
+			path = WealthProductHeaderView;
 			sourceTree = "<group>";
 		};
 		E1D852FD2C880F7E00DE6CC6 = {
@@ -615,10 +667,10 @@
 		E1D853D32C8A31C700DE6CC6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */,
+				E11BD4872C8CE57500EC6777 /* WealthProductHeaderView */,
+				E11BD4792C8CC75500EC6777 /* WealthProductNavigationCell */,
+				E11BD4782C8CC74800EC6777 /* WealthProductCell */,
 				E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */,
-				E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */,
-				E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -637,6 +689,7 @@
 				E11BD44F2C8C76BF00EC6777 /* Helper */,
 				E1D853C32C8A162C00DE6CC6 /* Provider */,
 				E11BD4752C8C79F500EC6777 /* Subclasses */,
+				E11BD4822C8CD07300EC6777 /* TabView */,
 				E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */,
 				E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */,
 			);
@@ -904,9 +957,13 @@
 				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
 				E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */,
 				E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */,
+				E11BD47D2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift in Sources */,
+				E11BD47B2C8CC76500EC6777 /* WealthProductNavigationCell.swift in Sources */,
 				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
 				E1D853D02C8A315600DE6CC6 /* WealthSection.swift in Sources */,
+				E11BD4862C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift in Sources */,
 				E1D853CA2C8A29E600DE6CC6 /* WealthViewState.swift in Sources */,
+				E11BD47F2C8CC7EB00EC6777 /* WealthProductNavigationHeaderViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1048,9 @@
 				E11BD46A2C8C777F00EC6777 /* DelegateProviding.swift in Sources */,
 				E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */,
 				E11BD4572C8C776700EC6777 /* BaseViewController.swift in Sources */,
+				E11BD4882C8CE7EB00EC6777 /* NeoTabView.swift in Sources */,
+				E11BD4892C8CE7EB00EC6777 /* TabItemRepresentable.swift in Sources */,
+				E11BD48A2C8CE7EB00EC6777 /* NeoTabItemView.swift in Sources */,
 				E11BD4702C8C783000EC6777 /* NeoButton.swift in Sources */,
 				E11BD4582C8C776700EC6777 /* BaseViewControllerDelegate.swift in Sources */,
 				E11BD4592C8C776700EC6777 /* BaseTableViewCell.swift in Sources */,

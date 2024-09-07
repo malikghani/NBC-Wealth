@@ -14,8 +14,8 @@ final class WealthViewController: BaseViewController<WealthViewModel> {
     private var cancellables = Set<AnyCancellable>()
     
     private lazy var tableView: DiffableTableView<WealthViewController, WealthViewController> = {
-        let tableView = DiffableTableView<WealthViewController, WealthViewController>(provider: self)
-        tableView.register(WealthProductCell.self)
+        let tableView = DiffableTableView<WealthViewController, WealthViewController>(provider: self, scrollDelegate: self)
+        tableView.register(WealthProductCell.self, WealthProductNavigationCell.self)
         tableView.setRefreshControl { [weak self] in
             self?.viewModel.fetchProducts()
         }
@@ -78,7 +78,7 @@ private extension WealthViewController {
 // MARK: - Navigation Functionality
 private extension WealthViewController {
     func pushProductDetail(with product: Wealth) {
-        tableView.scroll(to: .productList("Fixed Income"), scrollToTopIfMissing: true)
+        
     }
 }
 
@@ -86,6 +86,8 @@ private extension WealthViewController {
 extension WealthViewController: DiffableTableViewDataProvider {
     func provideCell(for section: WealthSection, in item: WealthItem, at indexPath: IndexPath) -> UITableViewCell? {
         switch item {
+        case .productNavigation:
+            return tableView.dequeue(WealthProductNavigationCell.self, for: indexPath)
         case .product(let wealth, let position):
             let viewModel = WealthProductCellViewModel(product: wealth, position: position)
             return tableView.dequeue(WealthProductCell.self, for: indexPath, with: viewModel, delegate: self)
@@ -93,14 +95,26 @@ extension WealthViewController: DiffableTableViewDataProvider {
     }
     
     func setHeaderView(in section: WealthSection) -> UIView? {
-        WealthProductHeaderView(section: section)
+        switch section {
+        case .productList:
+            return WealthProductHeaderView(section: section)
+        case .productNavigation(let groups):
+            let viewModel = WealthProductNavigationHeaderViewModel(groups: groups)
+            let headerView = WealthProductNavigationHeaderView(viewModel: viewModel, delegate: self)
+            return headerView
+        }
     }
 }
 
 // MARK: - DiffableViewScrollDelegate Conformance
 extension WealthViewController: DiffableViewScrollDelegate {
     func diffableViewDidScroll(to position: DiffableViewScrollPosition, at section: WealthSection?) {
-       
+        guard let section else {
+            return
+        }
+        
+        let group = viewModel.getProductGroup(for: section.title)
+        (tableView.stickyHeaderView as? WealthProductNavigationHeaderView)?.setSelectedItem(to: group)
     }
 }
 
@@ -108,5 +122,12 @@ extension WealthViewController: DiffableViewScrollDelegate {
 extension WealthViewController: WealthProductCellDelegate {
     func didTapProductCallToAction(of product: Wealth) {
         pushProductDetail(with: product)
+    }
+}
+
+// MARK: - WealthProductNavigationCellDelegate Conformance
+extension WealthViewController: WealthProductNavigationHeaderViewDelegate {
+    func didTapProductGroup(of productGroup: ProductGroup<Wealth>) {
+        tableView.scroll(to: .productList(productGroup.name), position: .top)
     }
 }

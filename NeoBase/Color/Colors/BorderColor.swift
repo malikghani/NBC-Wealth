@@ -8,4 +8,5 @@
 /// NeoColor for Border
 public enum Border: String, NamespacedColor {
     case `default`
+    case primary
 }
