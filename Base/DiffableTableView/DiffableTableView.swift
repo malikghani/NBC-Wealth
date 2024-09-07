@@ -10,16 +10,20 @@ import UIKit
 /// A TableView class that implements `DiffableDatasource` to reduce complexity and code boilerplate for displaying data lists in the app.
 ///
 /// To use this class, controller must conforms to `DiffableTableViewDataProvider` protocol, serving as the data and behavior provider for the table view.
-///
-/// - SeeAlso: [**Confluence:** DiffableTableView Documentation](https://graveltechnologies.atlassian.net/l/cp/Zz3kuWuQ)
-public final class DiffableTableView<Provider: DiffableTableViewDataProvider>: UITableView, UITableViewDelegate {
+public final class DiffableTableView<
+        Provider: DiffableTableViewDataProvider,
+        ScrollDelegate: DiffableViewScrollDelegate
+    >: UITableView, UITableViewDelegate where ScrollDelegate.Section == Provider.Section {
     /// Acts as the data and behavior provider for the table view.
     ///
     /// Data and behavior provider for the table view, supplying implementations for cell, header, footer, and press actions.
     private weak var provider: Provider?
     
     /// The scroll delegate for this table view.
-    private weak var scrollDelegate: DiffableViewScrollDelegate?
+    private weak var scrollDelegate: ScrollDelegate?
+    
+    /// The current section header that is sticky.
+    private var stickyHeaderView: UIView?
 
     /// Shorthand for the Data Source Snapshot
     public typealias Snapshot = NSDiffableDataSourceSnapshot<Provider.Section, Provider.Item>
@@ -106,7 +110,12 @@ public final class DiffableTableView<Provider: DiffableTableViewDataProvider>: U
     /// Begin of UIScrollViewDelegate Protocol Conformance
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = DiffableViewScrollPosition(inside: scrollView)
-        scrollDelegate?.diffableViewDidScroll(to: position)
+        let section = getSection(at: scrollView.contentOffset)
+        scrollDelegate?.diffableViewDidScroll(to: position, at: section)
+        
+        if let section {
+            handleStickyHeaderView(at: section)
+        }
     }
     /// End of UIScrollViewDelegate Protocol Conformance
     
@@ -132,7 +141,7 @@ public final class DiffableTableView<Provider: DiffableTableViewDataProvider>: U
         backgroundColor: UIColor = .white,
         rowAnimation: RowAnimation = .fade,
         provider: Provider,
-        scrollDelegate: DiffableViewScrollDelegate? = nil
+        scrollDelegate: ScrollDelegate? = nil
     ) {
         super.init(frame: .zero, style: style)
         self.provider = provider
@@ -201,6 +210,30 @@ public extension DiffableTableView {
         currentSnapshot.sectionIdentifiers[index]
     }
     
+    /// Retrieves the section at a given offset within the scroll view.
+    ///
+    /// - Parameter offset: The `CGPoint` representing the offset within the scroll view, used to determine the section.
+    /// - Returns: An optional `Provider.Section` object corresponding to the section at the given offset.
+    func getSection(at offset: CGPoint) -> Provider.Section? {
+        guard let section = getSectionIndex(at: offset) else {
+            return nil
+        }
+        
+        return getSection(at: section)
+    }
+
+    /// Retrieves the index of the section at a given offset within the scroll view.
+    ///
+    /// - Parameter offset: The `CGPoint` representing the offset within the scroll view, used to determine the section index.
+    /// - Returns: An optional `Int` representing the section index at the given offset.
+    func getSectionIndex(at offset: CGPoint) -> Int? {
+        guard let indexPath = indexPathsForVisibleRows?.first else {
+            return nil
+        }
+        
+        return indexPath.section
+    }
+    
     /// Retrieves the item for given indexPath.
     ///
     /// - Parameter indexPath: The index path for the item.
@@ -251,9 +284,52 @@ public extension DiffableTableView {
     ///
     /// - Parameter indexPath: The index path to scroll to.
     func scroll(to indexPath: IndexPath) {
-        springAnimation(duration: 1.0, damping: 0.85, velocity: 0.8, animation: { [weak self] in
+        contentOffset.y += 1
+        springAnimation(duration: 0.75, damping: 0.85, velocity: 0.8, animation: { [weak self] in
             self?.scrollToRow(at: indexPath, at: .middle, animated: false)
         })
+    }
+}
+
+// MARK: - Sticky Header View Functionality
+public extension DiffableTableView {
+    /// Manages the sticky header view for a given section.
+    ///
+    /// - Parameter section: The `Provider.Section` instance for which the sticky header view needs to be managed.
+    /// - Important: The section must conform to `SectionStickable` to determine if it should stick.
+    ///
+    /// This method will:
+    /// - Add the sticky header view if it is not already added and the section should stick.
+    /// - Update the position of the sticky header view based on the navigation bar height and header height.
+    /// - Remove the sticky header view if it is no longer needed.
+    func handleStickyHeaderView(at section: Provider.Section) {
+        guard let sectionStickable = section as? (any SectionStickable), sectionStickable.shouldStick else {
+            stickyHeaderView?.removeFromSuperview()
+            stickyHeaderView = nil
+            return
+        }
+
+        guard let sectionIndex = getSectionIndex(at: contentOffset) else {
+            return
+        }
+
+        let headerRect = rectForHeader(inSection: sectionIndex)
+        let headerHeight = headerRect.height
+        let shouldStickHeader = contentOffset.y > headerRect.origin.y
+        let navigationBarHeight = parentViewController?.totalNavigationBarHeight ?? 0
+
+        if shouldStickHeader {
+            if stickyHeaderView == nil {
+                stickyHeaderView = provider?.setHeaderView(in: section)
+                stickyHeaderView?.frame = CGRect(x: 0, y: navigationBarHeight, width: bounds.width, height: headerHeight)
+                if let stickyHeaderView = stickyHeaderView {
+                    superview?.addSubview(stickyHeaderView)
+                }
+            }
+        } else {
+            stickyHeaderView?.removeFromSuperview()
+            stickyHeaderView = nil
+        }
     }
 }
 

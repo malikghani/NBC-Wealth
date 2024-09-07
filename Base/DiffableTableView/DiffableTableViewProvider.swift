@@ -8,8 +8,6 @@
 import UIKit
 
 /// A protocol for providing data and behavior to a `DiffableTableView`.
-///
-/// - SeeAlso: [**Confluence:** DiffableTableView Documentation](https://graveltechnologies.atlassian.net/l/cp/Zz3kuWuQ)
 public protocol DiffableTableViewDataProvider: AnyObject {
     /// The type of the Section in Diffable Data Source
     associatedtype Section: Hashable, Sendable

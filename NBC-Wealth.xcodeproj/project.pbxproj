@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */; };
+		E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -43,6 +45,35 @@
 		E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */; };
 		E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */; };
 		E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */; };
+		E1D853C82C8A186400DE6CC6 /* WealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C72C8A186300DE6CC6 /* WealthViewModel.swift */; };
+		E1D853CA2C8A29E600DE6CC6 /* WealthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C92C8A29E600DE6CC6 /* WealthViewState.swift */; };
+		E1D853CD2C8A30BC00DE6CC6 /* libNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853432C8827B500DE6CC6 /* libNetworking.a */; };
+		E1D853D02C8A315600DE6CC6 /* WealthSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853CF2C8A315600DE6CC6 /* WealthSection.swift */; };
+		E1D853D22C8A315C00DE6CC6 /* WealthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D12C8A315C00DE6CC6 /* WealthItem.swift */; };
+		E1D853D52C8A31DD00DE6CC6 /* WealthProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */; };
+		E1D853D72C8A320500DE6CC6 /* WealthProductCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */; };
+		E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */; };
+		E1D853DB2C8A33D800DE6CC6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DA2C8A33D800DE6CC6 /* UITableView+Extension.swift */; };
+		E1D853DD2C8A340200DE6CC6 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DC2C8A340200DE6CC6 /* UITableViewCell+Extension.swift */; };
+		E1D853DF2C8A34CC00DE6CC6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */; };
+		E1D853E12C8BF33600DE6CC6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E02C8BF33600DE6CC6 /* BaseView.swift */; };
+		E1D853E32C8BF6CE00DE6CC6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */; };
+		E1D853E52C8BF6F500DE6CC6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E42C8BF6F500DE6CC6 /* UIStackView+Extension.swift */; };
+		E1D853E72C8BF83700DE6CC6 /* AttributedStringProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */; };
+		E1D853E92C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */; };
+		E1D853EB2C8C1B0200DE6CC6 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EA2C8C1B0200DE6CC6 /* CALayer+Extension.swift */; };
+		E1D853ED2C8C398C00DE6CC6 /* Numeric+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EC2C8C398C00DE6CC6 /* Numeric+Extension.swift */; };
+		E1D853EF2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EE2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift */; };
+		E1D853F12C8C577500DE6CC6 /* SectionStickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F02C8C577500DE6CC6 /* SectionStickable.swift */; };
+		E1D853F42C8C5EFD00DE6CC6 /* NeoDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */; };
+		E1D853F62C8C5F5D00DE6CC6 /* LineDashConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */; };
+		E1D853FF2C8C5FC200DE6CC6 /* NeoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1D854022C8C5FC200DE6CC6 /* NeoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */; };
+		E1D854032C8C5FC200DE6CC6 /* NeoBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1D854092C8C5FD900DE6CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */; };
+		E1D8540A2C8C603900DE6CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */; };
+		E1D8540F2C8C6A4700DE6CC6 /* NeoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */; };
+		E1D854112C8C6AD200DE6CC6 /* BorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D854102C8C6AD200DE6CC6 /* BorderColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +119,20 @@
 			remoteGlobalIDString = E1D8539F2C89768C00DE6CC6;
 			remoteInfo = Base;
 		};
+		E1D853CB2C8A30B700DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853422C8827B500DE6CC6;
+			remoteInfo = Networking;
+		};
+		E1D854002C8C5FC200DE6CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D853FB2C8C5FC200DE6CC6;
+			remoteInfo = NeoBase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,9 +172,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D854072C8C5FC200DE6CC6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1D854032C8C5FC200DE6CC6 /* NeoBase.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNamespaces.swift; sourceTree = "<group>"; };
+		E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamespacedColors.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +228,32 @@
 		E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewScrollDelegate.swift; sourceTree = "<group>"; };
 		E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E1D853C72C8A186300DE6CC6 /* WealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthViewModel.swift; sourceTree = "<group>"; };
+		E1D853C92C8A29E600DE6CC6 /* WealthViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthViewState.swift; sourceTree = "<group>"; };
+		E1D853CF2C8A315600DE6CC6 /* WealthSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthSection.swift; sourceTree = "<group>"; };
+		E1D853D12C8A315C00DE6CC6 /* WealthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthItem.swift; sourceTree = "<group>"; };
+		E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductCell.swift; sourceTree = "<group>"; };
+		E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductCellDelegate.swift; sourceTree = "<group>"; };
+		E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductCellViewModel.swift; sourceTree = "<group>"; };
+		E1D853DA2C8A33D800DE6CC6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E1D853DC2C8A340200DE6CC6 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		E1D853E02C8BF33600DE6CC6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		E1D853E42C8BF6F500DE6CC6 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringProducer.swift; sourceTree = "<group>"; };
+		E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedStringProducer+KeyValue.swift"; sourceTree = "<group>"; };
+		E1D853EA2C8C1B0200DE6CC6 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		E1D853EC2C8C398C00DE6CC6 /* Numeric+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extension.swift"; sourceTree = "<group>"; };
+		E1D853EE2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		E1D853F02C8C577500DE6CC6 /* SectionStickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionStickable.swift; sourceTree = "<group>"; };
+		E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoDivider.swift; sourceTree = "<group>"; };
+		E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDashConfiguration.swift; sourceTree = "<group>"; };
+		E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeoBase.h; sourceTree = "<group>"; };
+		E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoColor.swift; sourceTree = "<group>"; };
+		E1D854102C8C6AD200DE6CC6 /* BorderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +264,7 @@
 				E1D853A72C8976A100DE6CC6 /* libBase.a in Frameworks */,
 				E1D8538B2C89637A00DE6CC6 /* libData.a in Frameworks */,
 				E1D853772C8962F400DE6CC6 /* libDomain.a in Frameworks */,
+				E1D854022C8C5FC200DE6CC6 /* NeoBase.framework in Frameworks */,
 				E1D853512C88B01E00DE6CC6 /* libNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,10 +301,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D853CD2C8A30BC00DE6CC6 /* libNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E1D8539D2C89768C00DE6CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853F92C8C5FC200DE6CC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +332,7 @@
 				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
 				E1D853A12C89768C00DE6CC6 /* Base */,
+				E1D853FD2C8C5FC200DE6CC6 /* NeoBase */,
 				E1D853072C880F7E00DE6CC6 /* Products */,
 				E1D853502C88B01E00DE6CC6 /* Frameworks */,
 			);
@@ -254,6 +348,7 @@
 				E1D8536E2C89626500DE6CC6 /* libDomain.a */,
 				E1D853842C89637300DE6CC6 /* libData.a */,
 				E1D853A02C89768C00DE6CC6 /* libBase.a */,
+				E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,7 +483,11 @@
 		E1D853992C89746400DE6CC6 /* Wealth */ = {
 			isa = PBXGroup;
 			children = (
+				E1D853D32C8A31C700DE6CC6 /* Components */,
+				E1D853CE2C8A314900DE6CC6 /* DiffableSectionItem */,
 				E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */,
+				E1D853C72C8A186300DE6CC6 /* WealthViewModel.swift */,
+				E1D853C92C8A29E600DE6CC6 /* WealthViewState.swift */,
 			);
 			path = Wealth;
 			sourceTree = "<group>";
@@ -410,12 +509,18 @@
 		E1D853A12C89768C00DE6CC6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1D853F22C8C5EF400DE6CC6 /* Neo */,
 				E1D853C42C8A163600DE6CC6 /* Extensions */,
 				E1D853C32C8A162C00DE6CC6 /* Provider */,
 				E1D853BC2C89912E00DE6CC6 /* DiffableTableView */,
 				E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */,
+				E1D853E02C8BF33600DE6CC6 /* BaseView.swift */,
 				E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */,
+				E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */,
 				E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */,
+				E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */,
+				E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */,
+				E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -427,6 +532,7 @@
 				E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */,
 				E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */,
 				E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */,
+				E1D853F02C8C577500DE6CC6 /* SectionStickable.swift */,
 			);
 			path = DiffableTableView;
 			sourceTree = "<group>";
@@ -447,11 +553,77 @@
 				E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */,
 				E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */,
 				E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */,
+				E1D853DA2C8A33D800DE6CC6 /* UITableView+Extension.swift */,
+				E1D853DC2C8A340200DE6CC6 /* UITableViewCell+Extension.swift */,
+				E1D853EA2C8C1B0200DE6CC6 /* CALayer+Extension.swift */,
+				E1D853E42C8BF6F500DE6CC6 /* UIStackView+Extension.swift */,
+				E1D853EC2C8C398C00DE6CC6 /* Numeric+Extension.swift */,
+				E1D853EE2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E1D853CE2C8A314900DE6CC6 /* DiffableSectionItem */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853CF2C8A315600DE6CC6 /* WealthSection.swift */,
+				E1D853D12C8A315C00DE6CC6 /* WealthItem.swift */,
+			);
+			path = DiffableSectionItem;
+			sourceTree = "<group>";
+		};
+		E1D853D32C8A31C700DE6CC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */,
+				E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */,
+				E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E1D853F22C8C5EF400DE6CC6 /* Neo */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */,
+				E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */,
+			);
+			path = Neo;
+			sourceTree = "<group>";
+		};
+		E1D853FD2C8C5FC200DE6CC6 /* NeoBase */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */,
+				E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */,
+				E1D8540D2C8C6A3B00DE6CC6 /* NeoColor */,
+			);
+			path = NeoBase;
+			sourceTree = "<group>";
+		};
+		E1D8540D2C8C6A3B00DE6CC6 /* NeoColor */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */,
+				E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */,
+				E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */,
+				E1D854102C8C6AD200DE6CC6 /* BorderColor.swift */,
+			);
+			path = NeoColor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E1D853F72C8C5FC200DE6CC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D853FF2C8C5FC200DE6CC6 /* NeoBase.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E1D853052C880F7E00DE6CC6 /* NBC-Wealth */ = {
@@ -461,6 +633,7 @@
 				E1D853022C880F7E00DE6CC6 /* Sources */,
 				E1D853032C880F7E00DE6CC6 /* Frameworks */,
 				E1D853042C880F7E00DE6CC6 /* Resources */,
+				E1D854072C8C5FC200DE6CC6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,6 +642,7 @@
 				E1D8538D2C89638200DE6CC6 /* PBXTargetDependency */,
 				E1D853762C89626D00DE6CC6 /* PBXTargetDependency */,
 				E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */,
+				E1D854012C8C5FC200DE6CC6 /* PBXTargetDependency */,
 			);
 			name = "NBC-Wealth";
 			productName = "NBC-Wealth";
@@ -556,6 +730,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E1D853CC2C8A30B700DE6CC6 /* PBXTargetDependency */,
 			);
 			name = Data;
 			productName = Data;
@@ -578,6 +753,24 @@
 			productName = Base;
 			productReference = E1D853A02C89768C00DE6CC6 /* libBase.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		E1D853FB2C8C5FC200DE6CC6 /* NeoBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D854042C8C5FC200DE6CC6 /* Build configuration list for PBXNativeTarget "NeoBase" */;
+			buildPhases = (
+				E1D853F72C8C5FC200DE6CC6 /* Headers */,
+				E1D853F82C8C5FC200DE6CC6 /* Sources */,
+				E1D853F92C8C5FC200DE6CC6 /* Frameworks */,
+				E1D853FA2C8C5FC200DE6CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeoBase;
+			productName = NeoBase;
+			productReference = E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -612,6 +805,10 @@
 					E1D8539F2C89768C00DE6CC6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					E1D853FB2C8C5FC200DE6CC6 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
 				};
 			};
 			buildConfigurationList = E1D853012C880F7E00DE6CC6 /* Build configuration list for PBXProject "NBC-Wealth" */;
@@ -630,10 +827,11 @@
 				E1D853052C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531B2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */,
-				E1D853422C8827B500DE6CC6 /* Networking */,
-				E1D8536D2C89626500DE6CC6 /* Domain */,
-				E1D853832C89637300DE6CC6 /* Data */,
 				E1D8539F2C89768C00DE6CC6 /* Base */,
+				E1D853832C89637300DE6CC6 /* Data */,
+				E1D8536D2C89626500DE6CC6 /* Domain */,
+				E1D853422C8827B500DE6CC6 /* Networking */,
+				E1D853FB2C8C5FC200DE6CC6 /* NeoBase */,
 			);
 		};
 /* End PBXProject section */
@@ -643,6 +841,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D8540A2C8C603900DE6CC6 /* Assets.xcassets in Resources */,
 				E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */,
 				E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */,
 			);
@@ -662,6 +861,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1D853FA2C8C5FC200DE6CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D854092C8C5FD900DE6CC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -669,9 +876,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D853D52C8A31DD00DE6CC6 /* WealthProductCell.swift in Sources */,
+				E1D853D72C8A320500DE6CC6 /* WealthProductCellDelegate.swift in Sources */,
 				E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */,
+				E1D853C82C8A186400DE6CC6 /* WealthViewModel.swift in Sources */,
+				E1D853D22C8A315C00DE6CC6 /* WealthItem.swift in Sources */,
 				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
+				E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */,
 				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
+				E1D853D02C8A315600DE6CC6 /* WealthSection.swift in Sources */,
+				E1D853CA2C8A29E600DE6CC6 /* WealthViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,19 +942,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D853DF2C8A34CC00DE6CC6 /* BaseTableViewCell.swift in Sources */,
+				E1D853E32C8BF6CE00DE6CC6 /* VerticalStackView.swift in Sources */,
 				E1D853AF2C89775200DE6CC6 /* ViewModelProviding.swift in Sources */,
+				E1D853DD2C8A340200DE6CC6 /* UITableViewCell+Extension.swift in Sources */,
+				E1D853F42C8C5EFD00DE6CC6 /* NeoDivider.swift in Sources */,
+				E1D853E12C8BF33600DE6CC6 /* BaseView.swift in Sources */,
 				E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */,
+				E1D853E52C8BF6F500DE6CC6 /* UIStackView+Extension.swift in Sources */,
 				E1D853AD2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift in Sources */,
+				E1D853E72C8BF83700DE6CC6 /* AttributedStringProducer.swift in Sources */,
+				E1D853EB2C8C1B0200DE6CC6 /* CALayer+Extension.swift in Sources */,
+				E1D853E92C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift in Sources */,
 				E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */,
+				E1D853ED2C8C398C00DE6CC6 /* Numeric+Extension.swift in Sources */,
+				E1D853F62C8C5F5D00DE6CC6 /* LineDashConfiguration.swift in Sources */,
 				E1D853B32C898EC000DE6CC6 /* DiffableTableView.swift in Sources */,
 				E1D853AB2C8976AF00DE6CC6 /* BaseViewController.swift in Sources */,
 				E1D853B72C898F2A00DE6CC6 /* HapticProducer.swift in Sources */,
 				E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */,
 				E1D853B12C898CC100DE6CC6 /* DelegateProviding.swift in Sources */,
+				E1D853DB2C8A33D800DE6CC6 /* UITableView+Extension.swift in Sources */,
 				E1D853B52C898EE700DE6CC6 /* DiffableTableViewProvider.swift in Sources */,
 				E1D853BB2C8990EB00DE6CC6 /* UIControl+Extension.swift in Sources */,
 				E1D853BE2C89915800DE6CC6 /* DiffableViewScrollPosition.swift in Sources */,
 				E1D853B92C89904D00DE6CC6 /* Array+Extension.swift in Sources */,
+				E1D853F12C8C577500DE6CC6 /* SectionStickable.swift in Sources */,
+				E1D853EF2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1D853F82C8C5FC200DE6CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D8540F2C8C6A4700DE6CC6 /* NeoColor.swift in Sources */,
+				E1D854112C8C6AD200DE6CC6 /* BorderColor.swift in Sources */,
+				E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */,
+				E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +1015,16 @@
 			isa = PBXTargetDependency;
 			target = E1D8539F2C89768C00DE6CC6 /* Base */;
 			targetProxy = E1D853A82C8976A600DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D853CC2C8A30B700DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853422C8827B500DE6CC6 /* Networking */;
+			targetProxy = E1D853CB2C8A30B700DE6CC6 /* PBXContainerItemProxy */;
+		};
+		E1D854012C8C5FC200DE6CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D853FB2C8C5FC200DE6CC6 /* NeoBase */;
+			targetProxy = E1D854002C8C5FC200DE6CC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -902,6 +1151,7 @@
 		E1D853312C880F8000DE6CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -931,6 +1181,7 @@
 		E1D853322C880F8000DE6CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -966,7 +1217,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -986,7 +1237,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1005,6 +1256,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1023,6 +1275,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malikghani.NBC-WealthUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1066,6 +1319,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1079,6 +1333,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1092,6 +1347,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1105,6 +1361,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1138,6 +1395,79 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1D854052C8C5FC200DE6CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.malikghani.NeoBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E1D854062C8C5FC200DE6CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FW3NJPMXS9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.malikghani.NeoBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1212,6 +1542,15 @@
 			buildConfigurations = (
 				E1D853A42C89768C00DE6CC6 /* Debug */,
 				E1D853A52C89768C00DE6CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1D854042C8C5FC200DE6CC6 /* Build configuration list for PBXNativeTarget "NeoBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D854052C8C5FC200DE6CC6 /* Debug */,
+				E1D854062C8C5FC200DE6CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

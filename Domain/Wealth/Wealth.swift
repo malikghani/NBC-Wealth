@@ -11,13 +11,13 @@ import Foundation
 public typealias Wealths = [Wealth]
 
 /// A structure that represents a product with additional attributes.
-public struct Wealth: Product {
+public struct Wealth: Product, Hashable {
     public let name: String
     public let code: String
-    let rate: Int
-    let marketingPoints: [String]
-    let startingAmount: Int64
-    let isPopular: Bool
+    public let rate: Int
+    public let marketingPoints: [String]
+    public let startingAmount: Int64
+    public let isPopular: Bool
     
     /// Similar to `ProductGroup`, it is preferable to access the product name using `product.name` rather than `product.productName`.
     /// This approach maintains consistency and clarity in the code.
