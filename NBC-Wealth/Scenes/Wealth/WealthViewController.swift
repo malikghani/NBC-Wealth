@@ -14,10 +14,7 @@ final class WealthViewController: BaseViewController<WealthViewModel> {
     private var cancellables = Set<AnyCancellable>()
     
     private lazy var tableView: DiffableTableView<WealthViewController, WealthViewController> = {
-        let tableView = DiffableTableView<WealthViewController, WealthViewController>(
-            backgroundColor: .Surface.default,
-            provider: self
-        )
+        let tableView = DiffableTableView<WealthViewController, WealthViewController>(provider: self)
         tableView.register(WealthProductCell.self)
         tableView.setRefreshControl { [weak self] in
             self?.viewModel.fetchProducts()
@@ -40,7 +37,6 @@ extension WealthViewController {
 private extension WealthViewController {
     func setupViews() {
         title = "Wealth"
-        surfaceColor = .Surface.default
         
         tableView.constraint(\.leadingAnchor, equalTo: view.leadingAnchor)
         tableView.constraint(\.topAnchor, equalTo: view.safeAreaLayoutGuide.topAnchor)
@@ -147,7 +143,6 @@ final class WealthProductHeaderView: BaseView {
 // MARK: - Private Functionality
 private extension WealthProductHeaderView {
     func setupViews() {
-        surfaceColor = .Surface.default
         titleLabel.dispatch(.setText(section.title ?? ""))
         titleLabel.fillToSuperview(horizontalSpacing: 16, verticalSpacing: 12)
     }

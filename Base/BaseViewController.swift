@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NeoBase
 
 open class BaseViewController<ViewModel>: UIViewController, ViewModelProviding {
     /// ViewModel for the ViewController.
@@ -19,9 +20,9 @@ open class BaseViewController<ViewModel>: UIViewController, ViewModelProviding {
     /// Subclasses can directly assign a color to this property to set the view's background color.
     ///
     /// - Important: You don't need to override this property; set it directly in subclasses instead.
-    public final var surfaceColor: UIColor = .lightGray {
+    public final var surfaceColor: NeoColor = .neo(.surface, color: .default) {
         didSet {
-            view.backgroundColor = surfaceColor
+            view.backgroundColor = surfaceColor.value
         }
     }
 
@@ -54,6 +55,6 @@ open class BaseViewController<ViewModel>: UIViewController, ViewModelProviding {
 private extension BaseViewController {
     /// Perform any necessary setup after the view has loaded.
     func setupOnDidLoad() {
-        view.backgroundColor = surfaceColor
+        view.backgroundColor = surfaceColor.value
     }
 }

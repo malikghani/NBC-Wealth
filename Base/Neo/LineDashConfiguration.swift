@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NeoBase
 
 /// A configuration struct for specifying settings related to dashed lines.
 public struct LineDashConfiguration {
@@ -16,7 +17,7 @@ public struct LineDashConfiguration {
     public var pattern: [NSNumber]
     
     /// The color of the line.
-    public var color: UIColor
+    public var color: NeoColor<Border>
 
     /// The width or thickness of the line.
     public var width: CGFloat
@@ -28,7 +29,7 @@ public struct LineDashConfiguration {
     ///   - width: The width or thickness of the line or border. Default is `1`.
     ///   - lineCap: The line cap style to be used for the dashed line. Default is `.butt`.
     ///   - pattern: The dash pattern array specifying the lengths of dashes and gaps. Default is `[5, 5]`.
-    public init(color: UIColor,
+    public init(color: NeoColor<Border>,
                 width: CGFloat = 1,
                 lineCap: CAShapeLayerLineCap = .butt,
                 pattern: [NSNumber] = [5, 5]) {

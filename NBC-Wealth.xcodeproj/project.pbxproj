@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */; };
 		E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */; };
+		E11BD4462C8C6EA600EC6777 /* ButtonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4452C8C6EA600EC6777 /* ButtonColor.swift */; };
+		E11BD4482C8C6EB700EC6777 /* SurfaceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4472C8C6EB700EC6777 /* SurfaceColor.swift */; };
+		E11BD44A2C8C6EC200EC6777 /* TextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4492C8C6EC200EC6777 /* TextColor.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -188,6 +191,9 @@
 /* Begin PBXFileReference section */
 		E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNamespaces.swift; sourceTree = "<group>"; };
 		E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamespacedColors.swift; sourceTree = "<group>"; };
+		E11BD4452C8C6EA600EC6777 /* ButtonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonColor.swift; sourceTree = "<group>"; };
+		E11BD4472C8C6EB700EC6777 /* SurfaceColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceColor.swift; sourceTree = "<group>"; };
+		E11BD4492C8C6EC200EC6777 /* TextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColor.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +328,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11BD44B2C8C6ECE00EC6777 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				E1D854102C8C6AD200DE6CC6 /* BorderColor.swift */,
+				E11BD4472C8C6EB700EC6777 /* SurfaceColor.swift */,
+				E11BD4452C8C6EA600EC6777 /* ButtonColor.swift */,
+				E11BD4492C8C6EC200EC6777 /* TextColor.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		E1D852FD2C880F7E00DE6CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -604,10 +621,10 @@
 		E1D8540D2C8C6A3B00DE6CC6 /* NeoColor */ = {
 			isa = PBXGroup;
 			children = (
-				E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */,
 				E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */,
 				E11BD4432C8C6BB600EC6777 /* NamespacedColors.swift */,
-				E1D854102C8C6AD200DE6CC6 /* BorderColor.swift */,
+				E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */,
+				E11BD44B2C8C6ECE00EC6777 /* Colors */,
 			);
 			path = NeoColor;
 			sourceTree = "<group>";
@@ -978,7 +995,10 @@
 			files = (
 				E1D8540F2C8C6A4700DE6CC6 /* NeoColor.swift in Sources */,
 				E1D854112C8C6AD200DE6CC6 /* BorderColor.swift in Sources */,
+				E11BD44A2C8C6EC200EC6777 /* TextColor.swift in Sources */,
 				E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */,
+				E11BD4482C8C6EB700EC6777 /* SurfaceColor.swift in Sources */,
+				E11BD4462C8C6EA600EC6777 /* ButtonColor.swift in Sources */,
 				E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

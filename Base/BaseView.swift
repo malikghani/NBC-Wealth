@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NeoBase
 
 /// A default view with common setup procedures.
 open class BaseView: UIView {
@@ -14,15 +15,15 @@ open class BaseView: UIView {
     /// This property is overridden to provide a default `.surfaceDefault` background color.
     ///
     /// - Note: Setting a new background color will update the appearance of the view.
-    open var surfaceColor: UIColor = .white {
+    open var surfaceColor: NeoColor = .neo(.surface, color: .default) {
         didSet {
-            super.backgroundColor = surfaceColor
+            super.backgroundColor = surfaceColor.value
         }
     }
     
     /// Performs initial setup for the view.
     open func setupOnInit() {
-        backgroundColor = surfaceColor
+        backgroundColor = surfaceColor.value
     }
     
     /// Performs setup when the view is moved to a superview.
