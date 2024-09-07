@@ -61,8 +61,8 @@ extension WealthViewModel {
             let currentProduct = WealthSection.productList(group.name)
             snapshot.appendSections([currentProduct])
             
-            let products: [WealthItem] = group.products.map {
-                .product($0, getProductPosition(for: $0, in: group.products))
+            let products = group.products.map {
+                WealthItem.product($0, getProductPosition(for: $0, in: group.products))
             }
             snapshot.appendItems(products, toSection: currentProduct)
         }
