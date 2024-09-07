@@ -51,7 +51,7 @@ public extension NeoButton {
         var spacing: CGFloat {
             switch self {
             case .small:
-                2
+                4
             case .medium:
                 12
             case .large:

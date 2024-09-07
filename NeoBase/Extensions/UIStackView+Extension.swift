@@ -23,3 +23,22 @@ public extension UIStackView {
         self.init(arrangedSubviews: arrangedSubviews)
     }
 }
+
+// MARK: - UIStackView Functionality
+public extension UIStackView {
+    /// Removes all arranged subviews from the stack view.
+    func removeAllArrangedSubviews() {
+        arrangedSubviews.forEach {
+            $0.removeFromSuperview()
+        }
+    }
+    
+    /// Adds an array of views as arranged subviews to the stack view.
+    ///
+    /// - Parameter views: An array of `UIView` objects to be added as arranged subviews.
+    func addArrangedSubviews(_ views: [UIView]) {
+        views.forEach { view in
+            addArrangedSubview(view)
+        }
+    }
+}

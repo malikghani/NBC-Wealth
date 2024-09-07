@@ -19,8 +19,6 @@ public struct Wealth: Product, Hashable {
     public let startingAmount: Int64
     public let isPopular: Bool
     
-    /// Similar to `ProductGroup`, it is preferable to access the product name using `product.name` rather than `product.productName`.
-    /// This approach maintains consistency and clarity in the code.
     enum CodingKeys: String, CodingKey {
         case name = "productName"
         case code

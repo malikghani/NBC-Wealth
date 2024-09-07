@@ -30,6 +30,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "NeoTabView.handleTabTap(for:):NeoTabView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(currentView.frame, currentView.bounds)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "WealthViewController.setupOnInit():WealthViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -53,6 +61,23 @@
          <PersistentStrings>
             <PersistentString
                value = "setHeaderView(in: currentSection)?.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NeoTabView.dispatch(_:):NeoTabView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "state.selectedItem != item">
+            </PersistentString>
+            <PersistentString
+               value = "state.selectedItem">
+            </PersistentString>
+            <PersistentString
+               value = "item">
+            </PersistentString>
+            <PersistentString
+               value = "state.selectedItem?.title != item?.title">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

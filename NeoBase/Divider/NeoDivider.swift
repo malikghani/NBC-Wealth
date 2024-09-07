@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NeoBase
 
 public final class NeoDivider: BaseView {
     private var state = State()
@@ -40,7 +39,7 @@ public extension NeoDivider {
         case setHeight(CGFloat)
         case setDividerStyle(Style)
         case setForegroundColor(NeoColor<Border>)
-        case snapToBottom(CGFloat)
+        case snapToBottom(CGFloat = 0)
     }
     
     func dispatch(_ action: Action) {

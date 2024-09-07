@@ -29,6 +29,7 @@ final class WealthViewModel {
 
 // MARK: - Public Functionality
 extension WealthViewModel {
+    /// Fetches product groups from the repository and updates the view state.
     func fetchProducts() {
         Task {
             do {
@@ -39,6 +40,18 @@ extension WealthViewModel {
                 viewState.send(.error(message: error.localizedDescription))
             }
         }
+    }
+
+    /// Retrieves a product group based on the provided title.
+    ///
+    /// - Parameter title: The title of the product group to find. If `nil`, the method returns `nil`.
+    /// - Returns: The `ProductGroup<Wealth>` instance with the matching title, or `nil` if no match is found.
+    func getProductGroup(for title: String?) -> ProductGroup<Wealth>? {
+        guard let title else {
+            return nil
+        }
+        
+        return productGroups.first(where: { $0.name == title })
     }
 }
 
@@ -57,14 +70,17 @@ extension WealthViewModel {
     func buildSnapshot() -> Snapshot {
         var snapshot = Snapshot()
         
+        snapshot.appendSections([.productNavigation(productGroups)])
+        snapshot.appendItems([.productNavigation], toSection: .productNavigation(productGroups))
+        
         for group in productGroups {
-            let currentProduct = WealthSection.productList(group.name)
-            snapshot.appendSections([currentProduct])
-            
             let products = group.products.map {
                 WealthItem.product($0, getProductPosition(for: $0, in: group.products))
             }
-            snapshot.appendItems(products, toSection: currentProduct)
+            
+            let productSection = WealthSection.productList(group.name)
+            snapshot.appendSections([productSection])
+            snapshot.appendItems(products, toSection: productSection)
         }
         
         return snapshot
