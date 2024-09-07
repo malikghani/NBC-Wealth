@@ -69,7 +69,7 @@ private extension NeoDivider {
         divider.removeFromSuperview()
         addSubview(divider)
         
-        divider.fillToSuperview()
+        divider.fillSuperview()
         divider.constraint(\.heightAnchor, constant: 1)
     }
     

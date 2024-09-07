@@ -39,6 +39,10 @@
 		E11BD4682C8C777C00EC6777 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */; };
 		E11BD4692C8C777F00EC6777 /* ViewModelProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */; };
 		E11BD46A2C8C777F00EC6777 /* DelegateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */; };
+		E11BD46D2C8C780700EC6777 /* NeoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD46C2C8C780700EC6777 /* NeoLabel.swift */; };
+		E11BD4702C8C783000EC6777 /* NeoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD46F2C8C783000EC6777 /* NeoButton.swift */; };
+		E11BD4722C8C78A700EC6777 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4712C8C78A700EC6777 /* CapsuleView.swift */; };
+		E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -177,6 +181,10 @@
 		E11BD4452C8C6EA600EC6777 /* ButtonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonColor.swift; sourceTree = "<group>"; };
 		E11BD4472C8C6EB700EC6777 /* SurfaceColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceColor.swift; sourceTree = "<group>"; };
 		E11BD4492C8C6EC200EC6777 /* TextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColor.swift; sourceTree = "<group>"; };
+		E11BD46C2C8C780700EC6777 /* NeoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoLabel.swift; sourceTree = "<group>"; };
+		E11BD46F2C8C783000EC6777 /* NeoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoButton.swift; sourceTree = "<group>"; };
+		E11BD4712C8C78A700EC6777 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
+		E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductHeaderView.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,9 +354,33 @@
 			isa = PBXGroup;
 			children = (
 				E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */,
-				E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E11BD46B2C8C77FE00EC6777 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD46C2C8C780700EC6777 /* NeoLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		E11BD46E2C8C782800EC6777 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD46F2C8C783000EC6777 /* NeoButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		E11BD4752C8C79F500EC6777 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */,
+				E11BD4712C8C78A700EC6777 /* CapsuleView.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 		E1D852FD2C880F7E00DE6CC6 = {
@@ -584,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */,
+				E11BD4732C8C78BF00EC6777 /* WealthProductHeaderView.swift */,
 				E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */,
 				E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */,
 			);
@@ -593,6 +626,8 @@
 		E1D853FD2C8C5FC200DE6CC6 /* NeoBase */ = {
 			isa = PBXGroup;
 			children = (
+				E11BD46B2C8C77FE00EC6777 /* Label */,
+				E11BD46E2C8C782800EC6777 /* Button */,
 				E11BD44E2C8C766A00EC6777 /* AttributedStringProducer */,
 				E11BD44C2C8C760F00EC6777 /* Base */,
 				E1D8540D2C8C6A3B00DE6CC6 /* Color */,
@@ -601,6 +636,7 @@
 				E1D853C42C8A163600DE6CC6 /* Extensions */,
 				E11BD44F2C8C76BF00EC6777 /* Helper */,
 				E1D853C32C8A162C00DE6CC6 /* Provider */,
+				E11BD4752C8C79F500EC6777 /* Subclasses */,
 				E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */,
 				E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */,
 			);
@@ -867,6 +903,7 @@
 				E1D853D22C8A315C00DE6CC6 /* WealthItem.swift in Sources */,
 				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
 				E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */,
+				E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */,
 				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
 				E1D853D02C8A315600DE6CC6 /* WealthSection.swift in Sources */,
 				E1D853CA2C8A29E600DE6CC6 /* WealthViewState.swift in Sources */,
@@ -954,10 +991,13 @@
 				E11BD46A2C8C777F00EC6777 /* DelegateProviding.swift in Sources */,
 				E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */,
 				E11BD4572C8C776700EC6777 /* BaseViewController.swift in Sources */,
+				E11BD4702C8C783000EC6777 /* NeoButton.swift in Sources */,
 				E11BD4582C8C776700EC6777 /* BaseViewControllerDelegate.swift in Sources */,
 				E11BD4592C8C776700EC6777 /* BaseTableViewCell.swift in Sources */,
 				E11BD45A2C8C776700EC6777 /* BaseView.swift in Sources */,
 				E11BD4482C8C6EB700EC6777 /* SurfaceColor.swift in Sources */,
+				E11BD46D2C8C780700EC6777 /* NeoLabel.swift in Sources */,
+				E11BD4722C8C78A700EC6777 /* CapsuleView.swift in Sources */,
 				E11BD4462C8C6EA600EC6777 /* ButtonColor.swift in Sources */,
 				E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */,
 			);
