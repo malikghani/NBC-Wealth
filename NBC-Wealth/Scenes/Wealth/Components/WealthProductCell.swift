@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Base
 import NeoBase
 
 /// A configuration struct for specifying settings related to dashed lines.

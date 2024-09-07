@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Base
+import NeoBase
 
 enum WealthSection: Hashable {
     case productList(String)

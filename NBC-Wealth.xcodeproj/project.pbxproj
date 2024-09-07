@@ -12,6 +12,33 @@
 		E11BD4462C8C6EA600EC6777 /* ButtonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4452C8C6EA600EC6777 /* ButtonColor.swift */; };
 		E11BD4482C8C6EB700EC6777 /* SurfaceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4472C8C6EB700EC6777 /* SurfaceColor.swift */; };
 		E11BD44A2C8C6EC200EC6777 /* TextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4492C8C6EC200EC6777 /* TextColor.swift */; };
+		E11BD4502C8C775500EC6777 /* AttributedStringProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */; };
+		E11BD4512C8C775500EC6777 /* AttributedStringProducer+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */; };
+		E11BD4522C8C775A00EC6777 /* DiffableViewScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */; };
+		E11BD4532C8C775A00EC6777 /* DiffableTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */; };
+		E11BD4542C8C775A00EC6777 /* SectionStickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F02C8C577500DE6CC6 /* SectionStickable.swift */; };
+		E11BD4552C8C775A00EC6777 /* DiffableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B22C898EC000DE6CC6 /* DiffableTableView.swift */; };
+		E11BD4562C8C775A00EC6777 /* DiffableViewScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */; };
+		E11BD4572C8C776700EC6777 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */; };
+		E11BD4582C8C776700EC6777 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */; };
+		E11BD4592C8C776700EC6777 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */; };
+		E11BD45A2C8C776700EC6777 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E02C8BF33600DE6CC6 /* BaseView.swift */; };
+		E11BD45B2C8C777600EC6777 /* NeoDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */; };
+		E11BD45C2C8C777600EC6777 /* LineDashConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */; };
+		E11BD45D2C8C777900EC6777 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */; };
+		E11BD45E2C8C777900EC6777 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */; };
+		E11BD45F2C8C777900EC6777 /* Numeric+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EC2C8C398C00DE6CC6 /* Numeric+Extension.swift */; };
+		E11BD4602C8C777900EC6777 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */; };
+		E11BD4612C8C777900EC6777 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DA2C8A33D800DE6CC6 /* UITableView+Extension.swift */; };
+		E11BD4622C8C777900EC6777 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E42C8BF6F500DE6CC6 /* UIStackView+Extension.swift */; };
+		E11BD4632C8C777900EC6777 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EA2C8C1B0200DE6CC6 /* CALayer+Extension.swift */; };
+		E11BD4642C8C777900EC6777 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EE2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift */; };
+		E11BD4652C8C777900EC6777 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DC2C8A340200DE6CC6 /* UITableViewCell+Extension.swift */; };
+		E11BD4662C8C777900EC6777 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */; };
+		E11BD4672C8C777C00EC6777 /* HapticProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */; };
+		E11BD4682C8C777C00EC6777 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */; };
+		E11BD4692C8C777F00EC6777 /* ViewModelProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */; };
+		E11BD46A2C8C777F00EC6777 /* DelegateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -34,20 +61,6 @@
 		E1D853922C89639400DE6CC6 /* WealthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */; };
 		E1D853932C89639400DE6CC6 /* WealthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */; };
 		E1D853942C89639400DE6CC6 /* WealthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853902C89639400DE6CC6 /* WealthRepository.swift */; };
-		E1D853A72C8976A100DE6CC6 /* libBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853A02C89768C00DE6CC6 /* libBase.a */; };
-		E1D853AB2C8976AF00DE6CC6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */; };
-		E1D853AD2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */; };
-		E1D853AF2C89775200DE6CC6 /* ViewModelProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */; };
-		E1D853B12C898CC100DE6CC6 /* DelegateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B02C898CC100DE6CC6 /* DelegateProviding.swift */; };
-		E1D853B32C898EC000DE6CC6 /* DiffableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B22C898EC000DE6CC6 /* DiffableTableView.swift */; };
-		E1D853B52C898EE700DE6CC6 /* DiffableTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B42C898EE700DE6CC6 /* DiffableTableViewProvider.swift */; };
-		E1D853B72C898F2A00DE6CC6 /* HapticProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */; };
-		E1D853B92C89904D00DE6CC6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853B82C89904D00DE6CC6 /* Array+Extension.swift */; };
-		E1D853BB2C8990EB00DE6CC6 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BA2C8990EB00DE6CC6 /* UIControl+Extension.swift */; };
-		E1D853BE2C89915800DE6CC6 /* DiffableViewScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BD2C89915800DE6CC6 /* DiffableViewScrollPosition.swift */; };
-		E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853BF2C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift */; };
-		E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C12C89921000DE6CC6 /* UIView+Extension.swift */; };
-		E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C52C8A167D00DE6CC6 /* UIViewController+Extension.swift */; };
 		E1D853C82C8A186400DE6CC6 /* WealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C72C8A186300DE6CC6 /* WealthViewModel.swift */; };
 		E1D853CA2C8A29E600DE6CC6 /* WealthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853C92C8A29E600DE6CC6 /* WealthViewState.swift */; };
 		E1D853CD2C8A30BC00DE6CC6 /* libNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853432C8827B500DE6CC6 /* libNetworking.a */; };
@@ -56,20 +69,6 @@
 		E1D853D52C8A31DD00DE6CC6 /* WealthProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D42C8A31DD00DE6CC6 /* WealthProductCell.swift */; };
 		E1D853D72C8A320500DE6CC6 /* WealthProductCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D62C8A320500DE6CC6 /* WealthProductCellDelegate.swift */; };
 		E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853D82C8A321100DE6CC6 /* WealthProductCellViewModel.swift */; };
-		E1D853DB2C8A33D800DE6CC6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DA2C8A33D800DE6CC6 /* UITableView+Extension.swift */; };
-		E1D853DD2C8A340200DE6CC6 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DC2C8A340200DE6CC6 /* UITableViewCell+Extension.swift */; };
-		E1D853DF2C8A34CC00DE6CC6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */; };
-		E1D853E12C8BF33600DE6CC6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E02C8BF33600DE6CC6 /* BaseView.swift */; };
-		E1D853E32C8BF6CE00DE6CC6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */; };
-		E1D853E52C8BF6F500DE6CC6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E42C8BF6F500DE6CC6 /* UIStackView+Extension.swift */; };
-		E1D853E72C8BF83700DE6CC6 /* AttributedStringProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */; };
-		E1D853E92C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */; };
-		E1D853EB2C8C1B0200DE6CC6 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EA2C8C1B0200DE6CC6 /* CALayer+Extension.swift */; };
-		E1D853ED2C8C398C00DE6CC6 /* Numeric+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EC2C8C398C00DE6CC6 /* Numeric+Extension.swift */; };
-		E1D853EF2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853EE2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift */; };
-		E1D853F12C8C577500DE6CC6 /* SectionStickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F02C8C577500DE6CC6 /* SectionStickable.swift */; };
-		E1D853F42C8C5EFD00DE6CC6 /* NeoDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */; };
-		E1D853F62C8C5F5D00DE6CC6 /* LineDashConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */; };
 		E1D853FF2C8C5FC200DE6CC6 /* NeoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1D854022C8C5FC200DE6CC6 /* NeoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */; };
 		E1D854032C8C5FC200DE6CC6 /* NeoBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -115,13 +114,6 @@
 			remoteGlobalIDString = E1D853832C89637300DE6CC6;
 			remoteInfo = Data;
 		};
-		E1D853A82C8976A600DE6CC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1D8539F2C89768C00DE6CC6;
-			remoteInfo = Base;
-		};
 		E1D853CB2C8A30B700DE6CC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1D852FE2C880F7E00DE6CC6 /* Project object */;
@@ -158,15 +150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E1D853822C89637300DE6CC6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D8539E2C89768C00DE6CC6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -220,7 +203,6 @@
 		E1D8538E2C89639400DE6CC6 /* WealthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthEndpoint.swift; sourceTree = "<group>"; };
 		E1D8538F2C89639400DE6CC6 /* WealthRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRemoteDataSource.swift; sourceTree = "<group>"; };
 		E1D853902C89639400DE6CC6 /* WealthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthRepository.swift; sourceTree = "<group>"; };
-		E1D853A02C89768C00DE6CC6 /* libBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E1D853AE2C89775200DE6CC6 /* ViewModelProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProviding.swift; sourceTree = "<group>"; };
@@ -267,7 +249,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D853A72C8976A100DE6CC6 /* libBase.a in Frameworks */,
 				E1D8538B2C89637A00DE6CC6 /* libData.a in Frameworks */,
 				E1D853772C8962F400DE6CC6 /* libDomain.a in Frameworks */,
 				E1D854022C8C5FC200DE6CC6 /* NeoBase.framework in Frameworks */,
@@ -311,13 +292,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D8539D2C89768C00DE6CC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E1D853F92C8C5FC200DE6CC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +313,44 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		E11BD44C2C8C760F00EC6777 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */,
+				E1D853E02C8BF33600DE6CC6 /* BaseView.swift */,
+				E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */,
+				E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E11BD44D2C8C763F00EC6777 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */,
+				E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		E11BD44E2C8C766A00EC6777 /* AttributedStringProducer */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */,
+				E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */,
+			);
+			path = AttributedStringProducer;
+			sourceTree = "<group>";
+		};
+		E11BD44F2C8C76BF00EC6777 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */,
+				E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E1D852FD2C880F7E00DE6CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +360,6 @@
 				E1D853082C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531F2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853292C880F8000DE6CC6 /* NBC-WealthUITests */,
-				E1D853A12C89768C00DE6CC6 /* Base */,
 				E1D853FD2C8C5FC200DE6CC6 /* NeoBase */,
 				E1D853072C880F7E00DE6CC6 /* Products */,
 				E1D853502C88B01E00DE6CC6 /* Frameworks */,
@@ -364,7 +375,6 @@
 				E1D853432C8827B500DE6CC6 /* libNetworking.a */,
 				E1D8536E2C89626500DE6CC6 /* libDomain.a */,
 				E1D853842C89637300DE6CC6 /* libData.a */,
-				E1D853A02C89768C00DE6CC6 /* libBase.a */,
 				E1D853FC2C8C5FC200DE6CC6 /* NeoBase.framework */,
 			);
 			name = Products;
@@ -523,25 +533,6 @@
 			path = WealthDetail;
 			sourceTree = "<group>";
 		};
-		E1D853A12C89768C00DE6CC6 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				E1D853F22C8C5EF400DE6CC6 /* Neo */,
-				E1D853C42C8A163600DE6CC6 /* Extensions */,
-				E1D853C32C8A162C00DE6CC6 /* Provider */,
-				E1D853BC2C89912E00DE6CC6 /* DiffableTableView */,
-				E1D853AA2C8976AF00DE6CC6 /* BaseViewController.swift */,
-				E1D853E02C8BF33600DE6CC6 /* BaseView.swift */,
-				E1D853AC2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift */,
-				E1D853DE2C8A34CC00DE6CC6 /* BaseTableViewCell.swift */,
-				E1D853B62C898F2A00DE6CC6 /* HapticProducer.swift */,
-				E1D853E22C8BF6CE00DE6CC6 /* VerticalStackView.swift */,
-				E1D853E62C8BF83700DE6CC6 /* AttributedStringProducer.swift */,
-				E1D853E82C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		E1D853BC2C89912E00DE6CC6 /* DiffableTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,26 +590,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		E1D853F22C8C5EF400DE6CC6 /* Neo */ = {
-			isa = PBXGroup;
-			children = (
-				E1D853F32C8C5EFD00DE6CC6 /* NeoDivider.swift */,
-				E1D853F52C8C5F5D00DE6CC6 /* LineDashConfiguration.swift */,
-			);
-			path = Neo;
-			sourceTree = "<group>";
-		};
 		E1D853FD2C8C5FC200DE6CC6 /* NeoBase */ = {
 			isa = PBXGroup;
 			children = (
+				E11BD44E2C8C766A00EC6777 /* AttributedStringProducer */,
+				E11BD44C2C8C760F00EC6777 /* Base */,
+				E1D8540D2C8C6A3B00DE6CC6 /* Color */,
+				E1D853BC2C89912E00DE6CC6 /* DiffableTableView */,
+				E11BD44D2C8C763F00EC6777 /* Divider */,
+				E1D853C42C8A163600DE6CC6 /* Extensions */,
+				E11BD44F2C8C76BF00EC6777 /* Helper */,
+				E1D853C32C8A162C00DE6CC6 /* Provider */,
 				E1D853FE2C8C5FC200DE6CC6 /* NeoBase.h */,
 				E1D854082C8C5FD900DE6CC6 /* Assets.xcassets */,
-				E1D8540D2C8C6A3B00DE6CC6 /* NeoColor */,
 			);
 			path = NeoBase;
 			sourceTree = "<group>";
 		};
-		E1D8540D2C8C6A3B00DE6CC6 /* NeoColor */ = {
+		E1D8540D2C8C6A3B00DE6CC6 /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				E11BD4412C8C6B6100EC6777 /* ColorNamespaces.swift */,
@@ -626,7 +615,7 @@
 				E1D8540E2C8C6A4700DE6CC6 /* NeoColor.swift */,
 				E11BD44B2C8C6ECE00EC6777 /* Colors */,
 			);
-			path = NeoColor;
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,7 +644,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E1D853A92C8976A600DE6CC6 /* PBXTargetDependency */,
 				E1D8538D2C89638200DE6CC6 /* PBXTargetDependency */,
 				E1D853762C89626D00DE6CC6 /* PBXTargetDependency */,
 				E1D8534F2C88AF2E00DE6CC6 /* PBXTargetDependency */,
@@ -754,23 +742,6 @@
 			productReference = E1D853842C89637300DE6CC6 /* libData.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E1D8539F2C89768C00DE6CC6 /* Base */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1D853A62C89768C00DE6CC6 /* Build configuration list for PBXNativeTarget "Base" */;
-			buildPhases = (
-				E1D8539C2C89768C00DE6CC6 /* Sources */,
-				E1D8539D2C89768C00DE6CC6 /* Frameworks */,
-				E1D8539E2C89768C00DE6CC6 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Base;
-			productName = Base;
-			productReference = E1D853A02C89768C00DE6CC6 /* libBase.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		E1D853FB2C8C5FC200DE6CC6 /* NeoBase */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D854042C8C5FC200DE6CC6 /* Build configuration list for PBXNativeTarget "NeoBase" */;
@@ -819,9 +790,6 @@
 					E1D853832C89637300DE6CC6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					E1D8539F2C89768C00DE6CC6 = {
-						CreatedOnToolsVersion = 15.4;
-					};
 					E1D853FB2C8C5FC200DE6CC6 = {
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
@@ -844,7 +812,6 @@
 				E1D853052C880F7E00DE6CC6 /* NBC-Wealth */,
 				E1D8531B2C880F8000DE6CC6 /* NBC-WealthTests */,
 				E1D853252C880F8000DE6CC6 /* NBC-WealthUITests */,
-				E1D8539F2C89768C00DE6CC6 /* Base */,
 				E1D853832C89637300DE6CC6 /* Data */,
 				E1D8536D2C89626500DE6CC6 /* Domain */,
 				E1D853422C8827B500DE6CC6 /* Networking */,
@@ -955,48 +922,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D8539C2C89768C00DE6CC6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1D853DF2C8A34CC00DE6CC6 /* BaseTableViewCell.swift in Sources */,
-				E1D853E32C8BF6CE00DE6CC6 /* VerticalStackView.swift in Sources */,
-				E1D853AF2C89775200DE6CC6 /* ViewModelProviding.swift in Sources */,
-				E1D853DD2C8A340200DE6CC6 /* UITableViewCell+Extension.swift in Sources */,
-				E1D853F42C8C5EFD00DE6CC6 /* NeoDivider.swift in Sources */,
-				E1D853E12C8BF33600DE6CC6 /* BaseView.swift in Sources */,
-				E1D853C62C8A167D00DE6CC6 /* UIViewController+Extension.swift in Sources */,
-				E1D853E52C8BF6F500DE6CC6 /* UIStackView+Extension.swift in Sources */,
-				E1D853AD2C89770A00DE6CC6 /* BaseViewControllerDelegate.swift in Sources */,
-				E1D853E72C8BF83700DE6CC6 /* AttributedStringProducer.swift in Sources */,
-				E1D853EB2C8C1B0200DE6CC6 /* CALayer+Extension.swift in Sources */,
-				E1D853E92C8BF88500DE6CC6 /* AttributedStringProducer+KeyValue.swift in Sources */,
-				E1D853C02C8991B100DE6CC6 /* DiffableViewScrollDelegate.swift in Sources */,
-				E1D853ED2C8C398C00DE6CC6 /* Numeric+Extension.swift in Sources */,
-				E1D853F62C8C5F5D00DE6CC6 /* LineDashConfiguration.swift in Sources */,
-				E1D853B32C898EC000DE6CC6 /* DiffableTableView.swift in Sources */,
-				E1D853AB2C8976AF00DE6CC6 /* BaseViewController.swift in Sources */,
-				E1D853B72C898F2A00DE6CC6 /* HapticProducer.swift in Sources */,
-				E1D853C22C89921000DE6CC6 /* UIView+Extension.swift in Sources */,
-				E1D853B12C898CC100DE6CC6 /* DelegateProviding.swift in Sources */,
-				E1D853DB2C8A33D800DE6CC6 /* UITableView+Extension.swift in Sources */,
-				E1D853B52C898EE700DE6CC6 /* DiffableTableViewProvider.swift in Sources */,
-				E1D853BB2C8990EB00DE6CC6 /* UIControl+Extension.swift in Sources */,
-				E1D853BE2C89915800DE6CC6 /* DiffableViewScrollPosition.swift in Sources */,
-				E1D853B92C89904D00DE6CC6 /* Array+Extension.swift in Sources */,
-				E1D853F12C8C577500DE6CC6 /* SectionStickable.swift in Sources */,
-				E1D853EF2C8C39B900DE6CC6 /* NumberFormatter+Extension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E1D853F82C8C5FC200DE6CC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E1D8540F2C8C6A4700DE6CC6 /* NeoColor.swift in Sources */,
+				E11BD45D2C8C777900EC6777 /* Array+Extension.swift in Sources */,
+				E11BD45E2C8C777900EC6777 /* UIViewController+Extension.swift in Sources */,
+				E11BD45F2C8C777900EC6777 /* Numeric+Extension.swift in Sources */,
+				E11BD4602C8C777900EC6777 /* UIView+Extension.swift in Sources */,
+				E11BD4612C8C777900EC6777 /* UITableView+Extension.swift in Sources */,
+				E11BD4622C8C777900EC6777 /* UIStackView+Extension.swift in Sources */,
+				E11BD4632C8C777900EC6777 /* CALayer+Extension.swift in Sources */,
+				E11BD4642C8C777900EC6777 /* NumberFormatter+Extension.swift in Sources */,
+				E11BD4652C8C777900EC6777 /* UITableViewCell+Extension.swift in Sources */,
+				E11BD4662C8C777900EC6777 /* UIControl+Extension.swift in Sources */,
 				E1D854112C8C6AD200DE6CC6 /* BorderColor.swift in Sources */,
+				E11BD4502C8C775500EC6777 /* AttributedStringProducer.swift in Sources */,
+				E11BD4672C8C777C00EC6777 /* HapticProducer.swift in Sources */,
+				E11BD4682C8C777C00EC6777 /* VerticalStackView.swift in Sources */,
+				E11BD4522C8C775A00EC6777 /* DiffableViewScrollPosition.swift in Sources */,
+				E11BD4532C8C775A00EC6777 /* DiffableTableViewProvider.swift in Sources */,
+				E11BD4542C8C775A00EC6777 /* SectionStickable.swift in Sources */,
+				E11BD4552C8C775A00EC6777 /* DiffableTableView.swift in Sources */,
+				E11BD4562C8C775A00EC6777 /* DiffableViewScrollDelegate.swift in Sources */,
+				E11BD45B2C8C777600EC6777 /* NeoDivider.swift in Sources */,
+				E11BD45C2C8C777600EC6777 /* LineDashConfiguration.swift in Sources */,
+				E11BD4512C8C775500EC6777 /* AttributedStringProducer+KeyValue.swift in Sources */,
 				E11BD44A2C8C6EC200EC6777 /* TextColor.swift in Sources */,
+				E11BD4692C8C777F00EC6777 /* ViewModelProviding.swift in Sources */,
+				E11BD46A2C8C777F00EC6777 /* DelegateProviding.swift in Sources */,
 				E11BD4422C8C6B6100EC6777 /* ColorNamespaces.swift in Sources */,
+				E11BD4572C8C776700EC6777 /* BaseViewController.swift in Sources */,
+				E11BD4582C8C776700EC6777 /* BaseViewControllerDelegate.swift in Sources */,
+				E11BD4592C8C776700EC6777 /* BaseTableViewCell.swift in Sources */,
+				E11BD45A2C8C776700EC6777 /* BaseView.swift in Sources */,
 				E11BD4482C8C6EB700EC6777 /* SurfaceColor.swift in Sources */,
 				E11BD4462C8C6EA600EC6777 /* ButtonColor.swift in Sources */,
 				E11BD4442C8C6BB600EC6777 /* NamespacedColors.swift in Sources */,
@@ -1030,11 +990,6 @@
 			isa = PBXTargetDependency;
 			target = E1D853832C89637300DE6CC6 /* Data */;
 			targetProxy = E1D8538C2C89638200DE6CC6 /* PBXContainerItemProxy */;
-		};
-		E1D853A92C8976A600DE6CC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1D8539F2C89768C00DE6CC6 /* Base */;
-			targetProxy = E1D853A82C8976A600DE6CC6 /* PBXContainerItemProxy */;
 		};
 		E1D853CC2C8A30B700DE6CC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1390,34 +1345,6 @@
 			};
 			name = Release;
 		};
-		E1D853A42C89768C00DE6CC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FW3NJPMXS9;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E1D853A52C89768C00DE6CC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FW3NJPMXS9;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		E1D854052C8C5FC200DE6CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1553,15 +1480,6 @@
 			buildConfigurations = (
 				E1D853892C89637300DE6CC6 /* Debug */,
 				E1D8538A2C89637300DE6CC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1D853A62C89768C00DE6CC6 /* Build configuration list for PBXNativeTarget "Base" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1D853A42C89768C00DE6CC6 /* Debug */,
-				E1D853A52C89768C00DE6CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
