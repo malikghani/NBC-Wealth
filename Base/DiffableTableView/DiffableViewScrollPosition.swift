@@ -49,4 +49,15 @@ public extension DiffableViewScrollPosition {
         
         return false
     }
+    
+    var offset: CGPoint {
+        switch self {
+        case .top:
+            .zero
+        case .scrollingAt(let point):
+            point
+        case .bottom:
+            .zero
+        }
+    }
 }

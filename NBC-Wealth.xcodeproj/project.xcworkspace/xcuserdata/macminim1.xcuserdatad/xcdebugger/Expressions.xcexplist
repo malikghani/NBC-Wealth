@@ -3,10 +3,67 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "static UIColor.neoColor&lt;&#x3c4;_0_0&gt;(_:color:):Color.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "C.namespace">
+            </PersistentString>
+            <PersistentString
+               value = "color.rawValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ViewController.viewDidLoad():ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "error.localizedDescription">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SceneDelegate.setupTitleForRoot(_:):SceneDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rootVC?.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WealthViewController.setupOnInit():WealthViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController">
+            </PersistentString>
+            <PersistentString
+               value = "navigationController?.viewControllers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SceneDelegate.scene(_:willConnectTo:options:):SceneDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController.viewControllers.first == viewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WealthViewController.diffableViewDidScroll(to:):WealthViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "setHeaderView(in: currentSection)?.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CapsuleView.setupView():WealthProductCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "view.bounds">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

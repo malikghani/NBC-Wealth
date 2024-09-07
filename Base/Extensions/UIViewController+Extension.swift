@@ -116,3 +116,29 @@ public extension UIViewController {
         return viewController
     }
 }
+
+// MARK: - Computed Properties
+public extension UIViewController {
+    /// The total height of the navigation bar and status bar combined.
+    var totalNavigationBarHeight: CGFloat {
+        let navBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        
+        return navBarHeight + statusBarHeight
+    }
+    
+}
+
+
+// MARK: - UI`
+extension UIResponder {
+    /// Retrieves for the nearest parent view controller in the responder chain.
+    ///
+    /// If the current responder is a view controller, it returns itself.
+    /// Otherwise, it traverses up the responder chain until it finds a view controller or reaches the root responder.
+    ///
+    /// - Returns: The nearest parent view controller of the responder.
+    var parentViewController: UIViewController? {
+        next as? UIViewController ?? next?.parentViewController
+    }
+}
