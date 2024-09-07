@@ -119,7 +119,6 @@ private extension NeoButton {
         bindText()
         bindSize()
         bindConfiguration()
-        
         setTapGesture()
     }
     

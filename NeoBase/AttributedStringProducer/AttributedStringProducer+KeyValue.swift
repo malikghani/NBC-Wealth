@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NeoBase
 
 public extension AttributedStringProducer {
     /// Represents key-value pairs for configuring attributes in an attributed string.
@@ -14,7 +13,7 @@ public extension AttributedStringProducer {
         // General
         case backgroundColor(NeoColor<Surface>)
         case foregroundColor(NeoColor<Text>)
-        case font(UIFont)
+        case font(NeoLabel.Scale)
         case paragraphStyle(NSMutableParagraphStyle)
         
         // Typesettings
@@ -98,8 +97,8 @@ public extension AttributedStringProducer {
                 return color.value
             case .foregroundColor(let color):
                 return color.value
-            case .font(let font):
-                return font
+            case .font(let scale):
+                return scale.font
             case .paragraphStyle(let style):
                 return style
                 

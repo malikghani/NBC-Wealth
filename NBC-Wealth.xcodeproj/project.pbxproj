@@ -626,8 +626,8 @@
 		E1D853FD2C8C5FC200DE6CC6 /* NeoBase */ = {
 			isa = PBXGroup;
 			children = (
-				E11BD46B2C8C77FE00EC6777 /* Label */,
 				E11BD46E2C8C782800EC6777 /* Button */,
+				E11BD46B2C8C77FE00EC6777 /* Label */,
 				E11BD44E2C8C766A00EC6777 /* AttributedStringProducer */,
 				E11BD44C2C8C760F00EC6777 /* Base */,
 				E1D8540D2C8C6A3B00DE6CC6 /* Color */,

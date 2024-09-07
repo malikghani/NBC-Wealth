@@ -225,8 +225,8 @@ private extension WealthProductCell {
     func setupRate(with value: String) {
         let producer = AttributedStringProducer(from: value)
             .assign(.foregroundColor(.neo(.text, color: .highlight)))
-            .assign(.font(NeoLabel.Scale.title.font))
-            .assign(.font(NeoLabel.Scale.ternary.font), for: "p.a.")
+            .assign(.font(.title))
+            .assign(.font(.ternary), for: "p.a.")
         
         rateLabel.dispatch(.setAttributedText(producer.get()))
     }
@@ -234,7 +234,7 @@ private extension WealthProductCell {
     func setupStartingAmount(with value: String) {
         let producer = AttributedStringProducer(from: value)
             .assign(.foregroundColor(.neo(.text, color: .default)))
-            .assign(.font(NeoLabel.Scale.titleAlt.font))
+            .assign(.font(.titleAlt))
         
         startAmountLabel.dispatch(.setAttributedText(producer.get()))
     }
