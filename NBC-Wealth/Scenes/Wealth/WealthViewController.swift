@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import NeoBase
 import Combine
 import Domain
+import NeoBase
 
 final class WealthViewController: BaseViewController<WealthViewModel> {
     private var cancellables = Set<AnyCancellable>()
@@ -78,8 +78,6 @@ private extension WealthViewController {
 // MARK: - Navigation Functionality
 private extension WealthViewController {
     func pushProductDetail(with product: Wealth) {
-        print(#function)
-        
         tableView.scroll(to: .productList("Fixed Income"), scrollToTopIfMissing: true)
     }
 }

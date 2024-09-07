@@ -58,21 +58,25 @@ extension WealthViewModel {
         var snapshot = Snapshot()
         
         for group in productGroups {
-            snapshot.appendSections([.productList(group.name)])
+            let currentProduct = WealthSection.productList(group.name)
+            snapshot.appendSections([currentProduct])
             
-            for product in group.products {
-                let position = if group.products.first == product {
-                    ProductPosition.first
-                } else if group.products.last == product {
-                    ProductPosition.last
-                } else {
-                    ProductPosition.middle
-                }
-                
-                snapshot.appendItems([.product(product, position)], toSection: .productList(group.name))
+            let products: [WealthItem] = group.products.map {
+                .product($0, getProductPosition(for: $0, in: group.products))
             }
+            snapshot.appendItems(products, toSection: currentProduct)
         }
         
         return snapshot
+    }
+    
+    private func getProductPosition<P: Product>(for product: P, in products: [P]) -> ProductPosition {
+        if products.first == product {
+            .first
+        } else if products.last == product {
+            .last
+        } else {
+            .middle
+        }
     }
 }

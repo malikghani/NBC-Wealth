@@ -23,7 +23,7 @@ final class WealthProductCellViewModel {
     }
 }
 
-// MARK: - Public Functionality
+// MARK: - Internal Functionality
 extension WealthProductCellViewModel {
     /// Represents the name of the product.
     var name: String {
@@ -49,6 +49,7 @@ extension WealthProductCellViewModel {
     var startingAmountDescription: String {
         product.startingAmount.toIDR()
     }
+    
     /// Indicates whether the product is marked as popular.
     var shouldShowPopular: Bool {
         product.isPopular

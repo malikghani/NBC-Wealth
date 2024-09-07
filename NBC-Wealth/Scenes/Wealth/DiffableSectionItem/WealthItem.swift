@@ -7,6 +7,12 @@
 
 import Domain
 
+/// An enumeration representing different types of wealth-related items.
 enum WealthItem: Hashable {
+    /// Represents a product item with associated wealth and position.
+    ///
+    /// - Parameters:
+    ///   - wealth: A `Wealth` instance representing the specific wealth product.
+    ///   - position: A `ProductPosition` indicating the position of the product.
     case product(Wealth, ProductPosition)
 }
