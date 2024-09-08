@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NeoBase
 
 public final class NeoCurrencyInputView: BaseView {
     private(set) var state = State()
@@ -33,8 +32,16 @@ public final class NeoCurrencyInputView: BaseView {
         return label
     }()
     
+    private lazy var preselectAmountStackView: VerticalStackView = {
+        let stackView = VerticalStackView()
+        stackView.alignment = .leading
+        stackView.spacing = 8
+    
+        return stackView
+    }()
+    
     private lazy var contentStackView: VerticalStackView = {
-        let stackView = VerticalStackView(of: inputField, messageLabel)
+        let stackView = VerticalStackView(of: inputField, messageLabel, preselectAmountStackView)
         stackView.spacing = 8
         
         return stackView.with(parent: self)
@@ -60,7 +67,7 @@ private extension NeoCurrencyInputView {
         } else {
             let minimumAmount = inputField.textFieldState.minimumAmount.toIDR()
             let message = "Minimum deposito \(minimumAmount)"
-            inputField.layer.borderColor = .neo(.text, color: .default)
+            inputField.layer.borderColor = .neo(.border, color: .default)
             messageLabel.dispatch(.setText(message, animated: true))
             messageLabel.dispatch(.setTextColor(.neo(.text, color: .subdued)))
         }
@@ -109,6 +116,7 @@ private extension NeoCurrencyInputView {
         bindMessageText()
         bindMessageTextColor()
         bindAmountChangeHandler()
+        insertPreselectAmounts()
     }
     
     func bindMessageText() {
@@ -121,5 +129,37 @@ private extension NeoCurrencyInputView {
     
     func bindAmountChangeHandler() {
         inputField.dispatch(.setAmountChangeHandler(state.amountChangeHandler))
+    }
+}
+
+// MARK: - Preselect Amount Functionality
+private extension NeoCurrencyInputView {
+    func insertPreselectAmounts() {
+        let stackViews = Constant.preselectAmount.map { value in
+            let chips = value.map(createChipView)
+            let stackView = UIStackView(of: chips)
+            stackView.spacing = 8
+            
+            return stackView
+        }
+   
+        preselectAmountStackView.addArrangedSubviews(stackViews)
+    }
+    
+    func createChipView(for value: Int64) -> NeoChipView {
+        let chipView = NeoChipView()
+        chipView.dispatch(.bindInitialState { state in
+            state.title = value.toIDR()
+            state.tapHandler = { [weak self] in
+                HapticProducer.shared.perform(feedback: .selectionChanged)
+                self?.didTapPreselectAmount(of: value)
+            }
+        })
+        
+        return chipView
+    }
+    
+    @objc func didTapPreselectAmount(of amount: Int64) {
+        inputField.dispatch(.setAmount(amount))
     }
 }

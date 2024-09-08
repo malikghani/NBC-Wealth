@@ -88,8 +88,6 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
         case .inputDeposit(let item):
             let viewModel = WealthDetailCurrencyInputCellViewModel(orderItem: item)
             return tableView.dequeue(WealthDetailCurrencyInputCell.self, for: indexPath, with: viewModel, delegate: self)
-        case .preselectInput:
-            return .init()
         case .coupon:
             let viewModel = WealthDetailMiscCellViewModel(item: item, value: "Dapat dilihat setelah login")
             return tableView.dequeue(WealthDetailMiscCell.self, for: indexPath, with: viewModel)
@@ -118,7 +116,7 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
 // MARK: - WealthDetailCurrencyInputCellDelegate Conformance
 extension WealthDetailViewController: WealthDetailCurrencyInputCellDelegate {
     func didInputDepositAmount(to amount: Int64) {
-        //viewModel.setValue(\.deposit, value: amount)
+        viewModel.setValue(\.deposit, value: amount)
         showWealthDetail()
     }
 }

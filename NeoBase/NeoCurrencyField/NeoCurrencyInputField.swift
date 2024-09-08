@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NeoBase
 
 public final class NeoCurrencyInputField: UITextField {
     private(set) var textFieldState = State()
@@ -24,20 +23,32 @@ public final class NeoCurrencyInputField: UITextField {
         let symbolWidth = symbolLabel.frame.width + 16
         return .init(top: .zero, left: symbolWidth, bottom: .zero, right: 16)
     }
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+            
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            setupLayers()
+        }
+    }
 }
 
 // MARK: - Private Functionality
 private extension NeoCurrencyInputField {
      func setupViews() {
+        setupLayers()
+        delegate = self
         font = NeoLabel.Scale.currency.font
         tintColor = .neo(.text, color: .link)
-        layer.borderColor = .neo(.border, color: .default)
-        layer.borderWidth = 1
-        layer.cornerRadius = 8
-        delegate = self
         
         symbolLabel.constraint(\.leadingAnchor, equalTo: leadingAnchor, constant: 12)
         symbolLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+    }
+    
+    func setupLayers() {
+        layer.borderColor = .neo(.border, color: .default)
+        layer.borderWidth = 1
+        layer.cornerRadius = 8
     }
 }
 
@@ -81,13 +92,14 @@ public extension NeoCurrencyInputField {
         public var maximumAmount: Int64 = 100_000_000_000
         public var minimumAmount: Int64 = 100_000
         public var errorHandler: ((InputError?) -> Void)?
+        var shouldNotify = true
     }
     
     enum Action {
         case bindInitialState((inout State) -> Void)
         case setCurrency(Currency)
         case setAmountChangeHandler(((Int64) -> Void)?)
-        case setAmount(Int64)
+        case setAmount(Int64, shouldNotify: Bool = true)
         case setMaximumAmount(Int64)
         case setMinimumAmount(Int64)
         case setInputErrorHandler(((InputError?) -> Void)?)
@@ -103,7 +115,8 @@ public extension NeoCurrencyInputField {
             bindCurrency()
         case .setAmountChangeHandler(let handler):
             textFieldState.amountChangeHandler = handler
-        case .setAmount(let amount):
+        case .setAmount(let amount, let shouldNotify):
+            textFieldState.shouldNotify = shouldNotify
             textFieldState.amount = amount
             bindAmount()
         case .setMaximumAmount(let maximumAmount):
@@ -131,7 +144,12 @@ private extension NeoCurrencyInputField {
     }
     
     func bindAmount() {
-        text = textFieldState.amount.toIDR(usingSymbol: false)
+        guard let text else {
+            return
+        }
+        
+        let range = NSRange(location: 0, length: text.utf16.count)
+        _ = textField(self, shouldChangeCharactersIn: range, replacementString: "\(textFieldState.amount)")
     }
     
     func bindMaximumAmount() { }
@@ -184,7 +202,11 @@ extension NeoCurrencyInputField: UITextFieldDelegate {
             return false
         }
         
-        textFieldState.amountChangeHandler?(number)
+        if textFieldState.shouldNotify {
+            textFieldState.amountChangeHandler?(number)
+        } else {
+            textFieldState.shouldNotify = true
+        }
         
         let formattedText = number.toIDR(usingSymbol: false)
         textField.text = formattedText
