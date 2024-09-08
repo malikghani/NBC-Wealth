@@ -17,7 +17,7 @@ final class WealthDetailViewController: BaseViewController<WealthDetailViewModel
             backgroundColor: .neo(.surface, color: .subdued),
             provider: self
         )
-        tableView.register(WealthDetailInfoCell.self, WealthDetailMiscCell.self)
+        tableView.register(WealthDetailInfoCell.self, WealthDetailCurrencyInputCell.self, WealthDetailMiscCell.self)
         
         return tableView.with(parent: view)
     }()
@@ -71,6 +71,13 @@ private extension WealthDetailViewController {
     }
 }
 
+// MARK: - Navigation Functionality
+private extension WealthDetailViewController {
+    func pushPayment() {
+        footerView.actionButton.dispatch(.setDisplayState(.active))
+    }
+}
+
 // MARK: - DiffableTableViewDataProvider Conformance
 extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableViewScrollDelegate {
     func provideCell(for section: WealthDetailSection, in item: WealthDetailItem, at indexPath: IndexPath) -> UITableViewCell? {
@@ -78,8 +85,9 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
         case .info(let item):
             let viewModel = WealthDetailInfoCellViewModel(orderItem: item)
             return tableView.dequeue(WealthDetailInfoCell.self, for: indexPath, with: viewModel)
-        case .inputDeposit(let wealth):
-            return .init()
+        case .inputDeposit(let item):
+            let viewModel = WealthDetailCurrencyInputCellViewModel(orderItem: item)
+            return tableView.dequeue(WealthDetailCurrencyInputCell.self, for: indexPath, with: viewModel, delegate: self)
         case .preselectInput:
             return .init()
         case .coupon:
@@ -107,10 +115,20 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
     }
 }
 
+// MARK: - WealthDetailCurrencyInputCellDelegate Conformance
+extension WealthDetailViewController: WealthDetailCurrencyInputCellDelegate {
+    func didInputDepositAmount(to amount: Int64) {
+        //viewModel.setValue(\.deposit, value: amount)
+        showWealthDetail()
+    }
+}
+
 // MARK: - WealthDetailFooterViewDelegate Conformance
 extension WealthDetailViewController: WealthDetailFooterViewDelegate {
     func didTapActionButton() {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.pushPayment()
+        }
     }
     
     func didTapTermsAndConditions() {

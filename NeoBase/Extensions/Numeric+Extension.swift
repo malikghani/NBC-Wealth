@@ -39,12 +39,12 @@ public extension Numeric {
     ///
     /// - Parameter default: The default string to return if the conversion fails. Default is "Rp0".
     /// - Returns: The string in IDR format or the default value if the conversion fails.
-    func toIDR(default: String = "Rp0") -> String {
+    func toIDR(default: String = "Rp0", usingSymbol: Bool = true) -> String {
         guard let nsNumberValue else {
             return `default`
         }
         
-        return NumberFormatter.idr().string(from: nsNumberValue) ?? `default`
+        return NumberFormatter.idr(usingSymbol: usingSymbol).string(from: nsNumberValue) ?? `default`
     }
     
     /// Convert any Numeric to percentage format.
