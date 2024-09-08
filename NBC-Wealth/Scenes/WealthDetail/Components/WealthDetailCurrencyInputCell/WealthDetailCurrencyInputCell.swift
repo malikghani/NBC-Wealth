@@ -46,6 +46,6 @@ private extension WealthDetailCurrencyInputCell {
         
         inputField.dispatch(.setMessageText("Minimum deposito \(viewModel.orderItem.product.startingAmount.toIDR())"))
         inputField.dispatch(.inputAction(.setMinimumAmount(viewModel.orderItem.product.startingAmount)))
-        inputField.dispatch(.inputAction(.setAmount(viewModel.orderItem.product.startingAmount)))
+        inputField.dispatch(.inputAction(.setAmount(viewModel.orderItem.deposit, shouldNotify: false)))
     }
 }

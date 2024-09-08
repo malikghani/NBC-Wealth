@@ -87,7 +87,6 @@ extension WealthDetailViewModel {
     }
     
     func appendCoinItem(to snapshot: inout Snapshot) {
-        let point = (1000...5000).randomElement() ?? 100
-        snapshot.appendItems([.coins("+\(point)")], toSection: .miscellaneous)
+        snapshot.appendItems([.coins("+1000")], toSection: .miscellaneous)
     }
 }

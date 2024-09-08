@@ -22,7 +22,7 @@ extension WealthDetailInfoCellViewModel {
         "\(orderItem.product.rate.toPercentage()) p.a."
     }
     
-    /// <#Description#>
+    /// A computed property that returns a description of the holding days for the current order item.
     var holdingDaysDescription: String {
         orderItem.holdingDaysDescription
     }

@@ -17,9 +17,6 @@ enum WealthDetailItem: Hashable {
     /// Represents an input field for a deposit related to a wealth product.
     case inputDeposit(WealthProductOrderItem)
     
-    /// Represents a preselected input field.
-    case preselectInput
-    
     /// Represents a estimated interest of a wealth product.
     case estimatedInterest(String)
     
