@@ -78,7 +78,8 @@ private extension WealthViewController {
 // MARK: - Navigation Functionality
 private extension WealthViewController {
     func pushProductDetail(with product: Wealth) {
-        
+        let viewModel = WealthDetailViewModel(wealth: product)
+        push(WealthDetailViewController.self, viewModel: viewModel)
     }
 }
 

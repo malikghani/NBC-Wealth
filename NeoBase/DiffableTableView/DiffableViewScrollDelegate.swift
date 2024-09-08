@@ -19,7 +19,7 @@ public protocol DiffableViewScrollDelegate: AnyObject {
 }
 
 // MARK: - DiffableViewScrollDelegate Default Implementation
-extension DiffableViewScrollDelegate {
+public extension DiffableViewScrollDelegate {
     /// Default implementation does nothing. Implement this method to handle scroll events.
     func diffableViewDidScroll(to position: DiffableViewScrollPosition, at section: Section?) { }
 }

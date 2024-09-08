@@ -64,7 +64,7 @@ private extension WealthViewModel {
 extension WealthViewModel {
     typealias Snapshot = NSDiffableDataSourceSnapshot<WealthSection, WealthItem>
     
-    /// Builds a snapshot for displaying edit profile data.
+    /// Builds a snapshot for displaying wealth data.
     ///
     ///  - Returns: A 'Snapshot' containing the sections and items to be displayed.
     func buildSnapshot() -> Snapshot {

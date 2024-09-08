@@ -19,6 +19,15 @@ public final class NeoButton: BaseView {
         
         return label
     }()
+    
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView().with(parent: button)
+        indicatorView.startAnimating()
+        indicatorView.tintColor = .neo(.text, color: .default)
+        indicatorView.alpha = 0
+        
+        return indicatorView
+    }()
 
     public override func setupOnMovedToSuperview() {
         button.fillSuperview()
@@ -27,6 +36,7 @@ public final class NeoButton: BaseView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         button.layer.cornerRadius = button.frame.height / 2
+        loadingIndicator.center = button.center
     }
 }
 
@@ -53,10 +63,24 @@ public extension NeoButton {
             case .small:
                 4
             case .medium:
-                12
+                8
             case .large:
-                16
+                12
             }
+        }
+    }
+    
+    enum DisplayState {
+        case active
+        case disabled
+        case loading
+        
+        var shouldInteract: Bool {
+            self != .loading
+        }
+        
+        var shouldShowLoading: Bool {
+            self == .loading
         }
     }
     
@@ -82,6 +106,7 @@ public extension NeoButton {
         public var text: String?
         public var size: Size = .small
         public var configuration: Configuration = .primary
+        public var displayState: DisplayState = .active
         public var tapHandler: (() -> Void)?
     }
     
@@ -90,6 +115,7 @@ public extension NeoButton {
         case setText(String)
         case setSize(Size)
         case setConfiguration(Configuration)
+        case setDisplayState(DisplayState)
         case setTapHandler((() -> Void)?)
     }
     
@@ -107,6 +133,9 @@ public extension NeoButton {
         case .setConfiguration(let configuration):
             state.configuration = configuration
             bindConfiguration()
+        case .setDisplayState(let displayState):
+            state.displayState = displayState
+            bindDisplayState()
         case .setTapHandler(let tapHandler):
             state.tapHandler = tapHandler
         }
@@ -125,11 +154,6 @@ private extension NeoButton {
     func setTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapButton))
         button.addGestureRecognizer(tapGesture)
-    }
-    
-    func setupView() {
-        button.fillSuperview()
-        setSpacing()
     }
     
     func setSpacing() {
@@ -158,5 +182,31 @@ private extension NeoButton {
     func bindConfiguration() {
         button.backgroundColor = state.configuration.backgroundColor.value
         label.dispatch(.setTextColor(state.configuration.textColor))
+    }
+    
+    func toggleLoadingIndicator() {
+        if state.displayState.shouldShowLoading {
+            loadingIndicator.fadeIn(duration: 0.25)
+        } else {
+            loadingIndicator.fadeOut(duration: 0.25)
+        }
+    }
+    
+    func bindDisplayState() {
+        toggleLoadingIndicator()
+        isUserInteractionEnabled = state.displayState.shouldInteract
+        
+        switch state.displayState {
+        case .active:
+            label.fadeIn(duration: 0.25)
+            bindConfiguration()
+        case .disabled:
+            label.fadeIn(duration: 0.25)
+            button.backgroundColor = .neo(.button, color: .disabled)
+            label.dispatch(.setTextColor(.neo(.text, color: .disabled)))
+        case .loading:
+            label.fadeOut(duration: 0.25)
+            button.backgroundColor = .neo(.button, color: .disabled)
+        }
     }
 }

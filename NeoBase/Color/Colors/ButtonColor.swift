@@ -12,4 +12,5 @@ public enum Button: String, NamespacedColor {
     case `default`
     case important
     case primary
+    case disabled
 }
