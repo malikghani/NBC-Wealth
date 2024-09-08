@@ -22,6 +22,7 @@ public final class NeoLabel: BaseView {
 // MARK: - Public Functionality
 public extension NeoLabel {
     enum Scale {
+        case currency
         case heading
         case title
         case titleAlt
@@ -30,6 +31,8 @@ public extension NeoLabel {
         
         public var font: UIFont {
             switch self {
+            case .currency:
+                .systemFont(ofSize: 22, weight: .semibold)
             case .heading:
                 .systemFont(ofSize: 18, weight: .semibold)
             case .title:
@@ -56,7 +59,7 @@ public extension NeoLabel {
     
     enum Action {
         case bindInitialState((inout State) -> Void)
-        case setText(String?)
+        case setText(String?, animated: Bool = false)
         case setAttributedText(NSAttributedString?)
         case setTextAligment(NSTextAlignment)
         case setNumberOfLines(Int)
@@ -70,9 +73,15 @@ public extension NeoLabel {
         case .bindInitialState(let builder):
             builder(&state)
             bindInitialState()
-        case .setText(let text):
+        case .setText(let text, let animated):
             state.text = text
-            bindText()
+            if animated {
+                transition { [weak self] in
+                    self?.bindText()
+                }
+            } else {
+                bindText()
+            }
         case .setAttributedText(let attributedString):
             state.attributedText = attributedString
             bindText()

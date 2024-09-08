@@ -17,11 +17,11 @@ public extension NumberFormatter {
     ///   let formattedAmount = NumberFormatter.idr().string(from: NSNumber(value: amount))
     ///   print(formattedAmount) // Output: "Rp 50.000"
     ///   ```
-    static func idr() -> NumberFormatter {
+    static func idr(usingSymbol: Bool = true) -> NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = NumberFormatter.Style.currency
         formatter.currencyCode = "IDR"
-        formatter.currencySymbol = "Rp"
+        formatter.currencySymbol = usingSymbol ? "Rp" : ""
         formatter.currencyGroupingSeparator = "."
         formatter.currencyDecimalSeparator = ","
         formatter.maximumFractionDigits = 0

@@ -69,6 +69,11 @@
 		E11BD4B82C8E00A200EC6777 /* WealthDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4B72C8E00A200EC6777 /* WealthDetailHeaderView.swift */; };
 		E11BD4BB2C8E049300EC6777 /* WealthDetailMiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4BA2C8E049300EC6777 /* WealthDetailMiscCell.swift */; };
 		E11BD4BD2C8E04A200EC6777 /* WealthDetailMiscCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4BC2C8E04A200EC6777 /* WealthDetailMiscCellViewModel.swift */; };
+		E11BD4C02C8E20FB00EC6777 /* NeoCurrencyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4BF2C8E20FB00EC6777 /* NeoCurrencyInputView.swift */; };
+		E11BD4C32C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C22C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift */; };
+		E11BD4C52C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C42C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift */; };
+		E11BD4C72C8E30DD00EC6777 /* NeoCurrencyInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C62C8E30DD00EC6777 /* NeoCurrencyInputField.swift */; };
+		E11BD4C92C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C82C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -237,6 +242,11 @@
 		E11BD4B72C8E00A200EC6777 /* WealthDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailHeaderView.swift; sourceTree = "<group>"; };
 		E11BD4BA2C8E049300EC6777 /* WealthDetailMiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailMiscCell.swift; sourceTree = "<group>"; };
 		E11BD4BC2C8E04A200EC6777 /* WealthDetailMiscCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailMiscCellViewModel.swift; sourceTree = "<group>"; };
+		E11BD4BF2C8E20FB00EC6777 /* NeoCurrencyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoCurrencyInputView.swift; sourceTree = "<group>"; };
+		E11BD4C22C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyInputCell.swift; sourceTree = "<group>"; };
+		E11BD4C42C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyInputCellViewModel.swift; sourceTree = "<group>"; };
+		E11BD4C62C8E30DD00EC6777 /* NeoCurrencyInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoCurrencyInputField.swift; sourceTree = "<group>"; };
+		E11BD4C82C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyInputCellDelegate.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -485,6 +495,8 @@
 		E11BD4962C8CEAF400EC6777 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E11BD4C12C8E245000EC6777 /* WealthDetailCurrencyInputCell */,
+				E11BD4BE2C8E20E600EC6777 /* NeoCurrencyField */,
 				E11BD4B92C8E047900EC6777 /* WealthDetailMiscCell */,
 				E11BD49B2C8CF5E800EC6777 /* WealthDetailInfoCell */,
 				E11BD4B62C8E009200EC6777 /* WealthDetailHeaderView */,
@@ -545,6 +557,25 @@
 				E11BD4BC2C8E04A200EC6777 /* WealthDetailMiscCellViewModel.swift */,
 			);
 			path = WealthDetailMiscCell;
+			sourceTree = "<group>";
+		};
+		E11BD4BE2C8E20E600EC6777 /* NeoCurrencyField */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD4BF2C8E20FB00EC6777 /* NeoCurrencyInputView.swift */,
+				E11BD4C62C8E30DD00EC6777 /* NeoCurrencyInputField.swift */,
+			);
+			path = NeoCurrencyField;
+			sourceTree = "<group>";
+		};
+		E11BD4C12C8E245000EC6777 /* WealthDetailCurrencyInputCell */ = {
+			isa = PBXGroup;
+			children = (
+				E11BD4C22C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift */,
+				E11BD4C82C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift */,
+				E11BD4C42C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift */,
+			);
+			path = WealthDetailCurrencyInputCell;
 			sourceTree = "<group>";
 		};
 		E1D852FD2C880F7E00DE6CC6 = {
@@ -1084,14 +1115,19 @@
 				E11BD48C2C8CE9D900EC6777 /* WealthDetailViewController.swift in Sources */,
 				E11BD4BB2C8E049300EC6777 /* WealthDetailMiscCell.swift in Sources */,
 				E1D853D22C8A315C00DE6CC6 /* WealthItem.swift in Sources */,
+				E11BD4C52C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift in Sources */,
 				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
 				E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */,
 				E11BD49F2C8CF5F800EC6777 /* WealthInfoDetailCellViewModel.swift in Sources */,
 				E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */,
+				E11BD4C72C8E30DD00EC6777 /* NeoCurrencyInputField.swift in Sources */,
+				E11BD4C92C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift in Sources */,
+				E11BD4C02C8E20FB00EC6777 /* NeoCurrencyInputView.swift in Sources */,
 				E11BD47D2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift in Sources */,
 				E11BD47B2C8CC76500EC6777 /* WealthProductNavigationCell.swift in Sources */,
 				E11BD4902C8CE9E500EC6777 /* WealthDetailViewState.swift in Sources */,
 				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
+				E11BD4C32C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift in Sources */,
 				E11BD4B82C8E00A200EC6777 /* WealthDetailHeaderView.swift in Sources */,
 				E1D853D02C8A315600DE6CC6 /* WealthSection.swift in Sources */,
 				E11BD4862C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift in Sources */,
