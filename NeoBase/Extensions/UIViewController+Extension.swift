@@ -129,9 +129,8 @@ public extension UIViewController {
     
 }
 
-
-// MARK: - UI`
-extension UIResponder {
+// MARK: - UIResponder Extension
+public extension UIResponder {
     /// Retrieves for the nearest parent view controller in the responder chain.
     ///
     /// If the current responder is a view controller, it returns itself.

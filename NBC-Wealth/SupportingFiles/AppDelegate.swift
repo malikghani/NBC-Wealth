@@ -22,11 +22,13 @@ private extension AppDelegate {
         let appearance = UINavigationBarAppearance()
         appearance.shadowColor = .neo(.surface, color: .default)
         appearance.backgroundColor = .neo(.surface, color: .default)
+        appearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
         appearance.titlePositionAdjustment = UIOffset(
             horizontal: -.greatestFiniteMagnitude,
             vertical: 0
         )
         
+        UINavigationBar.appearance().tintColor = .neo(.text, color: .default)
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().standardAppearance = appearance

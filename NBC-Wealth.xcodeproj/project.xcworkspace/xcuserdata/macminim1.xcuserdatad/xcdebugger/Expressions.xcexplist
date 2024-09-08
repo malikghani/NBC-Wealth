@@ -82,6 +82,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "NeoLabel.labelTapped(_:):NeoLabel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.state">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CapsuleView.setupView():WealthProductCell.swift">
          <PersistentStrings>
             <PersistentString

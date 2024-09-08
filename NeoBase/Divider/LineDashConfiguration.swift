@@ -29,7 +29,7 @@ public struct LineDashConfiguration {
     ///   - width: The width or thickness of the line or border. Default is `1`.
     ///   - lineCap: The line cap style to be used for the dashed line. Default is `.butt`.
     ///   - pattern: The dash pattern array specifying the lengths of dashes and gaps. Default is `[5, 5]`.
-    public init(color: NeoColor<Border>,
+    public init(color: NeoColor<Border> = .neo(.border, color: .default),
                 width: CGFloat = 1,
                 lineCap: CAShapeLayerLineCap = .butt,
                 pattern: [NSNumber] = [5, 5]) {

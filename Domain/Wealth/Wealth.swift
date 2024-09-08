@@ -28,3 +28,11 @@ public struct Wealth: Product, Hashable {
         case isPopular
     }
 }
+
+// MARK: - Public Functionality
+public extension Wealth {
+    /// Checks product has "Rollover Options".
+    var hasRolloverOptions: Bool {
+        marketingPoints.contains("Rollover Options")
+    }
+}

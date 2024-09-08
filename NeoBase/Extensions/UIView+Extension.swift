@@ -149,3 +149,34 @@ public extension UIView {
         }
     }
 }
+
+// MARK: - Visibility Functionalty
+public extension UIView {
+    /// Fades in the view by adjusting its alpha property.
+    ///
+    /// - Parameters:
+    ///   - duration: The duration of the fade-in animation. Defaults to 0.5 seconds.
+    ///   - delay: The delay before starting the fade-in animation. Defaults to 0 seconds.
+    ///   - completion: A closure to be executed after the fade-in animation completes.
+    func fadeIn(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: duration, delay: delay, options: .curveEaseIn, animations: {
+            self.alpha = 1.0
+        }) { _ in
+            completion?()
+        }
+    }
+
+    /// Fades out the view by adjusting its alpha property.
+    ///
+    /// - Parameters:
+    ///   - duration: The duration of the fade-out animation. Defaults to 0.5 seconds.
+    ///   - delay: The delay before starting the fade-out animation. Defaults to 0 seconds.
+    ///   - completion: A closure to be executed after the fade-out animation completes.
+    func fadeOut(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: duration, delay: delay, options: .curveEaseOut, animations: {
+            self.alpha = 0.0
+        }) { _ in
+            completion?()
+        }
+    }
+}
