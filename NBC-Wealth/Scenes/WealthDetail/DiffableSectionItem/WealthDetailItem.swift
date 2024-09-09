@@ -67,7 +67,7 @@ extension WealthDetailItem {
     var typeScale: NeoLabel.Scale {
         switch self {
         case .estimatedInterest:
-            .ternary
+            .tertiary
         default:
             .subtitle
         }

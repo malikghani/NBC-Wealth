@@ -30,7 +30,7 @@ final class WealthProductCell: BaseTableViewCell, ViewModelProviding, DelegatePr
         let label = NeoLabel()
         label.dispatch(.bindInitialState { state in
             state.text = "Populer"
-            state.scale = .ternary
+            state.scale = .tertiary
             state.textColor = .neo(.text, color: .primary)
         })
         
@@ -226,7 +226,7 @@ private extension WealthProductCell {
         let producer = AttributedStringProducer(from: value)
             .assign(.foregroundColor(.neo(.text, color: .highlight)))
             .assign(.font(.title))
-            .assign(.font(.ternary), for: "p.a.")
+            .assign(.font(.tertiary), for: "p.a.")
         
         rateLabel.dispatch(.setAttributedText(producer.get()))
     }

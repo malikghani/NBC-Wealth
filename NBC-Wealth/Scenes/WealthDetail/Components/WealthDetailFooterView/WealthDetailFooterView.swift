@@ -97,7 +97,7 @@ private extension WealthDetailFooterView {
         let text = "Saya telah membaca dan menyetujui ‭\(depositText)"
         let producer = AttributedStringProducer(from: text)
             .assign(.font(.subtitle))
-            .assign(.font(.ternary), for: depositText)
+            .assign(.font(.tertiary), for: depositText)
             .assign(.foregroundColor(.neo(.text, color: .subtitle)))
             .assign(.foregroundColor(.neo(.text, color: .link)), for: depositText)
         termsConditionLabel.dispatch(.setAttributedText(producer.get()))

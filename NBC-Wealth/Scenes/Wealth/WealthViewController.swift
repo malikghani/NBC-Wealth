@@ -58,14 +58,14 @@ private extension WealthViewController {
     func observeViewState(_ state: WealthViewState) {
         switch state {
         case .empty:
-            print(state)
+            debugPrint(state)
         case .loading:
-            print(state)
+            debugPrint(state)
         case .productsReceived:
             tableView.setRefreshControlEndRefresh()
             showProducts()
         case .error(let message):
-            print(message)
+            debugPrint(message)
         }
     }
     

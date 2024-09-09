@@ -69,6 +69,13 @@ private extension WebViewController {
 // MARK: - WKNavigationDelegate Conformance
 extension WebViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if webView.url?.absoluteString == Constant.xenditDemoCheckout {
+            dismiss(animated: true) { [weak self] in
+                self?.navigationController?.popToRootViewController(animated: true)
+            }
+            return
+        }
+        
         guard let title = webView.title else {
             return
         }

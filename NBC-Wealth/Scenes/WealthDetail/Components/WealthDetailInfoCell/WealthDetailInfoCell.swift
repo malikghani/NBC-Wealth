@@ -72,7 +72,7 @@ private extension WealthDetailInfoCell {
         let producer = AttributedStringProducer(from: value)
             .assign(.foregroundColor(.neo(.text, color: .highlight)))
             .assign(.font(.heading))
-            .assign(.font(.ternary), for: "p.a.")
+            .assign(.font(.tertiary), for: "p.a.")
         
         rateLabel.dispatch(.setAttributedText(producer.get()))
         

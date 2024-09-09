@@ -12,4 +12,6 @@ public enum Surface: String, NamespacedColor {
     case `default`
     case subdued
     case clear
+    case shadow
+    case recommended
 }
