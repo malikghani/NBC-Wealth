@@ -21,5 +21,27 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        observePaymentSuccess()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("CustomNotificationName"), object: nil)
+    }
+}
+
+// MARK: - Notification Functionality
+private extension SceneDelegate {
+    func observePaymentSuccess() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handlePaymentSuccess),
+            name: Notification.Name("PaymentSuccess"),
+            object: nil
+        )
+    }
+    
+    @objc func handlePaymentSuccess() {
+        (window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
     }
 }

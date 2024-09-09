@@ -18,15 +18,3 @@ enum PaymentViewState {
     /// Indicates an error occurred, with an associated message.
     case error(message: String)
 }
-
-// MARK: - Internal Functionality
-extension PaymentViewState {
-    /// Determines whether the loading state view should be toggled based on the current state.
-    var shouldShowLoadingIndicator: Bool {
-        if case .loading = self {
-            return true
-        }
-        
-        return false
-    }
-}

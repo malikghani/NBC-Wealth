@@ -10,7 +10,7 @@ import Foundation
 /// A collection of static constants used throughout the application.
 public enum Constant {
     /// The URL for the privacy policy page.
-    public static let privacyPolicuURL = "https://www.bankneocommerce.co.id/id/policy"
+    public static let privacyPolicyURL = "https://www.bankneocommerce.co.id/id/policy"
     
     /// The URL for the Xendit Demo checkout.
     public static let xenditDemoURL = "https://checkout-staging.xendit.co/web/66de50aaea48440164c8227c"

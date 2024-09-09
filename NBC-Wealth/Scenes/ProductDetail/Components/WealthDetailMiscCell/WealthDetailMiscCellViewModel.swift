@@ -16,9 +16,3 @@ final class WealthDetailMiscCellViewModel {
         self.value = value
     }
 }
-
-// MARK: - Internal Functionality
-extension WealthDetailMiscCellViewModel {
-
-    
-}

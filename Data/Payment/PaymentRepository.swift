@@ -7,7 +7,7 @@
 
 import Domain
 
-/// A protocol that defines the contract for fetching wealth-related product groups.
+/// A protocol that defines the contract for fetching payment related data.
 public protocol PaymentRepository {
     /// Fetches the list of available payment methods.
     ///

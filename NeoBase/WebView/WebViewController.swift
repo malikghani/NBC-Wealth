@@ -64,17 +64,22 @@ private extension WebViewController {
             self?.headerView.setProgress(to: Float(change.newValue ?? 0))
         }
     }
+    
+    func checkXenditCheckout() {
+        guard webView.url?.absoluteString == Constant.xenditDemoCheckout else {
+            return
+        }
+        
+        dismiss(animated: true)
+        HapticProducer.shared.perform(feedback: .success)
+        NotificationCenter.default.post(name: Notification.Name("PaymentSuccess"), object: nil)
+    }
 }
 
 // MARK: - WKNavigationDelegate Conformance
 extension WebViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if webView.url?.absoluteString == Constant.xenditDemoCheckout {
-            dismiss(animated: true) { [weak self] in
-                self?.navigationController?.popToRootViewController(animated: true)
-            }
-            return
-        }
+        checkXenditCheckout()
         
         guard let title = webView.title else {
             return

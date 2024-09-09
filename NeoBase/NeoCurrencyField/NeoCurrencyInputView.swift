@@ -61,10 +61,12 @@ private extension NeoCurrencyInputView {
     
     func handleInputError(of error: NeoCurrencyInputField.InputError?) {
         if let error {
+            state.interactionHandler?(false)
             inputField.layer.borderColor = .neo(.text, color: .error)
             messageLabel.dispatch(.setText(error.description, animated: true))
             messageLabel.dispatch(.setTextColor(.neo(.text, color: .error)))
         } else {
+            state.interactionHandler?(true)
             let minimumAmount = inputField.textFieldState.minimumAmount.toIDR()
             let message = "Minimum deposito \(minimumAmount)"
             inputField.layer.borderColor = .neo(.border, color: .default)
@@ -78,6 +80,7 @@ private extension NeoCurrencyInputView {
 public extension NeoCurrencyInputView {
     struct State {
         public var amountChangeHandler: ((Int64) -> Void)?
+        public var interactionHandler: ((Bool) -> Void)?
         public var messageText: String = ""
         public var messageTextColor: NeoColor = .neo(.text, color: .subdued)
     }
@@ -152,6 +155,7 @@ private extension NeoCurrencyInputView {
             state.title = value.toIDR()
             state.tapHandler = { [weak self] in
                 HapticProducer.shared.perform(feedback: .selectionChanged)
+                self?.state.amountChangeHandler?(value)
                 self?.didTapPreselectAmount(of: value)
             }
         })

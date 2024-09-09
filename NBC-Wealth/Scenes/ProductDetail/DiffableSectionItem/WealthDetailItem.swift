@@ -12,10 +12,10 @@ import NeoBase
 /// An enumeration representing different types of items in the wealth detail view.
 enum WealthDetailItem: Hashable {
     /// Represents detailed information about a wealth product.
-    case info(WealthProductOrderItem)
+    case info(ProductOrderItem)
     
     /// Represents an input field for a deposit related to a wealth product.
-    case inputDeposit(WealthProductOrderItem)
+    case inputDeposit(ProductOrderItem)
     
     /// Represents a estimated interest of a wealth product.
     case estimatedInterest(String)

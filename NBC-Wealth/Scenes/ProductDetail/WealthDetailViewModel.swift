@@ -11,11 +11,8 @@ import Domain
 import UIKit
 
 final class WealthDetailViewModel {
-    // Subjects
-    private(set) var viewState = CurrentValueSubject<WealthDetailViewState, Never>(.loading)
-    
     // Dependencies
-    private(set) var orderItem: WealthProductOrderItem
+    private(set) var orderItem: ProductOrderItem
     
     init(wealth: Wealth) {
         orderItem = .init(wealth: wealth)
@@ -29,14 +26,9 @@ extension WealthDetailViewModel {
     /// - Parameters:
     ///   - path: The key path to the property of `WealthProductOrderItem` where the value should be set.
     ///   - value: The value to set at the specified key path.
-    func setValue<T>(_ path: WritableKeyPath<WealthProductOrderItem, T>, value: T) {
+    func setValue<T>(_ path: WritableKeyPath<ProductOrderItem, T>, value: T) {
         orderItem[keyPath: path] = value
     }
-}
-
-// MARK: - Private Functionality
-private extension WealthDetailViewModel {
-    
 }
 
 // MARK: - Snapshot Functionality
@@ -63,7 +55,7 @@ extension WealthDetailViewModel {
     }
     
     func appendMaturityDateItem(to snapshot: inout Snapshot) {
-        let description = orderItem.parsed.maturityDateDescription
+        let description = orderItem.infoParser.maturityDateDescription
         snapshot.appendItems([.maturityDate(description)], toSection: .deposit)
     }
     

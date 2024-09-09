@@ -10,8 +10,6 @@ import NeoBase
 import Combine
 
 final class WealthDetailViewController: BaseViewController<WealthDetailViewModel> {
-    private var cancellables = Set<AnyCancellable>()
-    
     private lazy var tableView: DiffableTableView<WealthDetailViewController, WealthDetailViewController> = {
         let tableView = DiffableTableView<WealthDetailViewController, WealthDetailViewController>(
             backgroundColor: .neo(.surface, color: .subdued),
@@ -30,7 +28,7 @@ extension WealthDetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        bindViewModel()
+        showWealthDetail()
     }
 }
 
@@ -41,28 +39,6 @@ private extension WealthDetailViewController {
         tableView.constraint(\.topAnchor, equalTo: view.safeAreaLayoutGuide.topAnchor)
         tableView.constraint(\.trailingAnchor, equalTo: view.trailingAnchor)
         tableView.constraint(\.bottomAnchor, equalTo: footerView.topAnchor)
-    }
-    
-    func bindViewModel() {
-        viewModel.viewState
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] state in
-                self?.observeViewState(state)
-            }
-            .store(in: &cancellables)
-        
-        showWealthDetail()
-    }
-    
-    func observeViewState(_ state: WealthDetailViewState) {
-        switch state {
-        case .loading:
-            break
-        case .orderCreated:
-            break
-        case .error(let message):
-            debugPrint(message)
-        }
     }
     
     func showWealthDetail() {
@@ -117,6 +93,10 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
 
 // MARK: - WealthDetailCurrencyInputCellDelegate Conformance
 extension WealthDetailViewController: WealthDetailCurrencyInputCellDelegate {
+    func didChangeInputInteraction(to isInteractable: Bool) {
+        footerView.actionButton.dispatch(.setDisplayState(isInteractable ? .active : .disabled))
+    }
+    
     func didInputDepositAmount(to amount: Int64) {
         viewModel.setValue(\.deposit, value: amount)
         showWealthDetail()
@@ -132,7 +112,7 @@ extension WealthDetailViewController: WealthDetailFooterViewDelegate {
     }
     
     func didTapTermsAndConditions() {
-        let viewModel = WebViewModel(url: Constant.privacyPolicuURL)
+        let viewModel = WebViewModel(url: Constant.privacyPolicyURL)
         present(WebViewController.self, viewModel: viewModel)
     }
 }

@@ -16,7 +16,7 @@ final class PaymentViewModel {
     private(set) var viewState = CurrentValueSubject<PaymentViewState, Never>(.loading)
     
     // Dependencies
-    private var orderItem: WealthProductOrderItem
+    private var orderItem: ProductOrderItem
     private var paymentMethods: PaymentMethods = []
     private var groupedMethods: [PaymentMethods] = []
     var selectedPaymentMethod: PaymentMethod?
@@ -27,7 +27,7 @@ final class PaymentViewModel {
     
     init(
         paymentRepository: any PaymentRepository = PaymentRepositoryImplementation(),
-        orderItem: WealthProductOrderItem
+        orderItem: ProductOrderItem
     ) {
         self.paymentRepository = paymentRepository
         self.orderItem = orderItem
@@ -37,7 +37,6 @@ final class PaymentViewModel {
 
 // MARK: - Public Functionality
 extension PaymentViewModel {
-    /// Fetches product groups from the repository and updates the view state.
     func fetchPaymentMethods() {
         Task {
             do {
@@ -55,9 +54,7 @@ extension PaymentViewModel {
 // MARK: - Private Functionality
 private extension PaymentViewModel {
     func getGroupedPaymentMethods() {
-        let sortedMethods = paymentMethods.sorted { $0.type.priority > $1.type.priority }
         let groupedMethods = Dictionary(grouping: paymentMethods, by: { $0.type })
-        
         self.groupedMethods = groupedMethods.values.map { $0 }
     }
 }
@@ -73,18 +70,31 @@ extension PaymentViewModel {
         var snapshot = Snapshot()
         
         let hasSelectedPaymentMethod = selectedPaymentMethod != nil
-        let otherPaymentMethodSection = PaymentSection.otherPaymentMethods(isSelected: hasSelectedPaymentMethod)
+        let otherPaymentMethodSection = PaymentSection.paymentSelection(isSelected: hasSelectedPaymentMethod)
         snapshot.appendSections([.countdown, .selectedPaymentMethod, otherPaymentMethodSection])
         snapshot.appendItems([.countdown(orderItem, paymentEndDate)], toSection: .countdown)
         
+        insertSelectedPaymentMethod(to: &snapshot)
+        insertGroupMethodItem(to: &snapshot, section: otherPaymentMethodSection)
+        
+        return snapshot
+    }
+    
+    private func insertSelectedPaymentMethod(to snapshot: inout Snapshot) {
         if let selectedPaymentMethod {
             snapshot.appendItems([.selectedMethod(selectedPaymentMethod)], toSection: .selectedPaymentMethod)
         }
-        
-        for methods in groupedMethods {
-            snapshot.appendItems([.methodList(methods)], toSection: otherPaymentMethodSection)
+    }
+    
+    private func insertGroupMethodItem(to snapshot: inout Snapshot, section: PaymentSection) {
+        for methods in groupedMethods.enumerated() {
+            let targetMethods = methods.element.filter { $0 != selectedPaymentMethod }
+            
+            if targetMethods.isEmpty {
+                continue
+            }
+            
+            snapshot.appendItems([.methodList(targetMethods, methods.offset)], toSection: section)
         }
-        
-        return snapshot
     }
 }

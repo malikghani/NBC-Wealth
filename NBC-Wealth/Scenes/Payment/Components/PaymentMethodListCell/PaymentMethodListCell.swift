@@ -18,7 +18,8 @@ final class PaymentMethodListCell: BaseTableViewCell, ViewModelProviding, Delega
     
     weak var delegate: PaymentMethodListCellDelegate?
     
-    private var isExpanded = true
+    private var isExpanded = false
+    private let expandedRotation = CGFloat(180.0 * (.pi / 180.0))
     
     private lazy var containerView = UIView().with(parent: self)
     
@@ -62,7 +63,7 @@ final class PaymentMethodListCell: BaseTableViewCell, ViewModelProviding, Delega
     
     private lazy var methodListStackView: VerticalStackView = {
         let stackView = VerticalStackView()
-        stackView.spacing = 14
+        stackView.spacing = 16
         
         return stackView
     }()
@@ -79,11 +80,15 @@ private extension PaymentMethodListCell {
         chevronIcon.tintColor = .neo(.text, color: .default)
         chevronIcon.constraint(\.heightAnchor, constant: 32)
         chevronIcon.constraint(\.widthAnchor, constant: 32)
+        chevronIcon.transform = .init(rotationAngle: expandedRotation)
         containerView.backgroundColor = .neo(.surface, color: .default)
-        containerView.fillSuperview(spacing: 16)
+        containerView.fillSuperview(horizontalSpacing: 16, verticalSpacing: 8)
         contentStackView.fillSuperview(spacing: 16)
         containerView.layer.cornerRadius = 8
         setupTapGesture()
+        
+        paymentMethodDescription.setHidden(true)
+        methodListStackView.setHidden(true)
     }
     
     func setupTapGesture() {
@@ -109,7 +114,6 @@ private extension PaymentMethodListCell {
             tableView.beginUpdates()
             tableView.endUpdates()
             
-            let expandedRotation = CGFloat(180.0 * (.pi / 180.0))
             chevronIcon.transform = isExpanded ? .init(rotationAngle: expandedRotation) : .identity
         })
         
@@ -128,6 +132,12 @@ private extension PaymentMethodListCell {
         
         paymentMethodName.dispatch(.setText(viewModel.title))
         paymentMethodDescription.dispatch(.setText(viewModel.description))
+        
+        DispatchQueue.main.async {
+            if viewModel.index == .zero {
+                self.didTapMethodName()
+            }
+        }
     }
     
     func createStackView(for method: PaymentMethod) -> UIStackView {

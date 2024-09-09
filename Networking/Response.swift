@@ -18,7 +18,7 @@ public struct Response<D>: Decodable where D: Decodable {
         case statusCode
     }
     
-    // The provided mock API contains only `data`. However, it is advisable to handle other potential errors or status codes as well.
+    // The provided mock API contains only `data`. However, it is advisable to handle other potential `succes`, `errCode` or `errMsg`.
     // Therefore, I have hardcoded it to fit the context mentioned earlier.
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
