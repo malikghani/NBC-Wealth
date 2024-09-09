@@ -45,8 +45,6 @@ private extension NeoChipView {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapChipView))
         addGestureRecognizer(tapGesture)
-        
-        titleLabel.fillSuperview(spacing: 6)
     }
     
     @objc func didTapChipView() {
@@ -61,14 +59,17 @@ public extension NeoChipView {
         public var textColor:  NeoColor = .neo(.text, color: .default)
         public var borderColor: NeoColor = .neo(.border, color: .default)
         public var backgroundColor: NeoColor = .neo(.surface, color: .default)
+        public var spacing: CGFloat = 6
         public var tapHandler: (() -> Void)?
     }
     
     enum Action {
         case bindInitialState((inout State) -> Void)
+        case setTitle(String)
         case setTextColor(NeoColor<Text>)
         case setBorderColor(NeoColor<Border>)
         case setBackgroundColor(NeoColor<Surface>)
+        case setSpacing(CGFloat)
         case setTapHandler((() -> Void)?)
     }
     
@@ -77,6 +78,9 @@ public extension NeoChipView {
         case .bindInitialState(let builder):
             builder(&state)
             bindInitialState()
+        case .setTitle(let title):
+            state.title = title
+            bindTitle()
         case .setTextColor(let textColor):
             state.textColor = textColor
             bindTextColor()
@@ -86,6 +90,9 @@ public extension NeoChipView {
         case .setBackgroundColor(let backgroundColor):
             state.backgroundColor = backgroundColor
             bindBackgroundColor()
+        case .setSpacing(let spacing):
+            state.spacing = spacing
+            bindSpacing()
         case .setTapHandler(let tapHandler):
             state.tapHandler = tapHandler
         }
@@ -98,6 +105,11 @@ private extension NeoChipView {
         bindTextColor()
         bindBorderColor()
         bindBackgroundColor()
+        bindSpacing()
+    }
+    
+    func bindTitle() {
+        titleLabel.dispatch(.setText(state.title))
     }
     
     func bindTextColor() {
@@ -110,5 +122,11 @@ private extension NeoChipView {
             
     func bindBackgroundColor() {
         backgroundColor = state.backgroundColor.value
+    }
+    
+    func bindSpacing() {
+        titleLabel.removeFromSuperview()
+        addSubview(titleLabel)
+        titleLabel.fillSuperview(spacing: state.spacing)
     }
 }

@@ -61,7 +61,7 @@ private extension WealthDetailViewController {
         case .orderCreated:
             break
         case .error(let message):
-            print(message)
+            debugPrint(message)
         }
     }
     
@@ -74,6 +74,8 @@ private extension WealthDetailViewController {
 // MARK: - Navigation Functionality
 private extension WealthDetailViewController {
     func pushPayment() {
+        let viewModel = PaymentViewModel(orderItem: viewModel.orderItem)
+        push(PaymentViewController.self, viewModel: viewModel)
         footerView.actionButton.dispatch(.setDisplayState(.active))
     }
 }

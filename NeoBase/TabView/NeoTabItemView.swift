@@ -13,7 +13,7 @@ public final class NeoTabItemView<I: TabItemRepresentable>: BaseView {
     private lazy var label: NeoLabel = {
         let label = NeoLabel().with(parent: self)
         label.dispatch(.bindInitialState { state in
-            state.scale = .ternary
+            state.scale = .tertiary
             state.textAlignment = .center
         })
         
@@ -88,7 +88,7 @@ private extension NeoTabItemView {
             
             let isSelected = state.isSelected
             label.dispatch(.setTextColor(.neo(.text, color: isSelected ? .default : .subdued)))
-            label.dispatch(.setScale(isSelected ? .ternary : .subtitle))
+            label.dispatch(.setScale(isSelected ? .tertiary : .subtitle))
         }, options: [.transitionCrossDissolve, .curveEaseInOut])
     }
     

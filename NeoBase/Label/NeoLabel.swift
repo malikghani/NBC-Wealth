@@ -27,7 +27,8 @@ public extension NeoLabel {
         case title
         case titleAlt
         case subtitle
-        case ternary
+        case tertiary
+        case titleAlt2
         
         public var font: UIFont {
             switch self {
@@ -39,9 +40,11 @@ public extension NeoLabel {
                 .systemFont(ofSize: 16, weight: .semibold)
             case .titleAlt:
                 .systemFont(ofSize: 14, weight: .semibold)
+            case .titleAlt2:
+                .systemFont(ofSize: 14, weight: .regular)
             case .subtitle:
                 .systemFont(ofSize: 12, weight: .regular)
-            case .ternary:
+            case .tertiary:
                 .systemFont(ofSize: 12, weight: .semibold)
             }
         }

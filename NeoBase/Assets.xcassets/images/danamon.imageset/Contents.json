@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "danamon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -17,4 +17,6 @@ public enum Text: String, NamespacedColor {
     case subtitle
     case disabled
     case error
+    case warning
+    case recommended
 }

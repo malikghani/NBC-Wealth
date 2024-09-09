@@ -179,4 +179,16 @@ public extension UIView {
             completion?()
         }
     }
+    
+    /// Sets the `isHidden` property only if the current `isHidden` is different from the given parameter.
+    ///
+    /// This implementation is necessary if updating `isHidden` inside an animation block due to a UIKit bug.
+    ///
+    /// - Parameter isHidden: The new value for the `isHidden` property.
+    /// - SeeAlso: [Hidden property cannot be changed within an animation block](https://stackoverflow.com/a/41665706)
+    func setHidden(_ isHidden: Bool) {
+        if self.isHidden != isHidden {
+            self.isHidden.toggle()
+        }
+    }
 }

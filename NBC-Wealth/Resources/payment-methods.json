@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "type": "va",
+            "name": "BCA Virtual Account",
+            "icon": "bca"
+        },
+        {
+            "type": "va",
+            "name": "Mandiri Virtual Account",
+            "icon": "mandiri"
+        },
+        {
+            "type": "va",
+            "name": "BNI Virtual Account",
+            "icon": "bni"
+        },
+        {
+            "type": "va",
+            "name": "Danamon Virtual Account",
+            "icon": "danamon"
+        },
+        {
+            "type": "vam",
+            "name": "Alfamart",
+            "icon": "alfamart"
+        },
+        {
+            "type": "vam",
+            "name": "Indomaret",
+            "icon": "indomart"
+        },
+        {
+            "type": "balance",
+            "name": "My Balance",
+            "icon": "coin"
+        }
+    ]
+}

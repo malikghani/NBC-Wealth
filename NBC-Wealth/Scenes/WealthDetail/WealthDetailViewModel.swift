@@ -15,7 +15,7 @@ final class WealthDetailViewModel {
     private(set) var viewState = CurrentValueSubject<WealthDetailViewState, Never>(.loading)
     
     // Dependencies
-    private var orderItem: WealthProductOrderItem
+    private(set) var orderItem: WealthProductOrderItem
     
     init(wealth: Wealth) {
         orderItem = .init(wealth: wealth)

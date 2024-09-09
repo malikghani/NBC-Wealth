@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Response<D>: Decodable where D: Decodable {
-    let data: D
+    public private(set) var data: D
     let error: String
     let statusCode: Int
     
