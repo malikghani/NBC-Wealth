@@ -9,9 +9,11 @@ import Domain
 
 final class PaymentMethodListCellViewModel {
     private(set) var paymentMethods: PaymentMethods
+    private(set) var index: Int
     
-    init(paymentMethods: PaymentMethods) {
+    init(paymentMethods: PaymentMethods, index: Int) {
         self.paymentMethods = paymentMethods
+        self.index = index
     }
 }
 

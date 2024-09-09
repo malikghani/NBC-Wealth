@@ -33,7 +33,7 @@ final class WealthDetailFooterView: BaseView, DelegateProviding {
     
     private lazy var termsConditionStackView: UIStackView = {
         let stackView = UIStackView(of: checkMark, termsConditionLabel)
-        stackView.spacing = 4
+        stackView.spacing = 8
         stackView.alignment = .center
         
         return stackView
@@ -41,7 +41,7 @@ final class WealthDetailFooterView: BaseView, DelegateProviding {
     
     private lazy var contentStackView: VerticalStackView = {
         let stackView = VerticalStackView(of: actionButton, termsConditionStackView).with(parent: containerView)
-        stackView.spacing = 10
+        stackView.spacing = 12
         
         return stackView
     }()
@@ -101,6 +101,7 @@ private extension WealthDetailFooterView {
             .assign(.foregroundColor(.neo(.text, color: .subtitle)))
             .assign(.foregroundColor(.neo(.text, color: .link)), for: depositText)
         termsConditionLabel.dispatch(.setAttributedText(producer.get()))
+        termsConditionLabel.dispatch(.setNumberOfLines(0))
         
         termsConditionLabel.dispatch(.setTextTapHandlers([depositText: { [weak self] in
             self?.delegate?.didTapTermsAndConditions()

@@ -55,9 +55,7 @@ extension PaymentViewModel {
 // MARK: - Private Functionality
 private extension PaymentViewModel {
     func getGroupedPaymentMethods() {
-        let sortedMethods = paymentMethods.sorted { $0.type.priority > $1.type.priority }
         let groupedMethods = Dictionary(grouping: paymentMethods, by: { $0.type })
-        
         self.groupedMethods = groupedMethods.values.map { $0 }
     }
 }
@@ -73,7 +71,7 @@ extension PaymentViewModel {
         var snapshot = Snapshot()
         
         let hasSelectedPaymentMethod = selectedPaymentMethod != nil
-        let otherPaymentMethodSection = PaymentSection.otherPaymentMethods(isSelected: hasSelectedPaymentMethod)
+        let otherPaymentMethodSection = PaymentSection.paymentSelection(isSelected: hasSelectedPaymentMethod)
         snapshot.appendSections([.countdown, .selectedPaymentMethod, otherPaymentMethodSection])
         snapshot.appendItems([.countdown(orderItem, paymentEndDate)], toSection: .countdown)
         
@@ -81,10 +79,20 @@ extension PaymentViewModel {
             snapshot.appendItems([.selectedMethod(selectedPaymentMethod)], toSection: .selectedPaymentMethod)
         }
         
-        for methods in groupedMethods {
-            snapshot.appendItems([.methodList(methods)], toSection: otherPaymentMethodSection)
-        }
+        insertGroupMethodItem(to: &snapshot, section: otherPaymentMethodSection)
         
         return snapshot
+    }
+    
+    func insertGroupMethodItem(to snapshot: inout Snapshot, section: PaymentSection) {
+        for methods in groupedMethods.enumerated() {
+            var targetMethods = methods.element.filter { $0 != selectedPaymentMethod }
+            
+            if targetMethods.isEmpty {
+                continue
+            }
+            
+            snapshot.appendItems([.methodList(targetMethods, methods.offset)], toSection: section)
+        }
     }
 }

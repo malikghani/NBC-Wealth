@@ -23,6 +23,9 @@ final class WealthDetailCurrencyInputCell: BaseTableViewCell, ViewModelProviding
             state.amountChangeHandler = { [weak self] amount in
                 self?.delegate?.didInputDepositAmount(to: amount)
             }
+            state.interactionHandler = { [weak self] isInteractable in
+                self?.delegate?.didChangeInputInteraction(to: isInteractable)
+            }
         })
         
         return field
@@ -46,6 +49,6 @@ private extension WealthDetailCurrencyInputCell {
         
         inputField.dispatch(.setMessageText("Minimum deposito \(viewModel.orderItem.product.startingAmount.toIDR())"))
         inputField.dispatch(.inputAction(.setMinimumAmount(viewModel.orderItem.product.startingAmount)))
-        inputField.dispatch(.inputAction(.setAmount(viewModel.orderItem.deposit, shouldNotify: false)))
+        inputField.dispatch(.inputAction(.setAmount(viewModel.orderItem.deposit)))
     }
 }

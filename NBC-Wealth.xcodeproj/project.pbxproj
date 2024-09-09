@@ -96,6 +96,16 @@
 		E11BD4FC2C8E79C500EC6777 /* PaymentMethodListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4FB2C8E79C500EC6777 /* PaymentMethodListCellViewModel.swift */; };
 		E11BD4FE2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4FD2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift */; };
 		E11BD5002C8E861A00EC6777 /* UIView+TapGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4FF2C8E861A00EC6777 /* UIView+TapGestureExtension.swift */; };
+		E1D30CCA2C8E9A9E0013D090 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */; };
+		E1D30CCD2C8E9A9E0013D090 /* Poppins-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */; };
+		E1D30CCE2C8E9A9E0013D090 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */; };
+		E1D30CCF2C8E9A9E0013D090 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */; };
+		E1D30CD02C8E9A9E0013D090 /* Poppins-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */; };
+		E1D30CD22C8E9A9E0013D090 /* Poppins-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */; };
+		E1D30CD42C8E9A9E0013D090 /* Poppins-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */; };
+		E1D30CD62C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */; };
+		E1D30CD82C8E9A9E0013D090 /* Poppins-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */; };
+		E1D30CDA2C8E9A9E0013D090 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -291,6 +301,16 @@
 		E11BD4FB2C8E79C500EC6777 /* PaymentMethodListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodListCellViewModel.swift; sourceTree = "<group>"; };
 		E11BD4FD2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodListCellDelegate.swift; sourceTree = "<group>"; };
 		E11BD4FF2C8E861A00EC6777 /* UIView+TapGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGestureExtension.swift"; sourceTree = "<group>"; };
+		E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.otf"; sourceTree = "<group>"; };
+		E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
+		E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.otf"; sourceTree = "<group>"; };
+		E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.otf"; sourceTree = "<group>"; };
+		E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.otf"; sourceTree = "<group>"; };
+		E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.otf"; sourceTree = "<group>"; };
+		E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -705,6 +725,23 @@
 			path = PaymentMethodListCell;
 			sourceTree = "<group>";
 		};
+		E1D30CB62C8E9A930013D090 /* poppins */ = {
+			isa = PBXGroup;
+			children = (
+				E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */,
+				E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */,
+				E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */,
+				E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */,
+				E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */,
+				E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */,
+				E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */,
+				E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */,
+				E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */,
+				E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */,
+			);
+			path = poppins;
+			sourceTree = "<group>";
+		};
 		E1D852FD2C880F7E00DE6CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +895,7 @@
 		E1D853972C89720C00DE6CC6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1D30CB62C8E9A930013D090 /* poppins */,
 				E1D8533D2C880FFB00DE6CC6 /* wealth.json */,
 				E11BD4DA2C8E51EF00EC6777 /* payment-methods.json */,
 				E1D853122C880F8000DE6CC6 /* Assets.xcassets */,
@@ -1204,10 +1242,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D30CCA2C8E9A9E0013D090 /* Poppins-Regular.otf in Resources */,
+				E1D30CCF2C8E9A9E0013D090 /* Poppins-Medium.otf in Resources */,
 				E1D8540A2C8C603900DE6CC6 /* Assets.xcassets in Resources */,
 				E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */,
 				E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */,
+				E1D30CCD2C8E9A9E0013D090 /* Poppins-LightItalic.otf in Resources */,
 				E11BD4DB2C8E51EF00EC6777 /* payment-methods.json in Resources */,
+				E1D30CCE2C8E9A9E0013D090 /* Poppins-Light.otf in Resources */,
+				E1D30CD62C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf in Resources */,
+				E1D30CD82C8E9A9E0013D090 /* Poppins-ThinItalic.otf in Resources */,
+				E1D30CD02C8E9A9E0013D090 /* Poppins-Thin.otf in Resources */,
+				E1D30CD42C8E9A9E0013D090 /* Poppins-MediumItalic.otf in Resources */,
+				E1D30CDA2C8E9A9E0013D090 /* Poppins-SemiBold.otf in Resources */,
+				E1D30CD22C8E9A9E0013D090 /* Poppins-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

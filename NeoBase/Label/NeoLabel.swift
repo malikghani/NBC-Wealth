@@ -33,20 +33,24 @@ public extension NeoLabel {
         public var font: UIFont {
             switch self {
             case .currency:
-                .systemFont(ofSize: 22, weight: .semibold)
+                UIFont(name: "Poppins-SemiBold", size: 22) ?? defaultFont
             case .heading:
-                .systemFont(ofSize: 18, weight: .semibold)
+                UIFont(name: "Poppins-SemiBold", size: 18) ?? defaultFont
             case .title:
-                .systemFont(ofSize: 16, weight: .semibold)
+                UIFont(name: "Poppins-SemiBold", size: 16) ?? defaultFont
             case .titleAlt:
-                .systemFont(ofSize: 14, weight: .semibold)
+                UIFont(name: "Poppins-SemiBold", size: 14) ?? defaultFont
             case .titleAlt2:
-                .systemFont(ofSize: 14, weight: .regular)
+                UIFont(name: "Poppins-Regular", size: 14) ?? defaultFont
             case .subtitle:
-                .systemFont(ofSize: 12, weight: .regular)
+                UIFont(name: "Poppins-Regular", size: 12) ?? defaultFont
             case .tertiary:
-                .systemFont(ofSize: 12, weight: .semibold)
+                UIFont(name: "Poppins-SemiBold", size: 12) ?? defaultFont
             }
+        }
+        
+        private var defaultFont: UIFont {
+            .systemFont(ofSize: 12, weight: .regular)
         }
     }
 

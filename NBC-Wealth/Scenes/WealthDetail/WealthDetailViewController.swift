@@ -117,6 +117,10 @@ extension WealthDetailViewController: DiffableTableViewDataProvider, DiffableVie
 
 // MARK: - WealthDetailCurrencyInputCellDelegate Conformance
 extension WealthDetailViewController: WealthDetailCurrencyInputCellDelegate {
+    func didChangeInputInteraction(to isInteractable: Bool) {
+        footerView.actionButton.dispatch(.setDisplayState(isInteractable ? .active : .disabled))
+    }
+    
     func didInputDepositAmount(to amount: Int64) {
         viewModel.setValue(\.deposit, value: amount)
         showWealthDetail()

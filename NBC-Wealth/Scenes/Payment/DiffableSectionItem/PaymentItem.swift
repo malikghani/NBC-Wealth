@@ -21,5 +21,5 @@ enum PaymentItem: Hashable {
     /// Represents a list of other available payment methods.
     ///
     /// - Parameter paymentMethods: A list of other payment methods.
-    case methodList(PaymentMethods)
+    case methodList(PaymentMethods, Int)
 }

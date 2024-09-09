@@ -83,15 +83,15 @@ extension PaymentViewController: DiffableTableViewDataProvider, DiffableViewScro
         case .selectedMethod(let paymentMethod):
             let viewModel = PaymentSelectedPaymentMethodCellViewModel(paymentMethod: paymentMethod)
             return tableView.dequeue(PaymentSelectedPaymentMethodCell.self, for: indexPath, with: viewModel, delegate: self)
-        case .methodList(let paymentMethods):
-            let viewModel = PaymentMethodListCellViewModel(paymentMethods: paymentMethods)
+        case .methodList(let paymentMethods, let index):
+            let viewModel = PaymentMethodListCellViewModel(paymentMethods: paymentMethods, index: index)
             return tableView.dequeue(PaymentMethodListCell.self, for: indexPath, with: viewModel, delegate: self)
         }
     }
     
     func setHeaderView(in section: PaymentSection) -> UIView? {
         switch section {
-        case .otherPaymentMethods:
+        case .paymentSelection:
             PaymentHeaderView(section: section)
         default:
             nil

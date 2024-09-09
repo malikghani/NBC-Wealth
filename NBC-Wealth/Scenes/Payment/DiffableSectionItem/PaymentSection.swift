@@ -16,14 +16,14 @@ enum PaymentSection: Hashable {
     case selectedPaymentMethod
 
     /// Represents a section listing other available payment methods.
-    case otherPaymentMethods(isSelected: Bool)
+    case paymentSelection(isSelected: Bool)
 }
 
 // MARK: - Intenal Functionality
 extension PaymentSection {
     var title: String? {
         switch self {
-        case .otherPaymentMethods(let isSelected):
+        case .paymentSelection(let isSelected):
             isSelected ? "Metode Pembayaran Lain" : "Pilih Metode Pembayaran"
         default:
             nil

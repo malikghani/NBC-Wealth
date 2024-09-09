@@ -167,6 +167,10 @@ private extension NeoButton {
     }
     
     @objc private func didTapButton() {
+        guard state.displayState == .active else {
+            return
+        }
+        
         state.tapHandler?()
     }
     

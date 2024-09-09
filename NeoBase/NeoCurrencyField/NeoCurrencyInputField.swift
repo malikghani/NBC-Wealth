@@ -36,13 +36,14 @@ public final class NeoCurrencyInputField: UITextField {
 // MARK: - Private Functionality
 private extension NeoCurrencyInputField {
      func setupViews() {
-        setupLayers()
-        delegate = self
-        font = NeoLabel.Scale.currency.font
-        tintColor = .neo(.text, color: .link)
-        
-        symbolLabel.constraint(\.leadingAnchor, equalTo: leadingAnchor, constant: 12)
-        symbolLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+         setupLayers()
+         delegate = self
+         font = NeoLabel.Scale.currency.font
+         tintColor = .neo(.text, color: .link)
+         keyboardType = .numberPad
+         
+         symbolLabel.constraint(\.leadingAnchor, equalTo: leadingAnchor, constant: 12)
+         symbolLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
     func setupLayers() {
@@ -92,14 +93,14 @@ public extension NeoCurrencyInputField {
         public var maximumAmount: Int64 = 100_000_000_000
         public var minimumAmount: Int64 = 100_000
         public var errorHandler: ((InputError?) -> Void)?
-        var shouldNotify = true
+        var lastAmount: Int64 = 0
     }
     
     enum Action {
         case bindInitialState((inout State) -> Void)
         case setCurrency(Currency)
         case setAmountChangeHandler(((Int64) -> Void)?)
-        case setAmount(Int64, shouldNotify: Bool = true)
+        case setAmount(Int64)
         case setMaximumAmount(Int64)
         case setMinimumAmount(Int64)
         case setInputErrorHandler(((InputError?) -> Void)?)
@@ -115,16 +116,13 @@ public extension NeoCurrencyInputField {
             bindCurrency()
         case .setAmountChangeHandler(let handler):
             textFieldState.amountChangeHandler = handler
-        case .setAmount(let amount, let shouldNotify):
-            textFieldState.shouldNotify = shouldNotify
+        case .setAmount(let amount):
             textFieldState.amount = amount
             bindAmount()
         case .setMaximumAmount(let maximumAmount):
             textFieldState.maximumAmount = maximumAmount
-            bindMaximumAmount()
         case .setMinimumAmount(let minimumAmount):
             textFieldState.minimumAmount = minimumAmount
-            bindMinimumAmount()
         case .setInputErrorHandler(let handler):
             textFieldState.errorHandler = handler
         }
@@ -134,9 +132,8 @@ public extension NeoCurrencyInputField {
 // MARK: - Binding Functionality
 private extension NeoCurrencyInputField {
     func bindInitialState() {
+        createToolbar()
         bindCurrency()
-        bindMaximumAmount()
-        bindMinimumAmount()
     }
     
     func bindCurrency() {
@@ -151,10 +148,6 @@ private extension NeoCurrencyInputField {
         let range = NSRange(location: 0, length: text.utf16.count)
         _ = textField(self, shouldChangeCharactersIn: range, replacementString: "\(textFieldState.amount)")
     }
-    
-    func bindMaximumAmount() { }
-    
-    func bindMinimumAmount() { }
 }
 
 // MARK: - Overriding Functionality
@@ -202,11 +195,7 @@ extension NeoCurrencyInputField: UITextFieldDelegate {
             return false
         }
         
-        if textFieldState.shouldNotify {
-            textFieldState.amountChangeHandler?(number)
-        } else {
-            textFieldState.shouldNotify = true
-        }
+        textFieldState.lastAmount = number
         
         let formattedText = number.toIDR(usingSymbol: false)
         textField.text = formattedText
@@ -220,5 +209,29 @@ extension NeoCurrencyInputField: UITextFieldDelegate {
         }
 
         return false
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldState.amountChangeHandler?(textFieldState.lastAmount)
+        
+        return true
+    }
+}
+
+// MARK: - Toolbar Functionality
+private extension NeoCurrencyInputField {
+    func createToolbar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+
+        inputAccessoryView = toolbar
+    }
+
+    @objc func doneTapped() {
+        _ = textFieldShouldReturn(self)
+        endEditing(true)
     }
 }
