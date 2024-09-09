@@ -13,6 +13,15 @@ import NeoBase
 final class WealthViewController: BaseViewController<WealthViewModel> {
     private var cancellables = Set<AnyCancellable>()
     
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView().with(parent: view)
+        indicatorView.startAnimating()
+        indicatorView.tintColor = .neo(.text, color: .default)
+        indicatorView.alpha = 1
+        
+        return indicatorView
+    }()
+
     private lazy var tableView: DiffableTableView<WealthViewController, WealthViewController> = {
         let tableView = DiffableTableView<WealthViewController, WealthViewController>(provider: self, scrollDelegate: self)
         tableView.register(WealthProductCell.self, WealthProductNavigationCell.self)
@@ -38,6 +47,7 @@ private extension WealthViewController {
     func setupViews() {
         title = "Wealth"
         
+        loadingIndicator.center = view.center
         tableView.constraint(\.leadingAnchor, equalTo: view.leadingAnchor)
         tableView.constraint(\.topAnchor, equalTo: view.safeAreaLayoutGuide.topAnchor)
         tableView.constraint(\.trailingAnchor, equalTo: view.trailingAnchor)
@@ -57,11 +67,10 @@ private extension WealthViewController {
     
     func observeViewState(_ state: WealthViewState) {
         switch state {
-        case .empty:
-            debugPrint(state)
         case .loading:
-            debugPrint(state)
+            tableView.fadeOut(duration: 0.1)
         case .productsReceived:
+            tableView.fadeIn(duration: 0.1)
             tableView.setRefreshControlEndRefresh()
             showProducts()
         case .error(let message):

@@ -9,7 +9,7 @@ import Foundation
 import Domain
 import Networking
 
-/// A protocol that defines the contract for fetching wealth-related product groups.
+/// A protocol that defines the contract for fetching payment related data.
 public protocol PaymentRemoteDataSource {
     /// Fetches the list of available payment methods.
     ///
@@ -21,20 +21,16 @@ public final class DefaultPaymentRemoteDataSource: PaymentRemoteDataSource {
     public init() { }
     
     public func fetchPaymentMethods() async throws -> PaymentMethods {
-        //try await APIService<WealthEndpoint>().execute(.getList, to: ProductGroups<Wealth>.self)
-        
         guard let url = Bundle.main.url(forResource: "payment-methods", withExtension: "json") else {
             return []
         }
 
         do {
             let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode(Response<PaymentMethods>.self, from: data)
+            let decodedData = try JSONDecoder().decode(Response<PaymentMethods>.self, from: data)
                 
             return decodedData.data
         } catch {
-            print("Error decoding JSON from file: \(error.localizedDescription)")
             return []
         }
     }

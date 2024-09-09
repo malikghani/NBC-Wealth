@@ -55,11 +55,6 @@ extension WealthViewModel {
     }
 }
 
-// MARK: - Private Functionality
-private extension WealthViewModel {
-   
-}
-
 // MARK: - Snapshot Functionality
 extension WealthViewModel {
     typealias Snapshot = NSDiffableDataSourceSnapshot<WealthSection, WealthItem>

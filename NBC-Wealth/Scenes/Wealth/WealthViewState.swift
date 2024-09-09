@@ -9,9 +9,6 @@ import Foundation
 
 /// Represents the various states of the Wealth view.
 enum WealthViewState {
-    /// Indicates the view has no data to display.
-    case empty
-    
     /// Indicates the view is currently loading data.
     case loading
     
@@ -20,16 +17,4 @@ enum WealthViewState {
     
     /// Indicates an error occurred, with an associated message.
     case error(message: String)
-}
-
-// MARK: - Internal Functionality
-extension WealthViewState {
-    /// Determines whether the loading state view should be toggled based on the current state.
-    var shouldShowLoadingIndicator: Bool {
-        if case .loading = self {
-            return true
-        }
-        
-        return false
-    }
 }

@@ -16,7 +16,7 @@ final class PaymentViewModel {
     private(set) var viewState = CurrentValueSubject<PaymentViewState, Never>(.loading)
     
     // Dependencies
-    private var orderItem: WealthProductOrderItem
+    private var orderItem: ProductOrderItem
     private var paymentMethods: PaymentMethods = []
     private var groupedMethods: [PaymentMethods] = []
     var selectedPaymentMethod: PaymentMethod?
@@ -27,7 +27,7 @@ final class PaymentViewModel {
     
     init(
         paymentRepository: any PaymentRepository = PaymentRepositoryImplementation(),
-        orderItem: WealthProductOrderItem
+        orderItem: ProductOrderItem
     ) {
         self.paymentRepository = paymentRepository
         self.orderItem = orderItem
@@ -37,7 +37,6 @@ final class PaymentViewModel {
 
 // MARK: - Public Functionality
 extension PaymentViewModel {
-    /// Fetches product groups from the repository and updates the view state.
     func fetchPaymentMethods() {
         Task {
             do {
@@ -75,18 +74,21 @@ extension PaymentViewModel {
         snapshot.appendSections([.countdown, .selectedPaymentMethod, otherPaymentMethodSection])
         snapshot.appendItems([.countdown(orderItem, paymentEndDate)], toSection: .countdown)
         
-        if let selectedPaymentMethod {
-            snapshot.appendItems([.selectedMethod(selectedPaymentMethod)], toSection: .selectedPaymentMethod)
-        }
-        
+        insertSelectedPaymentMethod(to: &snapshot)
         insertGroupMethodItem(to: &snapshot, section: otherPaymentMethodSection)
         
         return snapshot
     }
     
-    func insertGroupMethodItem(to snapshot: inout Snapshot, section: PaymentSection) {
+    private func insertSelectedPaymentMethod(to snapshot: inout Snapshot) {
+        if let selectedPaymentMethod {
+            snapshot.appendItems([.selectedMethod(selectedPaymentMethod)], toSection: .selectedPaymentMethod)
+        }
+    }
+    
+    private func insertGroupMethodItem(to snapshot: inout Snapshot, section: PaymentSection) {
         for methods in groupedMethods.enumerated() {
-            var targetMethods = methods.element.filter { $0 != selectedPaymentMethod }
+            let targetMethods = methods.element.filter { $0 != selectedPaymentMethod }
             
             if targetMethods.isEmpty {
                 continue

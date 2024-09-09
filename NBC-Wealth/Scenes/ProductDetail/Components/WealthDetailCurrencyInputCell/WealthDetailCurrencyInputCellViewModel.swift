@@ -8,9 +8,9 @@
 import Domain
 
 final class WealthDetailCurrencyInputCellViewModel {
-    private(set) var orderItem: WealthProductOrderItem
+    private(set) var orderItem: ProductOrderItem
     
-    init(orderItem: WealthProductOrderItem) {
+    init(orderItem: ProductOrderItem) {
         self.orderItem = orderItem
     }
 }

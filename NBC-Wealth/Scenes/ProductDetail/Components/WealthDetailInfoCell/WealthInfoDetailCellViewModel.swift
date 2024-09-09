@@ -8,9 +8,9 @@
 import Domain
 
 final class WealthDetailInfoCellViewModel {
-    private let orderItem: WealthProductOrderItem
+    private let orderItem: ProductOrderItem
     
-    init(orderItem: WealthProductOrderItem) {
+    init(orderItem: ProductOrderItem) {
         self.orderItem = orderItem
     }
 }
@@ -22,8 +22,8 @@ extension WealthDetailInfoCellViewModel {
         "\(orderItem.product.rate.toPercentage()) p.a."
     }
     
-    /// A computed property that returns a description of the holding days for the current order item.
+    /// Returns a description of the holding days for the current order item.
     var holdingDaysDescription: String {
-        orderItem.holdingDaysDescription
+        orderItem.infoParser.description
     }
 }

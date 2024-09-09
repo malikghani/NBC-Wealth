@@ -54,16 +54,12 @@ final class WealthDetailInfoCell: BaseTableViewCell, ViewModelProviding {
     }()
     
     override func setupOnMovedToSuperview() {
-        setupView()
+        contentStackView.fillSuperview(spacing: 16)
     }
 }
 
 // MARK: - Private Functionality
 private extension WealthDetailInfoCell {
-    func setupView() {
-        contentStackView.fillSuperview(spacing: 16)
-    }
-    
     func showDepositInfo() {
         guard let value = viewModel?.rateDescription else {
             return
@@ -73,7 +69,6 @@ private extension WealthDetailInfoCell {
             .assign(.foregroundColor(.neo(.text, color: .highlight)))
             .assign(.font(.heading))
             .assign(.font(.tertiary), for: "p.a.")
-        
         rateLabel.dispatch(.setAttributedText(producer.get()))
         
         guard let holdingDays = viewModel?.holdingDaysDescription else {

@@ -52,7 +52,6 @@
 		E11BD48A2C8CE7EB00EC6777 /* NeoTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4832C8CD0D800EC6777 /* NeoTabItemView.swift */; };
 		E11BD48C2C8CE9D900EC6777 /* WealthDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD48B2C8CE9D900EC6777 /* WealthDetailViewController.swift */; };
 		E11BD48E2C8CE9E000EC6777 /* WealthDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD48D2C8CE9E000EC6777 /* WealthDetailViewModel.swift */; };
-		E11BD4902C8CE9E500EC6777 /* WealthDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD48F2C8CE9E500EC6777 /* WealthDetailViewState.swift */; };
 		E11BD4932C8CE9FC00EC6777 /* WealthDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4922C8CE9FC00EC6777 /* WealthDetailSection.swift */; };
 		E11BD4952C8CEA0200EC6777 /* WealthDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4942C8CEA0200EC6777 /* WealthDetailItem.swift */; };
 		E11BD4982C8CEB0300EC6777 /* WealthDetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4972C8CEB0200EC6777 /* WealthDetailFooterView.swift */; };
@@ -60,7 +59,7 @@
 		E11BD49F2C8CF5F800EC6777 /* WealthInfoDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD49E2C8CF5F800EC6777 /* WealthInfoDetailCellViewModel.swift */; };
 		E11BD4A12C8CFF1500EC6777 /* WealthDetailFooterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4A02C8CFF1500EC6777 /* WealthDetailFooterViewDelegate.swift */; };
 		E11BD4A32C8D005000EC6777 /* UITapGesture+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4A22C8D005000EC6777 /* UITapGesture+Extension.swift */; };
-		E11BD4AF2C8D8A7B00EC6777 /* WealthProductOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4A52C8D0A5400EC6777 /* WealthProductOrderItem.swift */; };
+		E11BD4AF2C8D8A7B00EC6777 /* ProductOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4A52C8D0A5400EC6777 /* ProductOrderItem.swift */; };
 		E11BD4B02C8D8A7B00EC6777 /* RolloverOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4992C8CF4BB00EC6777 /* RolloverOption.swift */; };
 		E11BD4B12C8D8AD600EC6777 /* WebViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4AC2C8D873F00EC6777 /* WebViewHeaderView.swift */; };
 		E11BD4B22C8D8AD600EC6777 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4AA2C8D0E5E00EC6777 /* WebViewModel.swift */; };
@@ -74,7 +73,6 @@
 		E11BD4C92C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C82C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift */; };
 		E11BD4CA2C8E3D9500EC6777 /* NeoCurrencyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4BF2C8E20FB00EC6777 /* NeoCurrencyInputView.swift */; };
 		E11BD4CB2C8E3D9500EC6777 /* NeoCurrencyInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4C62C8E30DD00EC6777 /* NeoCurrencyInputField.swift */; };
-		E11BD4CE2C8E3DDA00EC6777 /* WealthDetailCurrencyPreselectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4CD2C8E3DDA00EC6777 /* WealthDetailCurrencyPreselectCell.swift */; };
 		E11BD4D12C8E406A00EC6777 /* NeoChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4D02C8E406A00EC6777 /* NeoChipView.swift */; };
 		E11BD4D32C8E4E9700EC6777 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4D22C8E4E9700EC6777 /* PaymentViewController.swift */; };
 		E11BD4D52C8E4EA000EC6777 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4D42C8E4EA000EC6777 /* PaymentViewModel.swift */; };
@@ -97,15 +95,9 @@
 		E11BD4FE2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4FD2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift */; };
 		E11BD5002C8E861A00EC6777 /* UIView+TapGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BD4FF2C8E861A00EC6777 /* UIView+TapGestureExtension.swift */; };
 		E1D30CCA2C8E9A9E0013D090 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */; };
-		E1D30CCD2C8E9A9E0013D090 /* Poppins-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */; };
-		E1D30CCE2C8E9A9E0013D090 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */; };
 		E1D30CCF2C8E9A9E0013D090 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */; };
-		E1D30CD02C8E9A9E0013D090 /* Poppins-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */; };
-		E1D30CD22C8E9A9E0013D090 /* Poppins-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */; };
-		E1D30CD42C8E9A9E0013D090 /* Poppins-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */; };
-		E1D30CD62C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */; };
-		E1D30CD82C8E9A9E0013D090 /* Poppins-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */; };
 		E1D30CDA2C8E9A9E0013D090 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */; };
+		E1D30CDC2C8E9FBE0013D090 /* ProductInfoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D30CDB2C8E9FBE0013D090 /* ProductInfoParser.swift */; };
 		E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */; };
 		E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */; };
 		E1D8530E2C880F7E00DE6CC6 /* WealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8530D2C880F7E00DE6CC6 /* WealthViewController.swift */; };
@@ -257,7 +249,6 @@
 		E11BD4852C8CDB4900EC6777 /* WealthProductNavigationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductNavigationHeaderView.swift; sourceTree = "<group>"; };
 		E11BD48B2C8CE9D900EC6777 /* WealthDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailViewController.swift; sourceTree = "<group>"; };
 		E11BD48D2C8CE9E000EC6777 /* WealthDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailViewModel.swift; sourceTree = "<group>"; };
-		E11BD48F2C8CE9E500EC6777 /* WealthDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailViewState.swift; sourceTree = "<group>"; };
 		E11BD4922C8CE9FC00EC6777 /* WealthDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailSection.swift; sourceTree = "<group>"; };
 		E11BD4942C8CEA0200EC6777 /* WealthDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailItem.swift; sourceTree = "<group>"; };
 		E11BD4972C8CEB0200EC6777 /* WealthDetailFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailFooterView.swift; sourceTree = "<group>"; };
@@ -266,7 +257,7 @@
 		E11BD49E2C8CF5F800EC6777 /* WealthInfoDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthInfoDetailCellViewModel.swift; sourceTree = "<group>"; };
 		E11BD4A02C8CFF1500EC6777 /* WealthDetailFooterViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailFooterViewDelegate.swift; sourceTree = "<group>"; };
 		E11BD4A22C8D005000EC6777 /* UITapGesture+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGesture+Extension.swift"; sourceTree = "<group>"; };
-		E11BD4A52C8D0A5400EC6777 /* WealthProductOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthProductOrderItem.swift; sourceTree = "<group>"; };
+		E11BD4A52C8D0A5400EC6777 /* ProductOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOrderItem.swift; sourceTree = "<group>"; };
 		E11BD4A72C8D0CE500EC6777 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E11BD4AA2C8D0E5E00EC6777 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		E11BD4AC2C8D873F00EC6777 /* WebViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewHeaderView.swift; sourceTree = "<group>"; };
@@ -279,7 +270,6 @@
 		E11BD4C42C8E248900EC6777 /* WealthDetailCurrencyInputCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyInputCellViewModel.swift; sourceTree = "<group>"; };
 		E11BD4C62C8E30DD00EC6777 /* NeoCurrencyInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoCurrencyInputField.swift; sourceTree = "<group>"; };
 		E11BD4C82C8E3B0600EC6777 /* WealthDetailCurrencyInputCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyInputCellDelegate.swift; sourceTree = "<group>"; };
-		E11BD4CD2C8E3DDA00EC6777 /* WealthDetailCurrencyPreselectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthDetailCurrencyPreselectCell.swift; sourceTree = "<group>"; };
 		E11BD4D02C8E406A00EC6777 /* NeoChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoChipView.swift; sourceTree = "<group>"; };
 		E11BD4D22C8E4E9700EC6777 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		E11BD4D42C8E4EA000EC6777 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
@@ -302,15 +292,9 @@
 		E11BD4FD2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodListCellDelegate.swift; sourceTree = "<group>"; };
 		E11BD4FF2C8E861A00EC6777 /* UIView+TapGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGestureExtension.swift"; sourceTree = "<group>"; };
 		E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
-		E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.otf"; sourceTree = "<group>"; };
-		E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
 		E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
-		E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.otf"; sourceTree = "<group>"; };
-		E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.otf"; sourceTree = "<group>"; };
-		E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.otf"; sourceTree = "<group>"; };
-		E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.otf"; sourceTree = "<group>"; };
-		E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.otf"; sourceTree = "<group>"; };
 		E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
+		E1D30CDB2C8E9FBE0013D090 /* ProductInfoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoParser.swift; sourceTree = "<group>"; };
 		E1D853062C880F7E00DE6CC6 /* NBC-Wealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC-Wealth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D853092C880F7E00DE6CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8530B2C880F7E00DE6CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -563,7 +547,6 @@
 				E11BD4A42C8D085F00EC6777 /* WealthDetailFooterView */,
 				E11BD49B2C8CF5E800EC6777 /* WealthDetailInfoCell */,
 				E11BD4C12C8E245000EC6777 /* WealthDetailCurrencyInputCell */,
-				E11BD4CC2C8E3DC100EC6777 /* WealthDetailCurrencyPreselectCell */,
 				E11BD4B92C8E047900EC6777 /* WealthDetailMiscCell */,
 			);
 			path = Components;
@@ -600,7 +583,8 @@
 		E11BD4AE2C8D8A7200EC6777 /* OrderItem */ = {
 			isa = PBXGroup;
 			children = (
-				E11BD4A52C8D0A5400EC6777 /* WealthProductOrderItem.swift */,
+				E11BD4A52C8D0A5400EC6777 /* ProductOrderItem.swift */,
+				E1D30CDB2C8E9FBE0013D090 /* ProductInfoParser.swift */,
 				E11BD4992C8CF4BB00EC6777 /* RolloverOption.swift */,
 			);
 			path = OrderItem;
@@ -642,14 +626,6 @@
 			path = WealthDetailCurrencyInputCell;
 			sourceTree = "<group>";
 		};
-		E11BD4CC2C8E3DC100EC6777 /* WealthDetailCurrencyPreselectCell */ = {
-			isa = PBXGroup;
-			children = (
-				E11BD4CD2C8E3DDA00EC6777 /* WealthDetailCurrencyPreselectCell.swift */,
-			);
-			path = WealthDetailCurrencyPreselectCell;
-			sourceTree = "<group>";
-		};
 		E11BD4CF2C8E406000EC6777 /* NeoChipView */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,9 +646,9 @@
 		E11BD4D92C8E4EB600EC6777 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E11BD4F82C8E797C00EC6777 /* PaymentMethodListCell */,
-				E11BD4ED2C8E668C00EC6777 /* PaymentSelectedPaymentMethodCell */,
 				E11BD4E82C8E595700EC6777 /* PaymentCountdownHeaderCell */,
+				E11BD4ED2C8E668C00EC6777 /* PaymentSelectedPaymentMethodCell */,
+				E11BD4F82C8E797C00EC6777 /* PaymentMethodListCell */,
 				E11BD4F62C8E793800EC6777 /* PaymentHeaderView.swift */,
 			);
 			path = Components;
@@ -719,8 +695,8 @@
 			isa = PBXGroup;
 			children = (
 				E11BD4F92C8E798A00EC6777 /* PaymentMethodListCell.swift */,
-				E11BD4FB2C8E79C500EC6777 /* PaymentMethodListCellViewModel.swift */,
 				E11BD4FD2C8E79D400EC6777 /* PaymentMethodListCellDelegate.swift */,
+				E11BD4FB2C8E79C500EC6777 /* PaymentMethodListCellViewModel.swift */,
 			);
 			path = PaymentMethodListCell;
 			sourceTree = "<group>";
@@ -728,16 +704,9 @@
 		E1D30CB62C8E9A930013D090 /* poppins */ = {
 			isa = PBXGroup;
 			children = (
-				E1D30CC02C8E9A9E0013D090 /* Poppins-Italic.otf */,
-				E1D30CBC2C8E9A9E0013D090 /* Poppins-Light.otf */,
-				E1D30CBB2C8E9A9E0013D090 /* Poppins-LightItalic.otf */,
 				E1D30CBD2C8E9A9E0013D090 /* Poppins-Medium.otf */,
-				E1D30CC22C8E9A9E0013D090 /* Poppins-MediumItalic.otf */,
 				E1D30CB82C8E9A9E0013D090 /* Poppins-Regular.otf */,
 				E1D30CC82C8E9A9E0013D090 /* Poppins-SemiBold.otf */,
-				E1D30CC42C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf */,
-				E1D30CBE2C8E9A9E0013D090 /* Poppins-Thin.otf */,
-				E1D30CC62C8E9A9E0013D090 /* Poppins-ThinItalic.otf */,
 			);
 			path = poppins;
 			sourceTree = "<group>";
@@ -876,7 +845,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D853992C89746400DE6CC6 /* Wealth */,
-				E1D8539B2C89747700DE6CC6 /* WealthDetail */,
+				E1D8539B2C89747700DE6CC6 /* ProductDetail */,
 				E1D8539A2C89746A00DE6CC6 /* Payment */,
 			);
 			path = Scenes;
@@ -927,16 +896,15 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
-		E1D8539B2C89747700DE6CC6 /* WealthDetail */ = {
+		E1D8539B2C89747700DE6CC6 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
 				E11BD4962C8CEAF400EC6777 /* Components */,
 				E11BD4912C8CE9F000EC6777 /* DiffableSectionItem */,
 				E11BD48B2C8CE9D900EC6777 /* WealthDetailViewController.swift */,
 				E11BD48D2C8CE9E000EC6777 /* WealthDetailViewModel.swift */,
-				E11BD48F2C8CE9E500EC6777 /* WealthDetailViewState.swift */,
 			);
-			path = WealthDetail;
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		E1D853BC2C89912E00DE6CC6 /* DiffableTableView */ = {
@@ -1247,15 +1215,8 @@
 				E1D8540A2C8C603900DE6CC6 /* Assets.xcassets in Resources */,
 				E1D853132C880F8000DE6CC6 /* Assets.xcassets in Resources */,
 				E1D8533E2C880FFB00DE6CC6 /* wealth.json in Resources */,
-				E1D30CCD2C8E9A9E0013D090 /* Poppins-LightItalic.otf in Resources */,
 				E11BD4DB2C8E51EF00EC6777 /* payment-methods.json in Resources */,
-				E1D30CCE2C8E9A9E0013D090 /* Poppins-Light.otf in Resources */,
-				E1D30CD62C8E9A9E0013D090 /* Poppins-SemiBoldItalic.otf in Resources */,
-				E1D30CD82C8E9A9E0013D090 /* Poppins-ThinItalic.otf in Resources */,
-				E1D30CD02C8E9A9E0013D090 /* Poppins-Thin.otf in Resources */,
-				E1D30CD42C8E9A9E0013D090 /* Poppins-MediumItalic.otf in Resources */,
 				E1D30CDA2C8E9A9E0013D090 /* Poppins-SemiBold.otf in Resources */,
-				E1D30CD22C8E9A9E0013D090 /* Poppins-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,7 +1277,6 @@
 				E1D8530A2C880F7E00DE6CC6 /* AppDelegate.swift in Sources */,
 				E1D853D92C8A321100DE6CC6 /* WealthProductCellViewModel.swift in Sources */,
 				E11BD49F2C8CF5F800EC6777 /* WealthInfoDetailCellViewModel.swift in Sources */,
-				E11BD4CE2C8E3DDA00EC6777 /* WealthDetailCurrencyPreselectCell.swift in Sources */,
 				E11BD4D32C8E4E9700EC6777 /* PaymentViewController.swift in Sources */,
 				E11BD4742C8C78BF00EC6777 /* WealthProductHeaderView.swift in Sources */,
 				E11BD4F72C8E793800EC6777 /* PaymentHeaderView.swift in Sources */,
@@ -1324,7 +1284,6 @@
 				E11BD4F12C8E66CF00EC6777 /* PaymentSelectedPaymentMethodCellViewModel.swift in Sources */,
 				E11BD47D2C8CC78C00EC6777 /* WealthProductNavigationHeaderViewModel.swift in Sources */,
 				E11BD47B2C8CC76500EC6777 /* WealthProductNavigationCell.swift in Sources */,
-				E11BD4902C8CE9E500EC6777 /* WealthDetailViewState.swift in Sources */,
 				E1D8530C2C880F7E00DE6CC6 /* SceneDelegate.swift in Sources */,
 				E11BD4C32C8E245F00EC6777 /* WealthDetailCurrencyInputCell.swift in Sources */,
 				E11BD4B82C8E00A200EC6777 /* WealthDetailHeaderView.swift in Sources */,
@@ -1370,9 +1329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D8537F2C89630200DE6CC6 /* Wealth.swift in Sources */,
-				E11BD4AF2C8D8A7B00EC6777 /* WealthProductOrderItem.swift in Sources */,
+				E11BD4AF2C8D8A7B00EC6777 /* ProductOrderItem.swift in Sources */,
 				E11BD4F52C8E680F00EC6777 /* PaymentMethodType.swift in Sources */,
 				E11BD4B02C8D8A7B00EC6777 /* RolloverOption.swift in Sources */,
+				E1D30CDC2C8E9FBE0013D090 /* ProductInfoParser.swift in Sources */,
 				E11BD4DE2C8E524900EC6777 /* PaymentMethod.swift in Sources */,
 				E1D8537E2C89630200DE6CC6 /* ProductGroup.swift in Sources */,
 				E1D8537D2C89630200DE6CC6 /* Product.swift in Sources */,

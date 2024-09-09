@@ -18,6 +18,7 @@ final class PaymentSelectedPaymentMethodCellViewModel {
 
 // MARK: - Internal Functionality
 extension PaymentSelectedPaymentMethodCellViewModel {
+    /// Represents the title for current payment method.
     var title: String {
         paymentMethod?.type.title ?? ""
     }

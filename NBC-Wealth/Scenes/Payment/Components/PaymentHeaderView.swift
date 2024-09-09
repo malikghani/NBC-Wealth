@@ -13,9 +13,7 @@ final class PaymentHeaderView: BaseView {
     
     private lazy var titleLabel: NeoLabel = {
         let label = NeoLabel().with(parent: self)
-        label.dispatch(.bindInitialState { state in
-            state.scale = .title
-        })
+        label.dispatch(.bindInitialState { _ in })
         
         return label
     }()

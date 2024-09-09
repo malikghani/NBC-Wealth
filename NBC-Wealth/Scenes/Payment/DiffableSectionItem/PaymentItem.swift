@@ -11,7 +11,7 @@ import Domain
 /// An enumeration representing different items in the payment flow.
 enum PaymentItem: Hashable {
     /// Represents a item that displays a countdown timer.
-    case countdown(WealthProductOrderItem, Date)
+    case countdown(ProductOrderItem, Date)
     
     /// Represents the selected payment method.
     ///

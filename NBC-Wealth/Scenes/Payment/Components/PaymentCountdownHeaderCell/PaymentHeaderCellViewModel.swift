@@ -9,12 +9,12 @@ import Foundation
 import Domain
 
 final class PaymentCountdownHeaderCellViewModel {
-    private(set) var countdownPublisher = Timer.publish(every: 1.0, on: .main, in: .default).autoconnect()
-    
-    private(set) var orderItem: WealthProductOrderItem
+    // Dependencies
+    private(set) var countdownPublisher = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    private(set) var orderItem: ProductOrderItem
     private(set) var endDate: Date
     
-    init(orderItem: WealthProductOrderItem, endDate: Date) {
+    init(orderItem: ProductOrderItem, endDate: Date) {
         self.orderItem = orderItem
         self.endDate = endDate
     }

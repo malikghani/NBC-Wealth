@@ -162,7 +162,7 @@ private extension NeoLabel {
     }
 }
 
-// MARK: - Bricks Label Text Tap Functionality
+// MARK: - NeoLabel Text Tap Functionality
 private extension NeoLabel {
     @objc func labelTapped(_ gesture: UITapGestureRecognizer) {
         guard let text = label.text else {

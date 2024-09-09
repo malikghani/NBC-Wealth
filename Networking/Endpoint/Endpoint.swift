@@ -25,11 +25,7 @@ public protocol Endpoint {
 // MARK: - Endpoint Default Implementations
 public extension Endpoint {
     var baseURL: String {
-        #if DEBUG
         "https://60c18a34-89cf-4554-b241-cd3cdfcc93ff.mock.pstmn.io/"
-        #else
-        "https://60c18a34-89cf-4554-b241-cd3cdfcc93ff.mock.pstmn.io/"
-        #endif
     }
     
     var parameters: [String: Any] {

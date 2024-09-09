@@ -32,23 +32,19 @@ final class WealthDetailCurrencyInputCell: BaseTableViewCell, ViewModelProviding
     }()
     
     override func setupOnMovedToSuperview() {
-        setupView()
+        inputField.fillSuperview(horizontalSpacing: 16, verticalSpacing: 8)
     }
 }
 
 // MARK: - Private Functionality
 private extension WealthDetailCurrencyInputCell {
-    func setupView() {
-        inputField.fillSuperview(horizontalSpacing: 16, verticalSpacing: 8)
-    }
-    
     func showInput() {
-        guard let viewModel else {
+        guard let orderItem = viewModel?.orderItem else {
             return
         }
         
-        inputField.dispatch(.setMessageText("Minimum deposito \(viewModel.orderItem.product.startingAmount.toIDR())"))
-        inputField.dispatch(.inputAction(.setMinimumAmount(viewModel.orderItem.product.startingAmount)))
-        inputField.dispatch(.inputAction(.setAmount(viewModel.orderItem.deposit)))
+        inputField.dispatch(.setMessageText("Minimum deposito \(orderItem.product.startingAmount.toIDR())"))
+        inputField.dispatch(.inputAction(.setMinimumAmount(orderItem.product.startingAmount)))
+        inputField.dispatch(.inputAction(.setAmount(orderItem.deposit)))
     }
 }
